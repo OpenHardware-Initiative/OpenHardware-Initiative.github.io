@@ -5,7 +5,7 @@ import ParallaxSection from "@/components/ParallaxSection";
 import SponsorSection from "@/components/SponsorSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, Chip, Lightbulb, Database } from "lucide-react";
+import { Cpu, CircuitBoard, Lightbulb, Database } from "lucide-react";
 
 const Index = () => {
   const focusAreasRef = useRef<HTMLDivElement>(null);
@@ -125,7 +125,7 @@ const Index = () => {
             <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all">
               <CardContent className="pt-6">
                 <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
-                  <Chip size={28} />
+                  <CircuitBoard size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Chip Design</h3>
                 <p className="text-gray-600">
