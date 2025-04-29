@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import ParallaxSection from "@/components/ParallaxSection";
 import SponsorSection from "@/components/SponsorSection";
@@ -9,92 +9,15 @@ import { Cpu, CircuitBoard, Lightbulb, Database } from "lucide-react";
 import CircuitAnimation from "@/components/CircuitAnimation";
 
 const Index = () => {
-  const focusAreasRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Create animated shapes
-    const createShapes = () => {
-      const shapes = document.querySelectorAll('.geometric-shape');
-      shapes.forEach(shape => shape.remove());
-      
-      const container = document.querySelector('.hero-section');
-      if (container) {
-        for (let i = 0; i < 5; i++) {
-          const shape = document.createElement('div');
-          shape.classList.add('geometric-shape');
-          
-          // Random size between 100px and 300px
-          const size = Math.floor(Math.random() * 200) + 100;
-          shape.style.width = `${size}px`;
-          shape.style.height = `${size}px`;
-          
-          // Random position
-          const maxX = container.clientWidth - size;
-          const maxY = container.clientHeight - size;
-          const x = Math.floor(Math.random() * maxX);
-          const y = Math.floor(Math.random() * maxY);
-          shape.style.left = `${x}px`;
-          shape.style.top = `${y}px`;
-          
-          // Random color gradient - FIX: Add classes individually
-          const gradients = [
-            ['from-primary-blue/30', 'to-bistre/30'],
-            ['from-bistre/20', 'to-primary-blue/20'],
-            ['from-primary-blue/20', 'to-night/20'],
-            ['from-tertiary-purple/20', 'to-primary-blue/20'],
-            ['from-tertiary-purple/30', 'to-bistre/20']
-          ];
-          const selectedGradient = gradients[Math.floor(Math.random() * gradients.length)];
-          shape.classList.add('bg-gradient-to-r', ...selectedGradient);
-          
-          // Add animation
-          shape.style.animationDelay = `${Math.random() * 5}s`;
-          shape.classList.add('animate-float');
-          
-          container.appendChild(shape);
-        }
-      }
-    };
-    
-    createShapes();
-    window.addEventListener('resize', createShapes);
-    
-    return () => {
-      window.removeEventListener('resize', createShapes);
-    };
-  }, []);
-
-  const animateElement = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-slide-up');
-      }
-    });
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(animateElement, {
-      threshold: 0.1
-    });
-    
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach(el => observer.observe(el));
-    
-    return () => {
-      elements.forEach(el => observer.unobserve(el));
-    };
-  }, []);
-
   return (
     <>
-      {/* Hero Section with Parallax */}
-      <section className="hero-section bg-offwhite">
-        <div className="circuit-pattern"></div>
+      {/* Hero Section */}
+      <section className="hero-section bg-night relative overflow-hidden">
         <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-3/5 pt-24">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-primary-blue">
+          <div className="w-full md:w-1/2 pt-24 z-10 text-offwhite">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
               OpenHardware
-              <span className="block text-bistre">Initiative</span>
+              <span className="block text-tertiary-purple">Initiative</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-xl">
               Pioneering the future of hardware acceleration, chip design, and smart manufacturing
@@ -102,7 +25,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/projects">
-                <Button className="bg-primary-blue hover:bg-primary-blue/90 text-lg px-8 py-6">
+                <Button className="bg-tertiary-purple hover:bg-tertiary-purple/90 text-lg px-8 py-6">
                   Explore Projects
                 </Button>
               </Link>
@@ -117,19 +40,19 @@ const Index = () => {
               </a>
             </div>
           </div>
-          <div className="w-full md:w-2/5 mt-12 md:mt-0">
+          <div className="w-full md:w-1/2 h-[500px] mt-12 md:mt-0 z-10">
             <CircuitAnimation />
           </div>
         </div>
       </section>
 
       {/* Focus Areas */}
-      <section ref={focusAreasRef} className="py-24 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Focus Areas</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-primary-blue">Our Focus Areas</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple">
+            <Card className="shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple">
               <CardContent className="pt-6">
                 <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
                   <CircuitBoard size={28} />
@@ -141,7 +64,7 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.2s" }}>
+            <Card className="shadow-sm hover:shadow-md transition-all">
               <CardContent className="pt-6">
                 <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
                   <Cpu size={28} />
@@ -153,7 +76,7 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.4s" }}>
+            <Card className="shadow-sm hover:shadow-md transition-all">
               <CardContent className="pt-6">
                 <div className="mb-4 w-14 h-14 bg-bistre/10 rounded-full flex items-center justify-center text-bistre">
                   <Database size={28} />
@@ -165,7 +88,7 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple" style={{ animationDelay: "0.6s" }}>
+            <Card className="shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple">
               <CardContent className="pt-6">
                 <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
                   <Lightbulb size={28} />
