@@ -35,13 +35,14 @@ const Index = () => {
           shape.style.left = `${x}px`;
           shape.style.top = `${y}px`;
           
-          // Random color gradient
-          const colors = [
-            'from-primary-blue/30 to-bistre/30',
-            'from-bistre/20 to-primary-blue/20',
-            'from-primary-blue/20 to-night/20'
+          // Random color gradient - FIX: Add classes individually
+          const gradients = [
+            ['from-primary-blue/30', 'to-bistre/30'],
+            ['from-bistre/20', 'to-primary-blue/20'],
+            ['from-primary-blue/20', 'to-night/20']
           ];
-          shape.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+          const selectedGradient = gradients[Math.floor(Math.random() * gradients.length)];
+          shape.classList.add('bg-gradient-to-r', ...selectedGradient);
           
           // Add animation
           shape.style.animationDelay = `${Math.random() * 5}s`;
