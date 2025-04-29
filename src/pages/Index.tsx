@@ -6,6 +6,7 @@ import SponsorSection from "@/components/SponsorSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Lightbulb, Database } from "lucide-react";
+import CircuitAnimation from "@/components/CircuitAnimation";
 
 const Index = () => {
   const focusAreasRef = useRef<HTMLDivElement>(null);
@@ -39,7 +40,9 @@ const Index = () => {
           const gradients = [
             ['from-primary-blue/30', 'to-bistre/30'],
             ['from-bistre/20', 'to-primary-blue/20'],
-            ['from-primary-blue/20', 'to-night/20']
+            ['from-primary-blue/20', 'to-night/20'],
+            ['from-tertiary-purple/20', 'to-primary-blue/20'],
+            ['from-tertiary-purple/30', 'to-bistre/20']
           ];
           const selectedGradient = gradients[Math.floor(Math.random() * gradients.length)];
           shape.classList.add('bg-gradient-to-r', ...selectedGradient);
@@ -87,11 +90,11 @@ const Index = () => {
       {/* Hero Section with Parallax */}
       <section className="hero-section bg-offwhite">
         <div className="circuit-pattern"></div>
-        <div className="container mx-auto px-4 h-full flex items-center">
+        <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center">
           <div className="w-full md:w-3/5 pt-24">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-primary-blue">
-              CircuitForge
-              <span className="block text-bistre">Hardware Initiative</span>
+              OpenHardware
+              <span className="block text-bistre">Initiative</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-xl">
               Pioneering the future of hardware acceleration, chip design, and smart manufacturing
@@ -108,11 +111,14 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Button variant="outline" className="text-lg px-8 py-6 border-2">
+                <Button variant="outline" className="text-lg px-8 py-6 border-2 border-tertiary-purple hover:bg-tertiary-purple/10">
                   Join Our Team
                 </Button>
               </a>
             </div>
+          </div>
+          <div className="w-full md:w-2/5 mt-12 md:mt-0">
+            <CircuitAnimation />
           </div>
         </div>
       </section>
@@ -123,9 +129,9 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Focus Areas</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all">
+            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple">
               <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
+                <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
                   <CircuitBoard size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Chip Design</h3>
@@ -149,7 +155,7 @@ const Index = () => {
             
             <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.4s" }}>
               <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
+                <div className="mb-4 w-14 h-14 bg-bistre/10 rounded-full flex items-center justify-center text-bistre">
                   <Database size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Smart Manufacturing</h3>
@@ -159,9 +165,9 @@ const Index = () => {
               </CardContent>
             </Card>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.6s" }}>
+            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple" style={{ animationDelay: "0.6s" }}>
               <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
+                <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
                   <Lightbulb size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">TinyML</h3>
@@ -174,7 +180,7 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Link to="/about">
-              <Button variant="outline" className="border-2">
+              <Button variant="outline" className="border-2 border-tertiary-purple hover:bg-tertiary-purple/10">
                 Learn More About Our Work
               </Button>
             </Link>
@@ -191,7 +197,7 @@ const Index = () => {
               We're a diverse group of students and researchers passionate about pushing the boundaries of hardware innovation.
             </p>
             <Link to="/team">
-              <Button className="bg-primary-blue hover:bg-primary-blue/90">
+              <Button className="bg-tertiary-purple hover:bg-tertiary-purple/90 text-white">
                 Meet The Team
               </Button>
             </Link>
