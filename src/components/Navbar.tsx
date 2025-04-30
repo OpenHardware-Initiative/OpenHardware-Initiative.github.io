@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
@@ -52,37 +53,37 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center space-x-1">
             <Link 
               to="/" 
-              className={`nav-link ${isActive("/") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/") ? "nav-link-active" : ""}`}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className={`nav-link ${isActive("/about") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/about") ? "nav-link-active" : ""}`}
             >
               About
             </Link>
             <Link 
               to="/projects" 
-              className={`nav-link ${isActive("/projects") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/projects") ? "nav-link-active" : ""}`}
             >
               Projects
             </Link>
             <Link 
               to="/team" 
-              className={`nav-link ${isActive("/team") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/team") ? "nav-link-active" : ""}`}
             >
               Team
             </Link>
             <Link 
               to="/alumni" 
-              className={`nav-link ${isActive("/alumni") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/alumni") ? "nav-link-active" : ""}`}
             >
               Alumni
             </Link>
             <Link 
               to="/contact" 
-              className={`nav-link ${isActive("/contact") ? "nav-link-active" : ""}`}
+              className={`nav-link font-bold ${isActive("/contact") ? "nav-link-active" : ""}`}
             >
               Contact
             </Link>
@@ -92,7 +93,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="ml-4"
             >
-              <Button className="bg-primary-blue hover:bg-primary-blue/90">Join Us</Button>
+              <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold">Join Us</Button>
             </a>
           </nav>
           
@@ -108,45 +109,45 @@ const Navbar = () => {
         
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 flex flex-col space-y-2 border-t mt-4">
+          <nav className="md:hidden pt-4 pb-2 flex flex-col space-y-2 border-t mt-4 bg-white">
             <Link 
               to="/" 
-              className={`p-2 ${isActive("/") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className={`p-2 ${isActive("/about") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/about") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/projects" 
-              className={`p-2 ${isActive("/projects") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/projects") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
             </Link>
             <Link 
               to="/team" 
-              className={`p-2 ${isActive("/team") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/team") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Team
             </Link>
             <Link 
               to="/alumni" 
-              className={`p-2 ${isActive("/alumni") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/alumni") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Alumni
             </Link>
             <Link 
               to="/contact" 
-              className={`p-2 ${isActive("/contact") ? "font-semibold text-primary-blue" : "text-gray-700"}`}
+              className={`p-2 font-bold ${isActive("/contact") ? "text-primary-blue" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
@@ -155,7 +156,7 @@ const Navbar = () => {
               href="https://forms.google.com/form" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 bg-primary-blue text-white font-semibold rounded-md text-center mt-2"
+              className="p-2 bg-primary-blue text-white font-bold rounded-md text-center mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Join Us

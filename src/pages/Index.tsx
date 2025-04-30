@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
+
 const Index = () => {
   return <div className="min-h-screen bg-offwhite">
       {/* Hero Section */}
@@ -158,7 +159,7 @@ const Index = () => {
               </span>
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
@@ -248,4 +249,5 @@ const Index = () => {
       <SupportersSection />
     </div>;
 };
+
 export default Index;
