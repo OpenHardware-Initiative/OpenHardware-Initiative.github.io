@@ -128,16 +128,18 @@ const Navbar = () => {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+      </div>
         
-        {/* Mobile Navigation Menu */}
-        {isMobile && (
-          <div 
-            className={`md:hidden fixed inset-0 top-[72px] z-20 bg-white pt-4 transform transition-transform duration-300 ease-in-out ${
-              isMenuOpen ? "translate-y-0" : "-translate-y-full"
-            }`}
-          >
-            <nav className="flex flex-col p-6 space-y-4 h-[calc(100vh-72px)] overflow-y-auto">
-              <div className="flex flex-col space-y-6 flex-grow mb-6">
+      {/* Mobile Navigation Menu - Moved outside the container to prevent content overlap */}
+      {isMobile && (
+        <div 
+          className={`md:hidden fixed inset-0 top-[72px] bg-white z-40 transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+          }`}
+        >
+          <div className="absolute inset-0 bg-white overflow-hidden">
+            <nav className="flex flex-col p-6 space-y-6 h-[calc(100vh-72px)] overflow-y-auto">
+              <div className="flex flex-col space-y-6">
                 <Link 
                   to="/" 
                   className={`py-4 px-4 font-bold text-xl rounded-md ${
@@ -200,7 +202,7 @@ const Navbar = () => {
                 </Link>
               </div>
               
-              <div className="pt-6 border-t border-gray-200 mt-auto">
+              <div className="mt-auto pt-6 border-t border-gray-200">
                 <a 
                   href="https://forms.google.com/form" 
                   target="_blank" 
@@ -214,8 +216,8 @@ const Navbar = () => {
               </div>
             </nav>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
