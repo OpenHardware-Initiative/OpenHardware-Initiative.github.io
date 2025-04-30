@@ -93,7 +93,29 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-01"
   },
   
-  // Team Members - New team members with uploaded images
+  // Additional Advisors
+  {
+    id: "14",
+    name: "Michael Neumeier",
+    role: "Advisor",
+    image: "/lovable-uploads/d423d410-7628-4d68-8521-079fba8c3a2b.png",
+    linkedIn: "https://linkedin.com",
+    education: "Neuromorphic Computing Researcher at Fortiss",
+    isActive: true,
+    joinDate: "2023-02"
+  },
+  {
+    id: "15",
+    name: "Elvin Hajizada",
+    role: "Advisor",
+    image: "/lovable-uploads/939aae91-0b77-44d0-b7d4-9f50fd8c7bf4.png",
+    linkedIn: "https://linkedin.com",
+    education: "Neuromorphic & Continual AI Researcher at Intel Labs",
+    isActive: true,
+    joinDate: "2023-03"
+  },
+  
+  // Team Members
   {
     id: "6",
     name: "Kagan Dikmen",
@@ -135,7 +157,29 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-10"
   },
   
-  // Alumni
+  // New Team Members
+  {
+    id: "16",
+    name: "Benedikt Witteler",
+    role: "Team Member",
+    image: "/lovable-uploads/eb129a8e-9330-417f-9ffd-f8a96fa4348e.png",
+    linkedIn: "https://linkedin.com",
+    education: "TUM, Master Electrical Engineering and Information Technology",
+    isActive: true,
+    joinDate: "2023-11"
+  },
+  {
+    id: "17",
+    name: "Ashik Chalakariyil Jayamon",
+    role: "Team Member",
+    image: "/lovable-uploads/44795fca-0025-4d88-93a1-8e84d5b1d5d7.png",
+    linkedIn: "https://linkedin.com",
+    education: "M.Sc. Communications and Electronics",
+    isActive: true,
+    joinDate: "2023-12"
+  },
+  
+  // Alumni - Additional alumni
   {
     id: "9",
     name: "Robert Garcia",
@@ -179,6 +223,50 @@ export const teamData: TeamMember[] = [
       "Implemented ViT accelerator on FPGA",
       "Optimized memory bandwidth for ML models",
       "Created tutorials on hardware acceleration"
+    ]
+  },
+  {
+    id: "18",
+    name: "Ingo Fritz",
+    role: "Former Team Member",
+    image: "/media/alumni/ingo-fritz.jpg",
+    linkedIn: "https://linkedin.com",
+    isActive: false,
+    joinDate: "2022-01",
+    endDate: "2023-04",
+    contributions: [
+      "Contributed to FPGA design for neuromorphic computing",
+      "Developed power analysis tooling for SNN accelerators"
+    ]
+  },
+  {
+    id: "19",
+    name: "Fabio Veneto",
+    role: "Former Team Lead",
+    image: "/media/alumni/fabio-veneto.jpg",
+    linkedIn: "https://linkedin.com",
+    isActive: false,
+    joinDate: "2021-09",
+    endDate: "2023-05",
+    contributions: [
+      "Led the communications team",
+      "Established partnership with TUM entrepreneurship center",
+      "Organized multiple hackathons"
+    ]
+  },
+  {
+    id: "20",
+    name: "Alyona Starikova",
+    role: "Former Co-Director",
+    image: "/media/alumni/alyona-starikova.jpg",
+    linkedIn: "https://linkedin.com",
+    isActive: false,
+    joinDate: "2021-06",
+    endDate: "2023-01",
+    contributions: [
+      "Co-founded OpenHardware initiative",
+      "Led strategic partnerships with industry",
+      "Secured initial funding for operations"
     ]
   }
 ];
