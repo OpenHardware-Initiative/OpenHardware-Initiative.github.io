@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Award } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -28,19 +28,21 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-primary-blue">Our Story</h2>
               <p className="mb-4">
-                OpenHardware was founded in 2020 by a group of passionate engineering students who recognized
-                the growing need for specialized hardware solutions in the era of AI and IoT. What began as
-                a small project group has evolved into a comprehensive initiative spanning multiple domains
-                of hardware innovation.
+                OpenHardware was founded in 2025 by members of the Brain-Inspired Computing group at neuroTUM. 
+                The founders recognized a significant gap in hands-on student initiatives, particularly within 
+                hardware design, chip development, and accelerator engineering. Initially rooted in neuromorphic 
+                computing under neuroTUM, the group soon realized the scope of their mission extended far beyond 
+                just neuromorphic technologies.
               </p>
               <p className="mb-4">
-                Our journey started with a simple FPGA project to accelerate neural networks, which quickly
-                expanded to explore neuromorphic computing, in-memory computing architectures, and smart
-                manufacturing solutions.
+                The transition to an independent initiative was solidified during their participation in the AMD 
+                Open Hardware Competition, developing custom hardware accelerators for Visual Transformers (ViT) 
+                tailored for drone racing and collision avoidance, leveraging advanced AI compilers like IREE and MLIR.
               </p>
               <p>
-                Today, we collaborate with academic researchers, industry partners, and other student
-                initiatives to develop cutting-edge hardware solutions that address real-world challenges.
+                Today, OpenHardware explores a broad spectrum of emerging technologies including neuromorphic and 
+                in-memory computing, custom accelerators, AI compilers, and targets real-world applications in 
+                drones, robotics, and biomedical technology.
               </p>
             </div>
             <div className="relative h-80 md:h-full min-h-[320px]">
@@ -51,7 +53,7 @@ const About = () => {
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block">
                 <div className="bg-primary-blue text-white p-4 rounded-lg shadow-lg">
-                  <p className="font-bold">Founded in 2020</p>
+                  <p className="font-bold">Founded in 2025</p>
                   <p>Technical University Munich</p>
                 </div>
               </div>
@@ -66,8 +68,8 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6 text-primary-blue">Our Mission</h2>
             <p className="text-lg">
-              To foster innovation in hardware design by bridging the gap between theoretical research and practical
-              implementation, while providing students with hands-on experience in cutting-edge technologies.
+              To foster innovation in hardware design by bridging theoretical research with practical 
+              implementation, empowering students through direct engagement with cutting-edge technologies.
             </p>
           </div>
           
@@ -81,15 +83,15 @@ const About = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Novel chip architectures</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Energy-efficient designs</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Bio-inspired computing</span>
                   </li>
                 </ul>
@@ -105,15 +107,15 @@ const About = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Hands-on workshops</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
-                    <span>Mentorship programs</span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
+                    <span>Hackathons</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Industry connections</span>
                   </li>
                 </ul>
@@ -129,15 +131,15 @@ const About = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
-                    <span>Energy-efficient AI</span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
+                    <span>Advancing emerging hardware technologies</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
-                    <span>Smart manufacturing</span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
+                    <span>Connecting diverse industries through events</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2 text-green-500 mt-1"><Check size={16} /></span>
+                    <span className="mr-2 text-primary-blue mt-1"><Award size={16} /></span>
                     <span>Open-source contributions</span>
                   </li>
                 </ul>
@@ -158,39 +160,14 @@ const About = () => {
             
             {/* Timeline Items */}
             <div className="relative z-10">
-              {/* 2020 */}
-              <div className="flex items-center mb-12">
-                <div className="flex-1 text-right pr-8">
-                  <h3 className="text-xl font-bold text-primary-blue">2020</h3>
-                  <p className="font-medium">Foundation</p>
-                  <p className="text-gray-600 mt-2">
-                    OpenHardware was established by a group of engineering students with a shared passion for hardware innovation.
-                  </p>
-                </div>
-                <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
-                <div className="flex-1 pl-8"></div>
-              </div>
-              
-              {/* 2021 */}
-              <div className="flex items-center mb-12">
-                <div className="flex-1 pr-8"></div>
-                <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
-                <div className="flex-1 pl-8">
-                  <h3 className="text-xl font-bold text-primary-blue">2021</h3>
-                  <p className="font-medium">First Projects</p>
-                  <p className="text-gray-600 mt-2">
-                    Launched our first FPGA-based projects and established partnerships with local industry.
-                  </p>
-                </div>
-              </div>
-              
               {/* 2022 */}
               <div className="flex items-center mb-12">
                 <div className="flex-1 text-right pr-8">
                   <h3 className="text-xl font-bold text-primary-blue">2022</h3>
-                  <p className="font-medium">Expansion</p>
+                  <p className="font-medium">neuroTUM e.V foundation</p>
                   <p className="text-gray-600 mt-2">
-                    Expanded our focus to include neuromorphic computing and IoT solutions for smart manufacturing.
+                    neuroTUM e.V was stablished by Leon Gebhard, Agustin N. Coppari Hollmann and Isabel Whitely Tscherniak 
+                    with the goal of bridging the gap of neuroscience and engineering.
                   </p>
                 </div>
                 <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
@@ -198,14 +175,43 @@ const About = () => {
               </div>
               
               {/* 2023 */}
-              <div className="flex items-center">
+              <div className="flex items-center mb-12">
                 <div className="flex-1 pr-8"></div>
                 <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
                 <div className="flex-1 pl-8">
                   <h3 className="text-xl font-bold text-primary-blue">2023</h3>
-                  <p className="font-medium">Innovation Hub</p>
+                  <p className="font-medium">Start of Brain-Inspired Computing (BIC) Group</p>
                   <p className="text-gray-600 mt-2">
-                    Established OpenHardware as a recognized innovation hub with multiple ongoing projects and industry collaborations.
+                    The BIC group was stablished by Agustin N. Coppari Hollmann in order to explore 
+                    the different Hardware and Software aspects of neuromorphic computing.
+                  </p>
+                </div>
+              </div>
+              
+              {/* 2024 */}
+              <div className="flex items-center mb-12">
+                <div className="flex-1 text-right pr-8">
+                  <h3 className="text-xl font-bold text-primary-blue">2024</h3>
+                  <p className="font-medium">Synopsys ASIP Hackathon</p>
+                  <p className="text-gray-600 mt-2">
+                    The organization of the ASIP Hackathon with Synopsys by Ipek Akdeniz and Agustin N. Coppari 
+                    Hollmann marked a shift for BIC towards a broader field and into processor design.
+                  </p>
+                </div>
+                <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="flex-1 pl-8"></div>
+              </div>
+              
+              {/* 2025 */}
+              <div className="flex items-center">
+                <div className="flex-1 pr-8"></div>
+                <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="flex-1 pl-8">
+                  <h3 className="text-xl font-bold text-primary-blue">2025</h3>
+                  <p className="font-medium">Foundation of the OpenHardware Initiative</p>
+                  <p className="text-gray-600 mt-2">
+                    OpenHardware is founded as a student initiative under the OpenResearch e.V. by Ipek Akdeniz, 
+                    Deniz Onat Erdogan, Aleksa Stojkovic and Agustin N. Coppari Hollmann.
                   </p>
                 </div>
               </div>
