@@ -1,15 +1,13 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,26 +24,6 @@ const Navbar = () => {
     };
   }, []);
   
-  // Close the mobile menu when route changes
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location.pathname]);
-  
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isMobile) {
-      if (isMenuOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-    }
-    
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMenuOpen, isMobile]);
-  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -57,7 +35,7 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -121,101 +99,71 @@ const Navbar = () => {
           
           {/* Mobile Navigation Toggle */}
           <button 
-            className="md:hidden p-2 rounded-md text-primary-blue transition-colors"
+            className="md:hidden p-2 rounded-md text-primary-blue"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <Menu size={24} />
           </button>
         </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMobile && (
-        <div 
-          className={`fixed inset-0 top-[72px] bg-white z-40 md:hidden transform transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "translate-y-0" : "-translate-y-full"
-          }`}
-        >
-          <nav className="flex flex-col p-6 h-[calc(100vh-72px)] overflow-y-auto">
-            <div className="flex flex-col space-y-6">
-              <Link 
-                to="/" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                Home
-              </Link>
-              <Link 
-                to="/about" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/about") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                About
-              </Link>
-              <Link 
-                to="/projects" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/projects") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                Projects
-              </Link>
-              <Link 
-                to="/team" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/team") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                Team
-              </Link>
-              <Link 
-                to="/alumni" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/alumni") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                Alumni
-              </Link>
-              <Link 
-                to="/contact" 
-                className={`py-4 px-4 font-bold text-xl rounded-md ${
-                  isActive("/contact") 
-                    ? "bg-primary-blue/10 text-primary-blue" 
-                    : "text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                Contact
-              </Link>
-            </div>
-            
-            <div className="mt-auto pt-6 border-t border-gray-200">
-              <a 
-                href="https://forms.google.com/form" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
-                <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold w-full py-7 text-xl">
-                  Join Us
-                </Button>
-              </a>
-            </div>
+        
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <nav className="md:hidden pt-4 pb-2 flex flex-col space-y-2 border-t mt-4 bg-white">
+            <Link 
+              to="/" 
+              className={`p-2 font-bold ${isActive("/") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`p-2 font-bold ${isActive("/about") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/projects" 
+              className={`p-2 font-bold ${isActive("/projects") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link 
+              to="/team" 
+              className={`p-2 font-bold ${isActive("/team") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Team
+            </Link>
+            <Link 
+              to="/alumni" 
+              className={`p-2 font-bold ${isActive("/alumni") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Alumni
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`p-2 font-bold ${isActive("/contact") ? "text-primary-blue" : "text-gray-700"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <a 
+              href="https://forms.google.com/form" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 bg-primary-blue text-white font-bold rounded-md text-center mt-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Join Us
+            </a>
           </nav>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 };
