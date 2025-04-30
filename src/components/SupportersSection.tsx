@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card } from "@/components/ui/card";
 interface Partner {
@@ -11,12 +12,12 @@ const partners: Partner[] = [{
   organization: "TUM"
 }, {
   name: "OpenResearch e.V.",
-  role: "Umbrella Organization",
-  organization: "Open Hardware"
+  role: "Non-Profit Organization",
+  organization: ""
 }, {
   name: "neuroTUM",
   role: "Student Initiative",
-  organization: "TUM"
+  organization: "part of OpenResearch e.V."
 }];
 const SupportersSection = () => {
   return <section className="py-16 bg-offwhite">
@@ -33,7 +34,9 @@ const SupportersSection = () => {
               <div className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-primary-blue mb-1">{partner.name}</h3>
                 <p className="text-bistre mb-1 font-medium">{partner.role}</p>
-                <p className="text-night text-sm font-semibold">{partner.organization}</p>
+                {partner.organization && (
+                  <p className="text-night text-sm font-semibold">{partner.organization}</p>
+                )}
               </div>
             </Card>)}
         </div>
