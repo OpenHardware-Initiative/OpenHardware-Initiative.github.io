@@ -2,6 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
+import TeamMemberImage from "./TeamMemberImage";
 
 interface TeamMemberProps {
   name: string;
@@ -9,6 +10,8 @@ interface TeamMemberProps {
   image: string;
   linkedIn: string;
   education?: string;
+  personIndex?: number;
+  isCoDirector?: boolean;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({
@@ -16,16 +19,22 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   role,
   image,
   linkedIn,
-  education
+  education,
+  personIndex = -1,
+  isCoDirector = false
 }) => {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">
       <div className="relative">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-64 object-cover object-center" 
-        />
+        {isCoDirector && image.includes("c4ac8743-6682-42b2-9e3f-61d5bee406ef") ? (
+          <TeamMemberImage image={image} name={name} personIndex={personIndex} />
+        ) : (
+          <img 
+            src={image} 
+            alt={name} 
+            className="w-full h-64 object-cover object-center" 
+          />
+        )}
         {role && (
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-primary-blue text-white text-sm rounded-full">

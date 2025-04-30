@@ -35,7 +35,7 @@ const Team = () => {
               <h2 className="text-2xl font-bold text-primary-blue">Co-Directors</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {coDirectors.map(member => (
+              {coDirectors.map((member, index) => (
                 <TeamMember
                   key={member.id}
                   name={member.name}
@@ -43,6 +43,8 @@ const Team = () => {
                   image={member.image}
                   linkedIn={member.linkedIn}
                   education={member.education}
+                  personIndex={index}
+                  isCoDirector={true}
                 />
               ))}
             </div>

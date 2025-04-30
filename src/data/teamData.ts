@@ -18,38 +18,38 @@ export const teamData: TeamMember[] = [
   // Co-directors
   {
     id: "1",
-    name: "Emily Chen",
+    name: "Ipek Akdeniz",
     role: "Co-Director",
-    image: "/media/team/emily-chen.jpg",
+    image: "/lovable-uploads/c4ac8743-6682-42b2-9e3f-61d5bee406ef.png",
     linkedIn: "https://linkedin.com",
-    education: "Ph.D. Computer Engineering",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2022-09"
   },
   {
-    id: "3",
-    name: "Sarah Kim",
+    id: "2",
+    name: "Agustin Nahuel Coppari Hollmann",
     role: "Co-Director",
-    image: "/media/team/sarah-kim.jpg",
+    image: "/lovable-uploads/c4ac8743-6682-42b2-9e3f-61d5bee406ef.png",
     linkedIn: "https://linkedin.com",
-    education: "M.Sc. Computer Science",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
   },
   {
-    id: "5",
-    name: "Lisa Müller",
+    id: "3",
+    name: "Deniz Onat Erdoğan",
     role: "Co-Director",
-    image: "/media/team/lisa-muller.jpg",
+    image: "/lovable-uploads/c4ac8743-6682-42b2-9e3f-61d5bee406ef.png",
     linkedIn: "https://linkedin.com",
-    education: "M.Sc. Machine Learning",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-05"
   },
   
   // Team Leads
   {
-    id: "2",
+    id: "4",
     name: "Michael Rodriguez",
     role: "Team Lead - Operations",
     image: "/media/team/michael-rodriguez.jpg",
@@ -59,7 +59,7 @@ export const teamData: TeamMember[] = [
     joinDate: "2022-10"
   },
   {
-    id: "4",
+    id: "5",
     name: "David Wang",
     role: "Team Lead - Communications",
     image: "/media/team/david-wang.jpg",
