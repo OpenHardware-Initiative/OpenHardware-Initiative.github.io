@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 
 const CircuitPattern: React.FC = () => {
@@ -41,16 +40,12 @@ const CircuitPattern: React.FC = () => {
           left: 0
         }}
       >
-        {/* Circuit paths with animation */}
+        {/* Static circuit paths */}
         <path 
           d="M0,100 L100,100 L100,200 L300,200 L300,400 L500,400" 
           stroke="#6E59A5" 
           strokeWidth="2" 
           fill="none"
-          strokeDasharray="1000"
-          strokeDashoffset="1000"
-          className="animate-draw-line"
-          style={{ animationDelay: '0.2s' }}
         />
         
         <path 
@@ -58,10 +53,6 @@ const CircuitPattern: React.FC = () => {
           stroke="#6E59A5" 
           strokeWidth="2" 
           fill="none"
-          strokeDasharray="1000"
-          strokeDashoffset="1000"
-          className="animate-draw-line"
-          style={{ animationDelay: '0.5s' }}
         />
         
         <path 
@@ -69,21 +60,17 @@ const CircuitPattern: React.FC = () => {
           stroke="#030349" 
           strokeWidth="2" 
           fill="none"
-          strokeDasharray="1000"
-          strokeDashoffset="1000"
-          className="animate-draw-line"
-          style={{ animationDelay: '0.8s' }}
         />
         
         {/* Circuit nodes */}
-        <circle cx="100" cy="100" r="4" fill="#6E59A5" className="animate-fade-in" style={{ animationDelay: '0.3s' }} />
-        <circle cx="300" cy="200" r="4" fill="#6E59A5" className="animate-fade-in" style={{ animationDelay: '0.6s' }} />
-        <circle cx="500" cy="400" r="6" fill="#6E59A5" className="animate-fade-in" style={{ animationDelay: '0.9s' }} />
-        <circle cx="200" cy="300" r="4" fill="#6E59A5" className="animate-fade-in" style={{ animationDelay: '1.2s' }} />
-        <circle cx="400" cy="500" r="4" fill="#6E59A5" className="animate-fade-in" style={{ animationDelay: '1.5s' }} />
-        <circle cx="600" cy="200" r="4" fill="#030349" className="animate-fade-in" style={{ animationDelay: '1.8s' }} />
-        <circle cx="400" cy="300" r="6" fill="#030349" className="animate-fade-in" style={{ animationDelay: '2.1s' }} />
-        <circle cx="500" cy="300" r="4" fill="#030349" className="animate-fade-in" style={{ animationDelay: '2.4s' }} />
+        <circle cx="100" cy="100" r="4" fill="#6E59A5" />
+        <circle cx="300" cy="200" r="4" fill="#6E59A5" />
+        <circle cx="500" cy="400" r="6" fill="#6E59A5" />
+        <circle cx="200" cy="300" r="4" fill="#6E59A5" />
+        <circle cx="400" cy="500" r="4" fill="#6E59A5" />
+        <circle cx="600" cy="200" r="4" fill="#030349" />
+        <circle cx="400" cy="300" r="6" fill="#030349" />
+        <circle cx="500" cy="300" r="4" fill="#030349" />
         
         {/* Add more paths and circles as needed */}
       </svg>

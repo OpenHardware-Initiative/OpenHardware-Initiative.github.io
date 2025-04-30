@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SponsorSection from "@/components/SponsorSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Chip, Cpu, CircuitBoard, Database } from "lucide-react";
+import { Cpu, CircuitBoard, Database } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
 
 const Index = () => {
@@ -23,7 +23,7 @@ const Index = () => {
           }}
         />
         
-        {/* Animated circuit pattern overlay */}
+        {/* Static circuit pattern overlay (no animation) */}
         <CircuitPattern />
         
         {/* Large decorative circles inspired by reference */}
@@ -116,7 +116,7 @@ const Index = () => {
               <Card className="focus-card">
                 <CardContent className="p-6">
                   <div className="focus-icon bg-primary-blue/10 text-primary-blue">
-                    <Chip size={24} />
+                    <CircuitBoard size={24} />
                   </div>
                   <h3 className="text-xl font-bold mb-3">TinyML</h3>
                   <p className="text-gray-600">
