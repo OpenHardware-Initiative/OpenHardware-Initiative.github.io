@@ -30,7 +30,6 @@ export default {
                 'offwhite': '#FDF7EF',
                 'bistre': '#34200C',
                 'night': '#131313',
-                'tertiary-purple': '#6E59A5',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
