@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { getCoDirectors, getTeamLeads, getTeamMembers, getAdvisors } from "@/data/teamData";
 import TeamMember from "@/components/TeamMember";
-import { UserCheck, User, Medal, GraduationCap } from "lucide-react";
+import { UserCheck, User, GraduationCap } from "lucide-react";
 
 const Team = () => {
   const coDirectors = getCoDirectors();
@@ -45,6 +45,7 @@ const Team = () => {
                   education={member.education}
                   personIndex={index}
                   isCoDirector={true}
+                  isOpenPosition={member.isOpenPosition}
                 />
               ))}
             </div>
@@ -63,6 +64,7 @@ const Team = () => {
                   image={member.image}
                   linkedIn={member.linkedIn}
                   education={member.education}
+                  isOpenPosition={member.isOpenPosition}
                 />
               ))}
             </div>
@@ -81,6 +83,7 @@ const Team = () => {
                   image={member.image}
                   linkedIn={member.linkedIn}
                   education={member.education}
+                  isOpenPosition={member.isOpenPosition}
                 />
               ))}
             </div>
@@ -99,6 +102,7 @@ const Team = () => {
                   image={member.image}
                   linkedIn={member.linkedIn}
                   education={member.education}
+                  isOpenPosition={member.isOpenPosition}
                 />
               ))}
             </div>

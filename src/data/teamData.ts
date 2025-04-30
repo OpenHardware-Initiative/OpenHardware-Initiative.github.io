@@ -10,6 +10,7 @@ export interface TeamMember {
   joinDate: string;
   endDate?: string;
   contributions?: string[];
+  isOpenPosition?: boolean;
 }
 
 // Team data
@@ -46,26 +47,28 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-05"
   },
   
-  // Team Leads
+  // Team Leads - Open Positions
   {
     id: "4",
-    name: "Michael Rodriguez",
+    name: "This could be you!",
     role: "Team Lead - Operations",
-    image: "/media/team/michael-rodriguez.jpg",
+    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
     linkedIn: "https://linkedin.com",
-    education: "M.Sc. Electrical Engineering",
+    education: "Join our team!",
     isActive: true,
-    joinDate: "2022-10"
+    joinDate: "2023-01",
+    isOpenPosition: true
   },
   {
     id: "5",
-    name: "David Wang",
+    name: "This could be you!",
     role: "Team Lead - Communications",
-    image: "/media/team/david-wang.jpg",
+    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
     linkedIn: "https://linkedin.com",
-    education: "B.Sc. Computer Engineering",
+    education: "Join our team!",
     isActive: true,
-    joinDate: "2023-03"
+    joinDate: "2023-01",
+    isOpenPosition: true
   },
   
   // Advisors
@@ -90,34 +93,44 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-01"
   },
   
-  // Team Members
+  // Team Members - New team members with uploaded images
   {
     id: "6",
-    name: "James Wilson",
+    name: "Kagan Dikmen",
     role: "Team Member",
-    image: "/media/team/james-wilson.jpg",
+    image: "/lovable-uploads/b7787fa8-d8a8-4c59-b082-811aa7f8f93e.png",
     linkedIn: "https://linkedin.com",
-    education: "B.Sc. Electrical Engineering",
+    education: "TUM, Bachelor Electrical Engineering and Information Technology",
     isActive: true,
     joinDate: "2023-06"
   },
   {
     id: "7",
-    name: "Thomas Schmidt",
+    name: "Mehmet Efe Karadeniz",
     role: "Team Member",
-    image: "/media/team/thomas-schmidt.jpg",
+    image: "/lovable-uploads/ab13a4db-2938-4aed-9a39-80130bb95fb1.png",
     linkedIn: "https://linkedin.com",
-    education: "M.Sc. Robotics",
+    education: "TUM, Bachelor Electrical Engineering and Information Technology",
     isActive: true,
     joinDate: "2023-09"
   },
   {
     id: "8",
-    name: "Nina Patel",
+    name: "Osman Yasar",
     role: "Team Member",
-    image: "/media/team/nina-patel.jpg",
+    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
     linkedIn: "https://linkedin.com",
-    education: "B.Sc. Computer Science",
+    education: "TUM, Master Communications and Electronics",
+    isActive: true,
+    joinDate: "2023-10"
+  },
+  {
+    id: "9",
+    name: "Tobias Konieczny",
+    role: "Team Member",
+    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
+    linkedIn: "https://linkedin.com",
+    education: "TUM, Bachelor Computer Science",
     isActive: true,
     joinDate: "2023-10"
   },
