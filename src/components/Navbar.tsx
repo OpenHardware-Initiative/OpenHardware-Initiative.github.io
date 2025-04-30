@@ -31,6 +31,21 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location.pathname]);
   
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMobile) {
+      if (isMenuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen, isMobile]);
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -117,15 +132,15 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobile && (
           <div 
-            className={`md:hidden fixed inset-x-0 top-[72px] bottom-0 z-20 bg-white/95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
+            className={`md:hidden fixed inset-0 top-[72px] z-20 bg-white pt-4 transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-y-0" : "-translate-y-full"
             }`}
           >
-            <nav className="flex flex-col p-6 space-y-4 h-full">
-              <div className="flex flex-col space-y-4 flex-grow">
+            <nav className="flex flex-col p-6 space-y-4 h-[calc(100vh-72px)] overflow-y-auto">
+              <div className="flex flex-col space-y-6 flex-grow mb-6">
                 <Link 
                   to="/" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -135,7 +150,7 @@ const Navbar = () => {
                 </Link>
                 <Link 
                   to="/about" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/about") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -145,7 +160,7 @@ const Navbar = () => {
                 </Link>
                 <Link 
                   to="/projects" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/projects") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -155,7 +170,7 @@ const Navbar = () => {
                 </Link>
                 <Link 
                   to="/team" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/team") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -165,7 +180,7 @@ const Navbar = () => {
                 </Link>
                 <Link 
                   to="/alumni" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/alumni") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -175,7 +190,7 @@ const Navbar = () => {
                 </Link>
                 <Link 
                   to="/contact" 
-                  className={`py-3 px-4 font-bold text-xl rounded-md ${
+                  className={`py-4 px-4 font-bold text-xl rounded-md ${
                     isActive("/contact") 
                       ? "bg-primary-blue/10 text-primary-blue" 
                       : "text-gray-700 hover:bg-gray-100"
@@ -185,7 +200,7 @@ const Navbar = () => {
                 </Link>
               </div>
               
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 mt-auto">
                 <a 
                   href="https://forms.google.com/form" 
                   target="_blank" 
