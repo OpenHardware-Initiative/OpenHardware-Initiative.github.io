@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -24,6 +24,11 @@ const Navbar = () => {
     };
   }, []);
   
+  // Close the mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,7 +40,7 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled || isMenuOpen ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -99,70 +104,71 @@ const Navbar = () => {
           
           {/* Mobile Navigation Toggle */}
           <button 
-            className="md:hidden p-2 rounded-md text-primary-blue"
+            className="md:hidden p-2 rounded-md text-primary-blue transition-colors"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <Menu size={24} />
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
         
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 flex flex-col space-y-2 border-t mt-4 bg-white">
+        <div 
+          className={`md:hidden fixed inset-x-0 top-[72px] z-20 bg-white/95 backdrop-blur-md shadow-md transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
+          <nav className="flex flex-col py-4 px-6 space-y-3">
             <Link 
               to="/" 
-              className={`p-2 font-bold ${isActive("/") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/") ? "text-primary-blue" : "text-gray-700"}`}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className={`p-2 font-bold ${isActive("/about") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/about") ? "text-primary-blue" : "text-gray-700"}`}
             >
               About
             </Link>
             <Link 
               to="/projects" 
-              className={`p-2 font-bold ${isActive("/projects") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/projects") ? "text-primary-blue" : "text-gray-700"}`}
             >
               Projects
             </Link>
             <Link 
               to="/team" 
-              className={`p-2 font-bold ${isActive("/team") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/team") ? "text-primary-blue" : "text-gray-700"}`}
             >
               Team
             </Link>
             <Link 
               to="/alumni" 
-              className={`p-2 font-bold ${isActive("/alumni") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/alumni") ? "text-primary-blue" : "text-gray-700"}`}
             >
               Alumni
             </Link>
             <Link 
               to="/contact" 
-              className={`p-2 font-bold ${isActive("/contact") ? "text-primary-blue" : "text-gray-700"}`}
-              onClick={() => setIsMenuOpen(false)}
+              className={`py-2.5 font-bold text-lg flex items-center ${isActive("/contact") ? "text-primary-blue" : "text-gray-700"}`}
             >
               Contact
             </Link>
-            <a 
-              href="https://forms.google.com/form" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-2 bg-primary-blue text-white font-bold rounded-md text-center mt-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Join Us
-            </a>
+            <div className="pt-2">
+              <a 
+                href="https://forms.google.com/form" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold w-full py-6 text-lg">
+                  Join Us
+                </Button>
+              </a>
+            </div>
           </nav>
-        )}
+        </div>
       </div>
     </header>
   );
