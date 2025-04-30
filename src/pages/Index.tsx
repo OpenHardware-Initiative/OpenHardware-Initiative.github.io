@@ -1,200 +1,160 @@
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import ParallaxSection from "@/components/ParallaxSection";
 import SponsorSection from "@/components/SponsorSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, CircuitBoard, Lightbulb, Database } from "lucide-react";
-import CircuitAnimation from "@/components/CircuitAnimation";
+import { Chip, Cpu, CircuitBoard, Database } from "lucide-react";
+import CircuitPattern from "@/components/CircuitPattern";
 
 const Index = () => {
-  const focusAreasRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Create animated shapes
-    const createShapes = () => {
-      const shapes = document.querySelectorAll('.geometric-shape');
-      shapes.forEach(shape => shape.remove());
-      
-      const container = document.querySelector('.hero-section');
-      if (container) {
-        for (let i = 0; i < 5; i++) {
-          const shape = document.createElement('div');
-          shape.classList.add('geometric-shape');
-          
-          // Random size between 100px and 300px
-          const size = Math.floor(Math.random() * 200) + 100;
-          shape.style.width = `${size}px`;
-          shape.style.height = `${size}px`;
-          
-          // Random position
-          const maxX = container.clientWidth - size;
-          const maxY = container.clientHeight - size;
-          const x = Math.floor(Math.random() * maxX);
-          const y = Math.floor(Math.random() * maxY);
-          shape.style.left = `${x}px`;
-          shape.style.top = `${y}px`;
-          
-          // Random color gradient - FIX: Add classes individually
-          const gradients = [
-            ['from-primary-blue/30', 'to-bistre/30'],
-            ['from-bistre/20', 'to-primary-blue/20'],
-            ['from-primary-blue/20', 'to-night/20'],
-            ['from-tertiary-purple/20', 'to-primary-blue/20'],
-            ['from-tertiary-purple/30', 'to-bistre/20']
-          ];
-          const selectedGradient = gradients[Math.floor(Math.random() * gradients.length)];
-          shape.classList.add('bg-gradient-to-r', ...selectedGradient);
-          
-          // Add animation
-          shape.style.animationDelay = `${Math.random() * 5}s`;
-          shape.classList.add('animate-float');
-          
-          container.appendChild(shape);
-        }
-      }
-    };
-    
-    createShapes();
-    window.addEventListener('resize', createShapes);
-    
-    return () => {
-      window.removeEventListener('resize', createShapes);
-    };
-  }, []);
-
-  const animateElement = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-slide-up');
-      }
-    });
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(animateElement, {
-      threshold: 0.1
-    });
-    
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach(el => observer.observe(el));
-    
-    return () => {
-      elements.forEach(el => observer.unobserve(el));
-    };
-  }, []);
-
   return (
-    <>
-      {/* Hero Section with Parallax */}
-      <section className="hero-section bg-offwhite">
-        <div className="circuit-pattern"></div>
-        <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-3/5 pt-24">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-primary-blue">
-              OpenHardware
-              <span className="block text-bistre">Initiative</span>
+    <div className="min-h-screen">
+      {/* Hero Section with modern design inspired by reference */}
+      <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
+        {/* Circuit background */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('/lovable-uploads/2026b668-4037-425a-b348-cf29b9b520bf.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.06
+          }}
+        />
+        
+        {/* Animated circuit pattern overlay */}
+        <CircuitPattern />
+        
+        {/* Large decorative circles inspired by reference */}
+        <div className="hero-circle left-[10%] top-[-10%] w-[500px] h-[500px] bg-tertiary-purple opacity-10 hidden md:block" />
+        <div className="hero-circle right-[-10%] bottom-[-30%] w-[600px] h-[600px] bg-primary-blue/10 hidden md:block" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="font-bold text-6xl md:text-7xl lg:text-8xl mb-3 text-primary-blue">
+              Open<span className="text-tertiary-purple">Hardware</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-xl">
-              Pioneering the future of hardware acceleration, chip design, and smart manufacturing
-              through student-led innovation and research.
+            
+            <p className="text-4xl md:text-5xl lg:text-6xl font-medium text-night mb-8 max-w-3xl">
+              Pioneering the future of hardware acceleration
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/projects">
-                <Button className="bg-primary-blue hover:bg-primary-blue/90 text-lg px-8 py-6">
-                  Explore Projects
-                </Button>
-              </Link>
-              <a 
-                href="https://forms.google.com/form" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" className="text-lg px-8 py-6 border-2 border-tertiary-purple hover:bg-tertiary-purple/10">
-                  Join Our Team
-                </Button>
-              </a>
+            
+            <div className="max-w-2xl">
+              <p className="text-xl mb-10 text-gray-700">
+                Student-led innovation and research in chip design, hardware acceleration, 
+                and smart manufacturing systems from concept to implementation.
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link to="/projects">
+                  <Button size="lg" className="bg-primary-blue hover:bg-primary-blue/90 text-white text-lg px-8">
+                    Our Projects
+                  </Button>
+                </Link>
+                <a 
+                  href="https://forms.google.com/form" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="lg" className="border-tertiary-purple text-tertiary-purple hover:bg-tertiary-purple/5 text-lg px-8">
+                    Join Our Team
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
-          <div className="w-full md:w-2/5 mt-12 md:mt-0">
-            <CircuitAnimation />
-          </div>
         </div>
       </section>
 
-      {/* Focus Areas */}
-      <section ref={focusAreasRef} className="py-24 bg-white">
+      {/* Focus Areas with clean modern design */}
+      <section className="py-20 bg-white relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Focus Areas</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple">
-              <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
-                  <CircuitBoard size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Chip Design</h3>
-                <p className="text-gray-600">
-                  Creating innovative chip architectures for next-generation computing, focusing on energy efficiency and performance.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 relative">
+              Our Focus Areas
+              <span className="absolute -bottom-3 left-0 w-20 h-1 bg-tertiary-purple"></span>
+            </h2>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.2s" }}>
-              <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue">
-                  <Cpu size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">AI Hardware Acceleration</h3>
-                <p className="text-gray-600">
-                  Developing specialized hardware accelerators for machine learning workloads to improve both speed and efficiency.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="focus-card">
+                <CardContent className="p-6">
+                  <div className="focus-icon bg-tertiary-purple/10 text-tertiary-purple">
+                    <CircuitBoard size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Chip Design</h3>
+                  <p className="text-gray-600">
+                    Creating innovative chip architectures for next-generation computing, focusing on energy efficiency and performance.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card">
+                <CardContent className="p-6">
+                  <div className="focus-icon bg-primary-blue/10 text-primary-blue">
+                    <Cpu size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">AI Hardware Acceleration</h3>
+                  <p className="text-gray-600">
+                    Developing specialized hardware accelerators for machine learning workloads to improve both speed and efficiency.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card">
+                <CardContent className="p-6">
+                  <div className="focus-icon bg-tertiary-purple/10 text-tertiary-purple">
+                    <Database size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Smart Manufacturing</h3>
+                  <p className="text-gray-600">
+                    Implementing Industry 4.0 techniques with IoT devices for smarter, more efficient manufacturing processes.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card">
+                <CardContent className="p-6">
+                  <div className="focus-icon bg-primary-blue/10 text-primary-blue">
+                    <Chip size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">TinyML</h3>
+                  <p className="text-gray-600">
+                    Bringing machine learning to embedded and IoT devices with optimized algorithms and hardware designs.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
             
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all" style={{ animationDelay: "0.4s" }}>
-              <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-bistre/10 rounded-full flex items-center justify-center text-bistre">
-                  <Database size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Smart Manufacturing</h3>
-                <p className="text-gray-600">
-                  Implementing Industry 4.0 techniques with IoT devices for smarter, more efficient manufacturing processes.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="animate-on-scroll opacity-0 shadow-sm hover:shadow-md transition-all border-l-4 border-l-tertiary-purple" style={{ animationDelay: "0.6s" }}>
-              <CardContent className="pt-6">
-                <div className="mb-4 w-14 h-14 bg-tertiary-purple/10 rounded-full flex items-center justify-center text-tertiary-purple">
-                  <Lightbulb size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">TinyML</h3>
-                <p className="text-gray-600">
-                  Bringing machine learning to embedded and IoT devices with optimized algorithms and hardware designs.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link to="/about">
-              <Button variant="outline" className="border-2 border-tertiary-purple hover:bg-tertiary-purple/10">
-                Learn More About Our Work
-              </Button>
-            </Link>
+            <div className="text-center mt-16">
+              <Link to="/about">
+                <Button variant="outline" className="border-2 border-primary-blue hover:bg-primary-blue/5">
+                  Learn More About Our Work
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
       
-      {/* Team Section with Parallax */}
-      <ParallaxSection bgImage="/placeholder.svg">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-white/90 backdrop-blur-sm py-12 px-6 md:px-12 rounded-lg shadow-xl max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-primary-blue">Our Team</h2>
-            <p className="text-lg mb-8">
-              We're a diverse group of students and researchers passionate about pushing the boundaries of hardware innovation.
+      {/* Team Section with parallax */}
+      <section className="relative py-32 overflow-hidden bg-gray-50">
+        <div 
+          className="parallax-bg"
+          style={{
+            backgroundImage: `url('/lovable-uploads/00225023-66fb-4121-a55e-2d302a639d83.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.1
+          }}
+        />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6 text-primary-blue">Our Team</h2>
+            <p className="text-lg mb-10 text-gray-700">
+              We're a diverse group of students and researchers passionate about pushing 
+              the boundaries of hardware innovation.
             </p>
             <Link to="/team">
               <Button className="bg-tertiary-purple hover:bg-tertiary-purple/90 text-white">
@@ -203,11 +163,11 @@ const Index = () => {
             </Link>
           </div>
         </div>
-      </ParallaxSection>
+      </section>
       
       {/* Sponsors */}
       <SponsorSection />
-    </>
+    </div>
   );
 };
 
