@@ -1,4 +1,3 @@
-
 // Define interfaces for better type safety
 export interface TeamMember {
   id: string;
@@ -15,10 +14,11 @@ export interface TeamMember {
 
 // Team data
 export const teamData: TeamMember[] = [
+  // Co-directors
   {
     id: "1",
     name: "Emily Chen",
-    role: "Team Lead",
+    role: "Co-Director",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "Ph.D. Computer Engineering",
@@ -26,19 +26,9 @@ export const teamData: TeamMember[] = [
     joinDate: "2022-09"
   },
   {
-    id: "2",
-    name: "Michael Rodriguez",
-    role: "Hardware Engineer",
-    image: "/placeholder.svg",
-    linkedIn: "https://linkedin.com",
-    education: "M.Sc. Electrical Engineering",
-    isActive: true,
-    joinDate: "2022-10"
-  },
-  {
     id: "3",
     name: "Sarah Kim",
-    role: "Board Member",
+    role: "Co-Director",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "M.Sc. Computer Science",
@@ -46,28 +36,43 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-01"
   },
   {
-    id: "4",
-    name: "David Wang",
-    role: "FPGA Specialist",
-    image: "/placeholder.svg",
-    linkedIn: "https://linkedin.com",
-    education: "B.Sc. Computer Engineering",
-    isActive: true,
-    joinDate: "2023-03"
-  },
-  {
     id: "5",
     name: "Lisa Müller",
-    role: "AI Compiler Developer",
+    role: "Co-Director",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "M.Sc. Machine Learning",
     isActive: true,
     joinDate: "2023-05"
   },
+  
+  // Team Leads
+  {
+    id: "2",
+    name: "Michael Rodriguez",
+    role: "Team Lead - Operations",
+    image: "/placeholder.svg",
+    linkedIn: "https://linkedin.com",
+    education: "M.Sc. Electrical Engineering",
+    isActive: true,
+    joinDate: "2022-10"
+  },
+  {
+    id: "4",
+    name: "David Wang",
+    role: "Team Lead - Communications",
+    image: "/placeholder.svg",
+    linkedIn: "https://linkedin.com",
+    education: "B.Sc. Computer Engineering",
+    isActive: true,
+    joinDate: "2023-03"
+  },
+  
+  // Team Members
   {
     id: "6",
     name: "James Wilson",
+    role: "Team Member",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "B.Sc. Electrical Engineering",
@@ -77,6 +82,7 @@ export const teamData: TeamMember[] = [
   {
     id: "7",
     name: "Thomas Schmidt",
+    role: "Team Member",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "M.Sc. Robotics",
@@ -86,17 +92,19 @@ export const teamData: TeamMember[] = [
   {
     id: "8",
     name: "Nina Patel",
+    role: "Team Member",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     education: "B.Sc. Computer Science",
     isActive: true,
     joinDate: "2023-10"
   },
+  
   // Alumni
   {
     id: "9",
     name: "Robert Garcia",
-    role: "Former Team Lead",
+    role: "Former Co-Director",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     isActive: false,
@@ -111,7 +119,7 @@ export const teamData: TeamMember[] = [
   {
     id: "10",
     name: "Julia Schwarz",
-    role: "Former Hardware Engineer",
+    role: "Former Team Lead",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     isActive: false,
@@ -126,7 +134,7 @@ export const teamData: TeamMember[] = [
   {
     id: "11",
     name: "Kai Zhang",
-    role: "Former FPGA Developer",
+    role: "Former Team Member",
     image: "/placeholder.svg",
     linkedIn: "https://linkedin.com",
     isActive: false,
@@ -159,24 +167,28 @@ export const getMembersByRole = (role: string): TeamMember[] => {
   );
 };
 
-// Function to get board members
-export const getBoardMembers = (): TeamMember[] => {
+// Function to get co-directors
+export const getCoDirectors = (): TeamMember[] => {
   return teamData.filter(member => 
-    member.isActive && (member.role?.includes("Lead") || member.role?.includes("Board"))
+    member.isActive && member.role?.includes("Co-Director")
   );
 };
 
-// Function to get technical team members
-export const getTechnicalTeam = (): TeamMember[] => {
+// Function to get team leads
+export const getTeamLeads = (): TeamMember[] => {
   return teamData.filter(member => 
-    member.isActive && 
-    !member.role?.includes("Lead") && 
-    !member.role?.includes("Board") && 
-    member.role
+    member.isActive && member.role?.includes("Team Lead")
   );
 };
 
-// Function to get regular members
-export const getRegularMembers = (): TeamMember[] => {
-  return teamData.filter(member => member.isActive && !member.role);
+// Function to get team members
+export const getTeamMembers = (): TeamMember[] => {
+  return teamData.filter(member => 
+    member.isActive && member.role?.includes("Team Member")
+  );
 };
+
+// Keeping these for backward compatibility
+export const getBoardMembers = getCoDirectors;
+export const getTechnicalTeam = getTeamLeads;
+export const getRegularMembers = getTeamMembers;

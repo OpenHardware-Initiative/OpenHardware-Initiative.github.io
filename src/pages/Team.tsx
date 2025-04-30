@@ -1,12 +1,13 @@
 
 import React, { useEffect } from "react";
-import { getBoardMembers, getTechnicalTeam, getRegularMembers } from "@/data/teamData";
+import { getCoDirectors, getTeamLeads, getTeamMembers } from "@/data/teamData";
 import TeamMember from "@/components/TeamMember";
+import { Star, UserCheck, User } from "lucide-react";
 
 const Team = () => {
-  const boardMembers = getBoardMembers();
-  const technicalTeam = getTechnicalTeam();
-  const regularMembers = getRegularMembers();
+  const coDirectors = getCoDirectors();
+  const teamLeads = getTeamLeads();
+  const teamMembers = getTeamMembers();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,10 +29,13 @@ const Team = () => {
       <section className="py-16 bg-offwhite">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Board Members */}
-            <h2 className="text-2xl font-bold mb-8 text-primary-blue">Board Members</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {boardMembers.map(member => (
+            {/* Co-Directors */}
+            <div className="flex items-center mb-8 gap-3">
+              <Star className="text-primary-blue" size={24} />
+              <h2 className="text-2xl font-bold text-primary-blue">Co-Directors</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {coDirectors.map(member => (
                 <TeamMember
                   key={member.id}
                   name={member.name}
@@ -43,10 +47,13 @@ const Team = () => {
               ))}
             </div>
             
-            {/* Technical Team */}
-            <h2 className="text-2xl font-bold mb-8 text-primary-blue">Technical Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {technicalTeam.map(member => (
+            {/* Team Leads */}
+            <div className="flex items-center mb-8 gap-3">
+              <UserCheck className="text-primary-blue" size={24} />
+              <h2 className="text-2xl font-bold text-primary-blue">Team Leads</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {teamLeads.map(member => (
                 <TeamMember
                   key={member.id}
                   name={member.name}
@@ -58,13 +65,17 @@ const Team = () => {
               ))}
             </div>
             
-            {/* Members */}
-            <h2 className="text-2xl font-bold my-8 text-primary-blue">Members</h2>
+            {/* Team Members */}
+            <div className="flex items-center mb-8 gap-3">
+              <User className="text-primary-blue" size={24} />
+              <h2 className="text-2xl font-bold text-primary-blue">Team Members</h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {regularMembers.map(member => (
+              {teamMembers.map(member => (
                 <TeamMember
                   key={member.id}
                   name={member.name}
+                  role={member.role}
                   image={member.image}
                   linkedIn={member.linkedIn}
                   education={member.education}
