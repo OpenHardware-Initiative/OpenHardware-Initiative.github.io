@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 const Index = () => {
   const isMobile = useIsMobile();
   return <div className="min-h-screen bg-offwhite">
@@ -66,7 +67,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-primary-blue">
               <span className="relative pb-2">
-                What We Develop
+                What We Work On
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-bistre"></span>
               </span>
             </h2>
