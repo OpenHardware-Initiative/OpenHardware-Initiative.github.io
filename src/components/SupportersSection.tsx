@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
 interface Partner {
@@ -34,7 +33,7 @@ const SupportersSection = () => {
               <div className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-primary-blue mb-1">{partner.name}</h3>
                 <p className="text-bistre mb-1 font-medium">{partner.role}</p>
-                <p className="text-night text-sm">{partner.organization}</p>
+                <p className="text-night text-sm font-semibold">{partner.organization}</p>
               </div>
             </Card>)}
         </div>
