@@ -14,19 +14,19 @@ const partners: Partner[] = [
     name: "Prof. Schlichtmann",
     role: "EDA Chair",
     organization: "TUM",
-    logoSrc: "/lovable-uploads/c437def5-92ff-48cf-86eb-2300aa696360.png"
+    logoSrc: "/lovable-uploads/13247213-358a-4273-9ad0-b5fa1af9c924.png"
   }, 
   {
     name: "OpenResearch e.V.",
     role: "Non-Profit Organization",
     organization: "",
-    logoSrc: "/lovable-uploads/eb05a193-9f42-4e1b-84c5-197b7eacb6a5.png"
+    logoSrc: "/lovable-uploads/c437def5-92ff-48cf-86eb-2300aa696360.png"
   }, 
   {
     name: "neuroTUM",
     role: "Student Initiative",
     organization: "part of OpenResearch e.V.",
-    logoSrc: "/lovable-uploads/13247213-358a-4273-9ad0-b5fa1af9c924.png"
+    logoSrc: "/lovable-uploads/eb05a193-9f42-4e1b-84c5-197b7eacb6a5.png"
   }
 ];
 
