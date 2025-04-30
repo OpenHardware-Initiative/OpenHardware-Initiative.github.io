@@ -10,10 +10,18 @@ interface EventCardProps {
   event: Event;
 }
 
+/**
+ * EventCard component
+ * Displays a single event with its details in a card format
+ */
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const { title, description, date, image, link, organizers, supporters, location } = event;
 
-  // Format date for display
+  /**
+   * Formats a date string for display
+   * @param dateString - Date in format YYYY-MM-DD
+   * @returns Formatted date string
+   */
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { 
       year: 'numeric', 
@@ -23,7 +31,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-  // Get appropriate icon for link type
+  /**
+   * Returns the appropriate icon based on link type
+   * @param type - Link type (instagram, linkedin, etc.)
+   * @returns Icon component
+   */
   const getLinkIcon = (type: string) => {
     switch (type) {
       case "instagram":
@@ -35,7 +47,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     }
   };
 
-  // Get link text based on type
+  /**
+   * Returns descriptive text based on link type
+   * @param type - Link type
+   * @returns Text to display for the link
+   */
   const getLinkText = (type: string) => {
     switch (type) {
       case "instagram":
@@ -53,6 +69,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
   return (
     <Card className="overflow-hidden h-full flex flex-col transition-all hover:shadow-md">
+      {/* Image and date/location badges */}
       <div className="relative h-48">
         <img 
           src={image} 
@@ -72,10 +89,12 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         )}
       </div>
       
+      {/* Event title */}
       <CardHeader className="pb-2">
         <h3 className="font-bold text-lg text-primary-blue">{title}</h3>
       </CardHeader>
       
+      {/* Event details */}
       <CardContent className="flex-grow">
         <p className="text-gray-600 text-sm mb-4">{description}</p>
         
@@ -113,6 +132,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         </div>
       </CardContent>
       
+      {/* Link to event */}
       <CardFooter className="pt-2 border-t">
         <a 
           href={link.url} 
