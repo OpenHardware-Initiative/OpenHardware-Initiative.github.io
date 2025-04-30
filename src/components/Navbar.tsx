@@ -129,93 +129,91 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-        
-      {/* Mobile Navigation Menu - Moved outside the container to prevent content overlap */}
+
+      {/* Mobile Navigation Menu */}
       {isMobile && (
         <div 
-          className={`md:hidden fixed inset-0 top-[72px] bg-white z-40 transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+          className={`fixed inset-0 top-[72px] bg-white z-40 md:hidden transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="absolute inset-0 bg-white overflow-hidden">
-            <nav className="flex flex-col p-6 space-y-6 h-[calc(100vh-72px)] overflow-y-auto">
-              <div className="flex flex-col space-y-6">
-                <Link 
-                  to="/" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  Home
-                </Link>
-                <Link 
-                  to="/about" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/about") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  About
-                </Link>
-                <Link 
-                  to="/projects" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/projects") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  Projects
-                </Link>
-                <Link 
-                  to="/team" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/team") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  Team
-                </Link>
-                <Link 
-                  to="/alumni" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/alumni") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  Alumni
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className={`py-4 px-4 font-bold text-xl rounded-md ${
-                    isActive("/contact") 
-                      ? "bg-primary-blue/10 text-primary-blue" 
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  Contact
-                </Link>
-              </div>
-              
-              <div className="mt-auto pt-6 border-t border-gray-200">
-                <a 
-                  href="https://forms.google.com/form" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                >
-                  <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold w-full py-7 text-xl">
-                    Join Us
-                  </Button>
-                </a>
-              </div>
-            </nav>
-          </div>
+          <nav className="flex flex-col p-6 h-[calc(100vh-72px)] overflow-y-auto">
+            <div className="flex flex-col space-y-6">
+              <Link 
+                to="/" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/about") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                About
+              </Link>
+              <Link 
+                to="/projects" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/projects") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                Projects
+              </Link>
+              <Link 
+                to="/team" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/team") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                Team
+              </Link>
+              <Link 
+                to="/alumni" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/alumni") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                Alumni
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`py-4 px-4 font-bold text-xl rounded-md ${
+                  isActive("/contact") 
+                    ? "bg-primary-blue/10 text-primary-blue" 
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
+            
+            <div className="mt-auto pt-6 border-t border-gray-200">
+              <a 
+                href="https://forms.google.com/form" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold w-full py-7 text-xl">
+                  Join Us
+                </Button>
+              </a>
+            </div>
+          </nav>
         </div>
       )}
     </header>
