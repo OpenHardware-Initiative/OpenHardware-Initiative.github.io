@@ -1,3 +1,4 @@
+
 // Define interfaces for better type safety
 export interface TeamMember {
   id: string;
@@ -66,6 +67,36 @@ export const teamData: TeamMember[] = [
     education: "B.Sc. Computer Engineering",
     isActive: true,
     joinDate: "2023-03"
+  },
+  
+  // Advisors
+  {
+    id: "12",
+    name: "Prof. Ulf Schlichtmann",
+    role: "Advisor - EDA Chair, TUM",
+    image: "/placeholder.svg",
+    linkedIn: "https://linkedin.com",
+    education: "Ph.D. Electronic Design Automation",
+    isActive: true,
+    joinDate: "2022-01"
+  },
+  {
+    id: "13",
+    name: "OpenResearch e.V.",
+    role: "Advisor - Umbrella Organization",
+    image: "/placeholder.svg",
+    linkedIn: "https://linkedin.com",
+    isActive: true,
+    joinDate: "2022-03"
+  },
+  {
+    id: "14",
+    name: "neuroTUM",
+    role: "Advisor - Student Initiative",
+    image: "/placeholder.svg",
+    linkedIn: "https://linkedin.com",
+    isActive: true,
+    joinDate: "2022-06"
   },
   
   // Team Members
@@ -178,6 +209,13 @@ export const getCoDirectors = (): TeamMember[] => {
 export const getTeamLeads = (): TeamMember[] => {
   return teamData.filter(member => 
     member.isActive && member.role?.includes("Team Lead")
+  );
+};
+
+// Function to get advisors
+export const getAdvisors = (): TeamMember[] => {
+  return teamData.filter(member => 
+    member.isActive && member.role?.includes("Advisor")
   );
 };
 
