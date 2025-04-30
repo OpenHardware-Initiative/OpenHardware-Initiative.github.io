@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
@@ -46,7 +45,7 @@ const Navbar = () => {
               alt="OpenHardware Logo" 
               className="h-10 w-auto mr-2" 
             />
-            <span className="text-2xl font-bold text-primary-blue">Open<span className="text-bistre">Hardware</span></span>
+            <span className="text-2xl font-bold text-[#333351]">Open<span className="text-[#AB9A89]">Hardware</span></span>
           </Link>
           
           {/* Desktop Navigation */}

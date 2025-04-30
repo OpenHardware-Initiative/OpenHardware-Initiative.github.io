@@ -25,10 +25,10 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-                // Updated color palette based on provided image
-                'primary-blue': '#030349',
+                // Updated color palette with new hex values
+                'primary-blue': '#333351',
                 'offwhite': '#FDF7EF',
-                'bistre': '#34200C',
+                'bistre': '#AB9A89',
                 'night': '#131313',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

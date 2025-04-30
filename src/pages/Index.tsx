@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import SponsorSection from "@/components/SponsorSection";
@@ -27,8 +28,8 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h1 className="font-bold text-6xl md:text-7xl mb-3 text-primary-blue lg:text-[333351] text-[#333351]">
-              Open<span className="text-[AB9A89] text-[#ab9a89]">Hardware</span>
+            <h1 className="font-bold text-6xl md:text-7xl mb-3 text-primary-blue lg:text-[#333351] text-[#333351]">
+              Open<span className="text-[#AB9A89] text-[#AB9A89]">Hardware</span>
             </h1>
             
             <p className="text-4xl md:text-5xl lg:text-6xl font-medium text-night mb-8 max-w-3xl">
