@@ -5,7 +5,7 @@ import SponsorSection from "@/components/SponsorSection";
 import SupportersSection from "@/components/SupportersSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, CircuitBoard, Database } from "lucide-react";
+import { Cpu, CircuitBoard, Database, Robot, Drone, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
 
 const Index = () => {
@@ -68,18 +68,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Focus Areas with cleaner design */}
+      {/* What we develop section */}
       <section className="py-20 bg-offwhite relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-primary-blue">
               <span className="relative pb-2">
-                Our Focus Areas
+                What We Develop
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-bistre"></span>
               </span>
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-8">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
@@ -97,7 +97,7 @@ const Index = () => {
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                     <Cpu size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-primary-blue">AI Hardware Acceleration</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">Hardware Accelerators</h3>
                   <p className="text-night">
                     Developing specialized hardware accelerators for machine learning workloads to improve both speed and efficiency.
                   </p>
@@ -107,11 +107,35 @@ const Index = () => {
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-8">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Cpu size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">AI Processors</h3>
+                  <p className="text-night">
+                    Building next-generation processors specifically designed for AI and machine learning applications.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-8">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                     <Database size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-primary-blue">Smart Manufacturing</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">EDA & Manufacturing Tools</h3>
                   <p className="text-night">
-                    Implementing Industry 4.0 techniques with IoT devices for smarter, more efficient manufacturing processes.
+                    Creating electronic design automation tools that streamline chip development and manufacturing processes.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-8">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <CircuitBoard size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">AI Compilers</h3>
+                  <p className="text-night">
+                    Developing specialized compilers that optimize AI models for efficient execution on custom hardware.
                   </p>
                 </CardContent>
               </Card>
@@ -128,6 +152,67 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Applications section */}
+      <section className="py-20 bg-primary-blue/5 relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-primary-blue">
+              <span className="relative pb-2">
+                Where We Apply Our Technology
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-bistre"></span>
+              </span>
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto">
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Robot size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary-blue">Robotics</h3>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Drone size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary-blue">Drones</h3>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Database size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary-blue">Smart Manufacturing</h3>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Car size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary-blue">Automotive</h3>
+                </CardContent>
+              </Card>
+              
+              <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="focus-icon bg-primary-blue/5 text-primary-blue">
+                    <Microscope size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-primary-blue">Biomedical</h3>
+                </CardContent>
+              </Card>
+            </div>
             
             <div className="text-center mt-16">
               <Link to="/about">
@@ -141,9 +226,9 @@ const Index = () => {
       </section>
       
       {/* Team Section with parallax */}
-      <section className="relative py-32 overflow-hidden bg-primary-blue/5">
+      <section className="relative py-32 overflow-hidden bg-offwhite">
         <div 
-          className="parallax-bg"
+          className="absolute inset-0 z-0"
           style={{
             backgroundImage: `url('/lovable-uploads/b0c52e6e-f6e2-40f7-9c6e-a9ac3973e58d.png')`,
             backgroundSize: 'cover',

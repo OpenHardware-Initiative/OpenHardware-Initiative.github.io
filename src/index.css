@@ -161,7 +161,7 @@
   }
   
   .focus-card {
-    @apply bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-tertiary-purple/30;
+    @apply bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-primary-blue/30;
   }
   
   .focus-icon {
