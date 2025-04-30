@@ -4,7 +4,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: "Chip Design" | "AI Hardware" | "IoT" | "Smart Manufacturing" | "TinyML";
+  category: "Chip Design" | "AI Hardware" | "IoT" | "Smart Manufacturing" | "TinyML" | "Spiking Neural Networks";
   status: "Active" | "Completed";
   image: string;
   githubLink?: string;
@@ -90,6 +90,53 @@ export const projectsData: Project[] = [
     image: "/media/projects/digital-twin.jpg",
     githubLink: "https://github.com/example/digital-twin-framework",
     year: 2021
+  },
+  // New projects based on user input
+  {
+    id: "9",
+    title: "SpikingC",
+    description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
+    category: "Spiking Neural Networks",
+    status: "Active",
+    image: "/lovable-uploads/58fafde8-2ada-40fe-9f31-cbfcc28bbf05.png",
+    githubLink: "https://github.com/example/spikingc",
+    year: 2023
+  },
+  {
+    id: "10",
+    title: "Fortiss Hackathon 2023 - Gesture Recognition",
+    description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
+    category: "Spiking Neural Networks",
+    status: "Completed",
+    image: "/lovable-uploads/2dc03eef-0d17-4562-ab49-d9dbdaef773d.png",
+    year: 2023
+  },
+  {
+    id: "11",
+    title: "DenseSpiking RTL",
+    description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
+    category: "Chip Design",
+    status: "Active",
+    image: "/lovable-uploads/b96b6259-c99d-43e3-a97b-fee16c0154bc.png",
+    year: 2023
+  },
+  {
+    id: "12",
+    title: "Drone-ViT-HW-Accelerator",
+    description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints.",
+    category: "AI Hardware",
+    status: "Active",
+    image: "/media/projects/drone-vit.jpg",
+    year: 2023
+  },
+  {
+    id: "13",
+    title: "Spiking Mobile ViT",
+    description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
+    category: "Spiking Neural Networks",
+    status: "Active",
+    image: "/media/projects/mobile-vit.jpg",
+    year: 2023
   }
 ];
 

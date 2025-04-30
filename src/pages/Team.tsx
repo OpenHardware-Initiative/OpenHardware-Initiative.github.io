@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { getCoDirectors, getTeamLeads, getTeamMembers, getAdvisors } from "@/data/teamData";
 import TeamMember from "@/components/TeamMember";
-import { UserCheck, User, GraduationCap } from "lucide-react";
+import { UserCheck, User, GraduationCap, Users } from "lucide-react";
 
 const Team = () => {
   const coDirectors = getCoDirectors();
@@ -32,6 +32,7 @@ const Team = () => {
           <div className="max-w-6xl mx-auto">
             {/* Co-Directors */}
             <div className="flex items-center mb-8 gap-3">
+              <Users className="text-primary-blue" size={24} />
               <h2 className="text-2xl font-bold text-primary-blue">Co-Directors</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

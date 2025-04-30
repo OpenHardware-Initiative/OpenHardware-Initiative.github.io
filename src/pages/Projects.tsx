@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { projectsData, Project } from "@/data/projectsData";
 import ProjectCard from "@/components/ProjectCard";
@@ -78,7 +77,7 @@ const Projects = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
           <p className="text-xl max-w-3xl">
             Explore our portfolio of innovative hardware projects spanning chip design, 
-            AI acceleration, IoT, and smart manufacturing.
+            AI acceleration, IoT, smart manufacturing, and spiking neural networks.
           </p>
         </div>
       </section>
