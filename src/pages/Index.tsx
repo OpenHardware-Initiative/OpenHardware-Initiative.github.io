@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import SponsorSection from "@/components/SponsorSection";
@@ -7,22 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-offwhite">
+  return <div className="min-h-screen bg-offwhite">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
         {/* Circuit background */}
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.05
-          }}
-        />
+        <div className="absolute inset-0 z-0" style={{
+        backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.05
+      }} />
         
         {/* Static circuit pattern overlay */}
         <CircuitPattern />
@@ -34,7 +28,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <h1 className="font-bold text-6xl md:text-7xl lg:text-8xl mb-3 text-primary-blue">
-              Open<span className="text-bistre">Hardware</span>
+              Open<span className="text-[AB9A89] text-[#ab9a89]">Hardware</span>
             </h1>
             
             <p className="text-4xl md:text-5xl lg:text-6xl font-medium text-night mb-8 max-w-3xl">
@@ -53,11 +47,7 @@ const Index = () => {
                     Our Projects
                   </Button>
                 </Link>
-                <a 
-                  href="https://forms.google.com/form" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+                <a href="https://forms.google.com/form" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="border-bistre text-bistre hover:bg-bistre/5 text-lg px-8">
                     Join Our Team
                   </Button>
@@ -227,15 +217,12 @@ const Index = () => {
       
       {/* Team Section with parallax */}
       <section className="relative py-32 overflow-hidden bg-offwhite">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.05
-          }}
-        />
+        <div className="absolute inset-0 z-0" style={{
+        backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.05
+      }} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -258,8 +245,6 @@ const Index = () => {
       
       {/* Supporters */}
       <SupportersSection />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
