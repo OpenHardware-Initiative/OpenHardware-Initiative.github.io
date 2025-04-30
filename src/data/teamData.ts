@@ -1,4 +1,3 @@
-
 // Define interfaces for better type safety
 export interface TeamMember {
   id: string;
@@ -72,31 +71,23 @@ export const teamData: TeamMember[] = [
   // Advisors
   {
     id: "12",
-    name: "Prof. Ulf Schlichtmann",
-    role: "Advisor - EDA Chair, TUM",
-    image: "/media/team/ulf-schlichtmann.jpg",
+    name: "Aleksa Stojković",
+    role: "Advisor",
+    image: "/lovable-uploads/9ef5aa20-f425-4846-b4ec-1c018fe72ff8.png",
     linkedIn: "https://linkedin.com",
-    education: "Ph.D. Electronic Design Automation",
+    education: "TUM, Master Electrical Engineering and Information Technology",
     isActive: true,
-    joinDate: "2022-01"
+    joinDate: "2023-01"
   },
   {
     id: "13",
-    name: "OpenResearch e.V.",
-    role: "Advisor - Umbrella Organization",
-    image: "/media/team/openresearch.jpg",
+    name: "Johannes Geier",
+    role: "Advisor",
+    image: "/lovable-uploads/7e48c9e4-b24e-4d43-8061-fc5d8977e73e.png",
     linkedIn: "https://linkedin.com",
+    education: "Technical University of Munich, Chair of Electronic Design Automation (Prof. Schlichtmann)",
     isActive: true,
-    joinDate: "2022-03"
-  },
-  {
-    id: "14",
-    name: "neuroTUM",
-    role: "Advisor - Student Initiative",
-    image: "/media/team/neurotum.jpg",
-    linkedIn: "https://linkedin.com",
-    isActive: true,
-    joinDate: "2022-06"
+    joinDate: "2023-01"
   },
   
   // Team Members

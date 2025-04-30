@@ -23,10 +23,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   personIndex = -1,
   isCoDirector = false
 }) => {
+  // Check if this is a co-director with the composite image
+  const isCompositeImage = isCoDirector && image.includes("c4ac8743-6682-42b2-9e3f-61d5bee406ef");
+  
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">
       <div className="relative">
-        {isCoDirector && image.includes("c4ac8743-6682-42b2-9e3f-61d5bee406ef") ? (
+        {isCompositeImage ? (
           <TeamMemberImage image={image} name={name} personIndex={personIndex} />
         ) : (
           <img 
