@@ -2,19 +2,17 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { MEDIA_PATHS } from "@/utils/mediaUtils";
+import { getSponsorLogoPath } from "@/utils/mediaUtils";
 
 interface Sponsor {
   name: string;
   logo: string;
-  description?: string;
 }
 
 const sponsors: Sponsor[] = [
   { 
     name: "Freunde der TUM", 
-    logo: "/lovable-uploads/cd54e028-fd30-418e-9da8-f6c1135ca0d5.png",
-    description: "Association of Alumni and Friends" 
+    logo: "/lovable-uploads/cd54e028-fd30-418e-9da8-f6c1135ca0d5.png"
   }
 ];
 
@@ -31,21 +29,19 @@ const SponsorSection = () => {
           </span>
         </h2>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <Card className="bg-offwhite border border-primary-blue/20 hover:border-primary-blue/50 transition-all overflow-hidden">
-            <div className="p-8 flex flex-col items-center justify-center">
-              <div className="w-full max-w-md mx-auto mb-4">
+            <div className="p-6 flex flex-col items-center justify-center">
+              <div className="w-full max-w-xs mx-auto">
                 <img 
                   src={sponsors[0].logo} 
                   alt={`${sponsors[0].name} logo`} 
                   className="w-full h-auto" 
                 />
               </div>
-              {sponsors[0].description && (
-                <p className="text-primary-blue text-lg text-center mt-2">
-                  {sponsors[0].description}
-                </p>
-              )}
+              <h3 className="text-primary-blue text-xl font-medium text-center mt-4">
+                {sponsors[0].name}
+              </h3>
             </div>
           </Card>
           
