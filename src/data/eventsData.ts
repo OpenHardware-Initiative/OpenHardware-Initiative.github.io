@@ -44,71 +44,75 @@ export interface Event {
 }
 
 /**
- * Mock events data
- * In a real application, this would likely come from an API or database
+ * Events data
+ * All the events organized by the team
  */
 export const eventsData: Event[] = [
   {
     id: "1",
-    title: "Open Hardware Summit 2023",
-    description: "Annual gathering of hardware enthusiasts and industry professionals discussing open-source hardware innovations.",
-    date: "2023-10-15",
-    image: "/media/events/hardware-summit.jpg", // Updated path
+    title: "ASIP Hackathon 2025",
+    description: "A hackathon focused on Application-Specific Instruction Set Processors using the ASIP Designer Tool from Synopsys. Participants developed ML inference accelerators with guidance from industry experts.",
+    date: "2025-03-15",
+    image: "/lovable-uploads/707528b4-75fe-4127-8f4c-f8e84f77cde9.png",
     link: {
-      url: "https://www.linkedin.com/events/openhardwaresummit2023/",
+      url: "https://www.linkedin.com/events/asiphackathon2025/",
       type: "linkedin"
     },
     organizers: [
-      { name: "Emily Chen", role: "Lead Organizer" },
-      { name: "Michael Rodriguez", role: "Operations Manager" }
+      { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
+      { name: "Ipek Akdeniz", role: "Co-organizer" },
+      { name: "Isabel Whitely Tscherniak", role: "Co-organizer" }
     ],
     supporters: [
-      { name: "TUM EDA Chair", type: "chair" },
-      { name: "OpenResearch e.V.", type: "organization" },
-      { name: "TechCorp", type: "company" }
-    ],
-    location: "Munich, Germany",
-    isArchived: true
-  },
-  {
-    id: "2",
-    title: "Hardware Acceleration Workshop",
-    description: "Hands-on workshop on implementing machine learning models on FPGAs and ASICs.",
-    date: "2023-07-22",
-    image: "/media/events/hardware-acceleration.jpg", // Updated path
-    link: {
-      url: "https://www.instagram.com/p/abcdefg/",
-      type: "instagram"
-    },
-    organizers: [
-      { name: "Sarah Kim", role: "Workshop Lead" },
-      { name: "David Wang", role: "Communications" }
-    ],
-    supporters: [
-      { name: "neuroTUM", type: "organization" },
-      { name: "TUM Chair for Integrated Systems", type: "chair" }
+      { name: "AI Processor Design Chair at TUM", type: "chair" },
+      { name: "Synopsys", type: "company" }
     ],
     location: "Technical University of Munich",
     isArchived: true
   },
   {
-    id: "3",
-    title: "Open Source Chip Design Meetup",
-    description: "Community meetup to discuss open-source chip design tools and methodologies.",
-    date: "2023-04-10",
-    image: "/media/events/chip-design-meetup.jpg", // Updated path
+    id: "2",
+    title: "Munich Neuromorphic Hackathon 2024",
+    description: "An immersive hackathon on neuromorphic computing technologies with collaboration from fortiss, neurobus, and IBM, featuring expert talks and hands-on challenges.",
+    date: "2024-04-20",
+    image: "/lovable-uploads/8740789a-c667-49ca-b58d-81a4ee08031f.png",
     link: {
-      url: "https://luma.com/events/example",
+      url: "https://www.instagram.com/p/munich-neuromorphic-hackathon/",
+      type: "instagram"
+    },
+    organizers: [
+      { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
+      { name: "Ipek Akdeniz", role: "Co-organizer" },
+      { name: "Alyona Starikova", role: "Co-organizer" },
+      { name: "Ana Villalobos", role: "Co-organizer" }
+    ],
+    supporters: [
+      { name: "fortiss", type: "organization" },
+      { name: "neurobus", type: "organization" },
+      { name: "IBM", type: "company" }
+    ],
+    location: "Munich, Germany",
+    isArchived: true
+  },
+  {
+    id: "3",
+    title: "Neuromorphic Hackathon 2023",
+    description: "Four-day hackathon focused on neuromorphic technologies, hosted in collaboration with Fortiss Neuromorphic Labs and Intel, featuring team challenges based on state-of-the-art research.",
+    date: "2023-11-06",
+    image: "/lovable-uploads/57267699-d192-4297-aad6-1220736103b6.png",
+    link: {
+      url: "https://luma.com/events/neuromorphic-hackathon-2023",
       type: "luma"
     },
     organizers: [
-      { name: "Lisa Müller", role: "Event Coordinator" }
+      { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" }
     ],
     supporters: [
-      { name: "Silicon Catalyst", type: "company" },
-      { name: "OpenCores", type: "organization" }
+      { name: "neuroTUM", type: "organization" },
+      { name: "Fortiss Neuromorphic Labs", type: "organization" },
+      { name: "Intel", type: "company" }
     ],
-    location: "Virtual Event",
+    location: "Fortiss offices, Munich",
     isArchived: true
   }
 ];

@@ -62,7 +62,7 @@ const Events = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Past Events</h1>
           <p className="text-xl max-w-3xl">
-            Explore our previous events and workshops that have contributed to the hardware community.
+            Explore our hackathons and workshops that contribute to the advancement of neuromorphic computing and open hardware.
           </p>
         </div>
       </section>
