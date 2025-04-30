@@ -25,13 +25,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-                // Custom colors based on provided palette
+                // Updated color palette based on provided image
                 'primary-blue': '#030349',
                 'offwhite': '#FDF7EF',
                 'bistre': '#34200C',
                 'night': '#131313',
-                'tertiary-purple': '#6E59A5',
-                'circuit-bg': '#0000001a',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -92,23 +90,13 @@ export default {
 				'pulse-slow': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.7' }
-				},
-                'fade-in': {
-                    '0%': { opacity: '0' },
-                    '100%': { opacity: '1' }
-                },
-                'draw-line': {
-                    '0%': { 'stroke-dashoffset': '1000' },
-                    '100%': { 'stroke-dashoffset': '0' }
-                }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
-                'fade-in': 'fade-in 1.5s ease-out forwards',
-                'draw-line': 'draw-line 2.5s ease-out forwards'
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite'
 			}
 		}
 	},

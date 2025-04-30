@@ -17,22 +17,27 @@ const sponsors: Sponsor[] = [
 
 const SponsorSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-primary-blue/5">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Sponsors</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-primary-blue">
+          <span className="relative pb-2">
+            Our Sponsors
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-bistre"></span>
+          </span>
+        </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           {sponsors.map((sponsor, index) => (
-            <Card key={index} className="flex items-center justify-center p-6 hover:shadow-md transition-shadow">
+            <Card key={index} className="flex items-center justify-center p-6 bg-offwhite border border-primary-blue/20 hover:border-primary-blue/50 transition-all">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary-blue/5 rounded-full flex items-center justify-center">
                   <img 
                     src={sponsor.logo} 
                     alt={`${sponsor.name} logo`} 
                     className="max-w-full max-h-full p-2" 
                   />
                 </div>
-                <p className="font-medium">{sponsor.name}</p>
+                <p className="font-medium text-primary-blue">{sponsor.name}</p>
               </div>
             </Card>
           ))}
