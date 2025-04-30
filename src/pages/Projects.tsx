@@ -1,9 +1,10 @@
+
 import React, { useEffect, useState } from "react";
 import { projectsData, Project } from "@/data/projectsData";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CheckIcon, Search } from "lucide-react";
+import { CheckIcon, Search, UserPlus } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -18,6 +19,7 @@ const Projects = () => {
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [yearFilter, setYearFilter] = useState<string>("all");
+  const [recruitingFilter, setRecruitingFilter] = useState<string>("all");
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,7 +27,7 @@ const Projects = () => {
   
   useEffect(() => {
     filterProjects();
-  }, [searchTerm, categoryFilter, statusFilter, yearFilter]);
+  }, [searchTerm, categoryFilter, statusFilter, yearFilter, recruitingFilter]);
   
   const filterProjects = () => {
     let filtered = [...projectsData];
@@ -55,6 +57,15 @@ const Projects = () => {
       filtered = filtered.filter(project => project.year.toString() === yearFilter);
     }
     
+    // Recruiting filter
+    if (recruitingFilter !== "all") {
+      if (recruitingFilter === "recruiting") {
+        filtered = filtered.filter(project => project.recruitingFor === true);
+      } else {
+        filtered = filtered.filter(project => !project.recruitingFor);
+      }
+    }
+    
     setProjects(filtered);
   };
   
@@ -63,6 +74,7 @@ const Projects = () => {
     setCategoryFilter("all");
     setStatusFilter("all");
     setYearFilter("all");
+    setRecruitingFilter("all");
   };
   
   // Get unique categories, years for filter options
@@ -98,7 +110,7 @@ const Projects = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
               <Select value={categoryFilter} onValueChange={setCategoryFilter}>
                 <SelectTrigger>
                   <SelectValue placeholder="Category" />
@@ -121,6 +133,7 @@ const Projects = () => {
                   <SelectItem value="all">All Status</SelectItem>
                   <SelectItem value="Active">Active</SelectItem>
                   <SelectItem value="Completed">Completed</SelectItem>
+                  <SelectItem value="Discontinued">Discontinued</SelectItem>
                 </SelectContent>
               </Select>
               
@@ -137,6 +150,17 @@ const Projects = () => {
                   ))}
                 </SelectContent>
               </Select>
+              
+              <Select value={recruitingFilter} onValueChange={setRecruitingFilter}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Recruitment" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Projects</SelectItem>
+                  <SelectItem value="recruiting">Recruiting</SelectItem>
+                  <SelectItem value="not-recruiting">Not Recruiting</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             
             <Button 
@@ -149,27 +173,34 @@ const Projects = () => {
           </div>
           
           {/* Filter tags */}
-          {(categoryFilter !== "all" || statusFilter !== "all" || yearFilter !== "all") && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {categoryFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
-                  <span>Category: {categoryFilter}</span>
-                </div>
-              )}
-              
-              {statusFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
-                  <span>Status: {statusFilter}</span>
-                </div>
-              )}
-              
-              {yearFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
-                  <span>Year: {yearFilter}</span>
-                </div>
-              )}
-            </div>
-          )}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {categoryFilter !== "all" && (
+              <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                <span>Category: {categoryFilter}</span>
+              </div>
+            )}
+            
+            {statusFilter !== "all" && (
+              <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                <span>Status: {statusFilter}</span>
+              </div>
+            )}
+            
+            {yearFilter !== "all" && (
+              <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                <span>Year: {yearFilter}</span>
+              </div>
+            )}
+            
+            {recruitingFilter !== "all" && (
+              <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm gap-1">
+                <UserPlus size={14} />
+                <span>
+                  {recruitingFilter === "recruiting" ? "Recruiting" : "Not Recruiting"}
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </section>
       

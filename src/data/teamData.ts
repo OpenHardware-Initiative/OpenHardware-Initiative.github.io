@@ -1,3 +1,4 @@
+
 // Define interfaces for better type safety
 export interface TeamMember {
   id: string;
@@ -93,28 +94,6 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-01"
   },
   
-  // Additional Advisors
-  {
-    id: "14",
-    name: "Michael Neumeier",
-    role: "Advisor",
-    image: "/lovable-uploads/d423d410-7628-4d68-8521-079fba8c3a2b.png",
-    linkedIn: "https://linkedin.com",
-    education: "Neuromorphic Computing Researcher at Fortiss",
-    isActive: true,
-    joinDate: "2023-02"
-  },
-  {
-    id: "15",
-    name: "Elvin Hajizada",
-    role: "Advisor",
-    image: "/lovable-uploads/939aae91-0b77-44d0-b7d4-9f50fd8c7bf4.png",
-    linkedIn: "https://linkedin.com",
-    education: "Neuromorphic & Continual AI Researcher at Intel Labs",
-    isActive: true,
-    joinDate: "2023-03"
-  },
-  
   // Team Members
   {
     id: "6",
@@ -157,29 +136,7 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-10"
   },
   
-  // New Team Members
-  {
-    id: "16",
-    name: "Benedikt Witteler",
-    role: "Team Member",
-    image: "/lovable-uploads/eb129a8e-9330-417f-9ffd-f8a96fa4348e.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Master Electrical Engineering and Information Technology",
-    isActive: true,
-    joinDate: "2023-11"
-  },
-  {
-    id: "17",
-    name: "Ashik Chalakariyil Jayamon",
-    role: "Team Member",
-    image: "/lovable-uploads/44795fca-0025-4d88-93a1-8e84d5b1d5d7.png",
-    linkedIn: "https://linkedin.com",
-    education: "M.Sc. Communications and Electronics",
-    isActive: true,
-    joinDate: "2023-12"
-  },
-  
-  // Alumni - Updated with proper image paths
+  // Alumni
   {
     id: "21",
     name: "Robert Garcia",
@@ -267,6 +224,67 @@ export const teamData: TeamMember[] = [
       "Co-founded OpenHardware initiative",
       "Led strategic partnerships with industry",
       "Secured initial funding for operations"
+    ]
+  },
+  // Moving these team members to alumni as requested
+  {
+    id: "16",
+    name: "Benedikt Witteler",
+    role: "Former Team Member",
+    image: "/lovable-uploads/eb129a8e-9330-417f-9ffd-f8a96fa4348e.png",
+    linkedIn: "https://linkedin.com",
+    education: "TUM, Master Electrical Engineering and Information Technology",
+    isActive: false,
+    joinDate: "2023-11",
+    endDate: "2024-03",
+    contributions: [
+      "Contributed to spiking neural network implementations",
+      "Worked on hardware optimization for edge devices"
+    ]
+  },
+  {
+    id: "17",
+    name: "Ashik Chalakariyil Jayamon",
+    role: "Former Team Member",
+    image: "/lovable-uploads/44795fca-0025-4d88-93a1-8e84d5b1d5d7.png",
+    linkedIn: "https://linkedin.com",
+    education: "M.Sc. Communications and Electronics",
+    isActive: false,
+    joinDate: "2023-12",
+    endDate: "2024-03",
+    contributions: [
+      "Developed hardware accelerators for neural networks",
+      "Optimized power efficiency for edge AI applications"
+    ]
+  },
+  {
+    id: "14",
+    name: "Michael Neumeier",
+    role: "Former Advisor",
+    image: "/lovable-uploads/d423d410-7628-4d68-8521-079fba8c3a2b.png",
+    linkedIn: "https://linkedin.com",
+    education: "Neuromorphic Computing Researcher at Fortiss",
+    isActive: false,
+    joinDate: "2023-02",
+    endDate: "2024-02",
+    contributions: [
+      "Provided expertise in neuromorphic computing architectures",
+      "Mentored team members on hardware-software co-design"
+    ]
+  },
+  {
+    id: "15",
+    name: "Elvin Hajizada",
+    role: "Former Advisor",
+    image: "/lovable-uploads/939aae91-0b77-44d0-b7d4-9f50fd8c7bf4.png",
+    linkedIn: "https://linkedin.com",
+    education: "Neuromorphic & Continual AI Researcher at Intel Labs",
+    isActive: false,
+    joinDate: "2023-03",
+    endDate: "2024-01",
+    contributions: [
+      "Advised on SNN implementations for industrial applications",
+      "Shared expertise on hardware-efficient neural network design"
     ]
   }
 ];
