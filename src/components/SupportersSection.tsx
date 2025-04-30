@@ -1,23 +1,29 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
-
 interface Partner {
   name: string;
   role: string;
   organization: string;
 }
-
-const partners: Partner[] = [
-  { name: "Prof. Schlichtmann", role: "Chair", organization: "EDA Chair, TUM" },
-  { name: "OpenResearch e.V.", role: "Umbrella Organization", organization: "Open Hardware" },
-  { name: "neuroTUM", role: "Student Initiative", organization: "TUM" },
-  { name: "Dr. James Wilson", role: "Academic Partner", organization: "Advanced Computing Lab" },
-];
-
+const partners: Partner[] = [{
+  name: "Prof. Schlichtmann",
+  role: "Chair",
+  organization: "EDA Chair, TUM"
+}, {
+  name: "OpenResearch e.V.",
+  role: "Umbrella Organization",
+  organization: "Open Hardware"
+}, {
+  name: "neuroTUM",
+  role: "Student Initiative",
+  organization: "TUM"
+}, {
+  name: "Dr. James Wilson",
+  role: "Academic Partner",
+  organization: "Advanced Computing Lab"
+}];
 const SupportersSection = () => {
-  return (
-    <section className="py-16 bg-offwhite">
+  return <section className="py-16 bg-offwhite">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary-blue">
           <span className="relative pb-2">
@@ -27,19 +33,15 @@ const SupportersSection = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {partners.map((partner, index) => (
-            <Card key={index} className="bg-offwhite border border-primary-blue/20 hover:border-primary-blue/50 transition-all">
+          {partners.map((partner, index) => <Card key={index} className="bg-offwhite border border-primary-blue/20 hover:border-primary-blue/50 transition-all">
               <div className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-primary-blue mb-1">{partner.name}</h3>
-                <p className="text-bistre mb-1">{partner.role}</p>
+                <p className="text-bistre mb-1 font-medium">{partner.role}</p>
                 <p className="text-night text-sm">{partner.organization}</p>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SupportersSection;
