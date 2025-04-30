@@ -27,7 +27,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h1 className="font-bold text-6xl md:text-7xl lg:text-8xl mb-3 text-primary-blue">
+            <h1 className="font-bold text-6xl md:text-7xl mb-3 text-primary-blue lg:text-[333351] text-[#333351]">
               Open<span className="text-[AB9A89] text-[#ab9a89]">Hardware</span>
             </h1>
             
