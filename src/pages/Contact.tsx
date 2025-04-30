@@ -1,51 +1,13 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Linkedin, Github } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // In a real implementation, this would send the form data to a server
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-  };
 
   return (
     <div className="pt-24 pb-16">
@@ -59,83 +21,14 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Contact Form and Info */}
+      {/* Contact Info */}
       <section className="py-16 bg-offwhite">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+          <div className="max-w-3xl mx-auto">
+            {/* Contact Info Card */}
             <Card className="p-6 md:p-8">
-              <h2 className="text-2xl font-bold mb-6 text-primary-blue">Send us a message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="What is this regarding?"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your message"
-                    rows={6}
-                    required
-                  />
-                </div>
-                
-                <Button type="submit" className="w-full bg-primary-blue hover:bg-primary-blue/90">
-                  Send Message
-                </Button>
-              </form>
-            </Card>
-            
-            {/* Contact Info */}
-            <div className="flex flex-col space-y-8">
-              <h2 className="text-2xl font-bold mb-2 text-primary-blue">Contact Information</h2>
-              <p className="text-gray-600">
+              <h2 className="text-2xl font-bold mb-6 text-primary-blue">Contact Information</h2>
+              <p className="text-gray-600 mb-8">
                 We'd love to hear from you! Whether you're interested in joining our team,
                 collaborating on a project, or just want to learn more about what we do.
               </p>
@@ -172,7 +65,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div>
+              <div className="mt-8">
                 <h3 className="font-bold mb-4">Connect with us</h3>
                 <div className="flex space-x-4">
                   <a 
@@ -196,7 +89,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="mt-auto pt-8">
+              <div className="mt-8 pt-8 border-t">
                 <h3 className="font-bold mb-4">Join our team</h3>
                 <p className="text-gray-600 mb-4">
                   Interested in being part of OpenHardware? We're always looking for talented individuals
@@ -212,7 +105,7 @@ const Contact = () => {
                   </Button>
                 </a>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
