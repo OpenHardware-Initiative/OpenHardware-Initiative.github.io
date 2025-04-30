@@ -1,4 +1,3 @@
-
 // Define interfaces for better type safety
 export interface TeamMember {
   id: string;
@@ -138,62 +137,18 @@ export const teamData: TeamMember[] = [
   
   // Alumni
   {
-    id: "21",
-    name: "Robert Garcia",
+    id: "26",
+    name: "Alyona Starikova",
     role: "Former Co-Director",
-    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
+    image: "/lovable-uploads/ab13a4db-2938-4aed-9a39-80130bb95fb1.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
-    joinDate: "2021-09",
-    endDate: "2023-06",
+    joinDate: "2021-06",
+    endDate: "2023-01",
     contributions: [
-      "Led the team that developed our first neuromorphic accelerator",
-      "Established partnership with industry leaders",
-      "Published paper on in-memory computing"
-    ]
-  },
-  {
-    id: "22",
-    name: "Julia Schwarz",
-    role: "Former Team Lead",
-    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
-    linkedIn: "https://linkedin.com",
-    isActive: false,
-    joinDate: "2021-10",
-    endDate: "2023-08",
-    contributions: [
-      "Designed PCB layouts for IoT sensor modules",
-      "Implemented power management systems",
-      "Mentored junior team members"
-    ]
-  },
-  {
-    id: "23",
-    name: "Kai Zhang",
-    role: "Former Team Member",
-    image: "/lovable-uploads/eb129a8e-9330-417f-9ffd-f8a96fa4348e.png",
-    linkedIn: "https://linkedin.com",
-    isActive: false,
-    joinDate: "2022-01",
-    endDate: "2023-07",
-    contributions: [
-      "Implemented ViT accelerator on FPGA",
-      "Optimized memory bandwidth for ML models",
-      "Created tutorials on hardware acceleration"
-    ]
-  },
-  {
-    id: "24",
-    name: "Ingo Fritz",
-    role: "Former Team Member",
-    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
-    linkedIn: "https://linkedin.com",
-    isActive: false,
-    joinDate: "2022-01",
-    endDate: "2023-04",
-    contributions: [
-      "Contributed to FPGA design for neuromorphic computing",
-      "Developed power analysis tooling for SNN accelerators"
+      "Co-founded OpenHardware initiative",
+      "Led strategic partnerships with industry",
+      "Secured initial funding for operations"
     ]
   },
   {
@@ -212,21 +167,19 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "26",
-    name: "Alyona Starikova",
-    role: "Former Co-Director",
-    image: "/lovable-uploads/ab13a4db-2938-4aed-9a39-80130bb95fb1.png",
+    id: "24",
+    name: "Ingo Fritz",
+    role: "Former Team Member",
+    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
-    joinDate: "2021-06",
-    endDate: "2023-01",
+    joinDate: "2022-01",
+    endDate: "2023-04",
     contributions: [
-      "Co-founded OpenHardware initiative",
-      "Led strategic partnerships with industry",
-      "Secured initial funding for operations"
+      "Contributed to FPGA design for neuromorphic computing",
+      "Developed power analysis tooling for SNN accelerators"
     ]
   },
-  // Moving these team members to alumni as requested
   {
     id: "16",
     name: "Benedikt Witteler",
@@ -285,6 +238,20 @@ export const teamData: TeamMember[] = [
     contributions: [
       "Advised on SNN implementations for industrial applications",
       "Shared expertise on hardware-efficient neural network design"
+    ]
+  },
+  {
+    id: "27",
+    name: "Ana Villalobos",
+    role: "Former Team Member",
+    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
+    linkedIn: "https://linkedin.com",
+    isActive: false,
+    joinDate: "2022-09",
+    endDate: "2023-12",
+    contributions: [
+      "Contributed to neuromorphic computing research",
+      "Helped organize the Munich Neuromorphic Hackathon 2024"
     ]
   }
 ];
