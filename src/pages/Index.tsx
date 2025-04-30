@@ -5,7 +5,7 @@ import SponsorSection from "@/components/SponsorSection";
 import SupportersSection from "@/components/SupportersSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
+import { Cpu, CircuitBoard, Database, Robot, Drone, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
 
 const Index = () => {
@@ -17,7 +17,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
+            backgroundImage: `url('/lovable-uploads/b0c52e6e-f6e2-40f7-9c6e-a9ac3973e58d.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.05
@@ -171,7 +171,7 @@ const Index = () => {
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
-                    <Bot size={24} />
+                    <Robot size={24} />
                   </div>
                   <h3 className="text-lg font-bold text-primary-blue">Robotics</h3>
                 </CardContent>
@@ -180,7 +180,7 @@ const Index = () => {
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
-                    <Cpu size={24} />
+                    <Drone size={24} />
                   </div>
                   <h3 className="text-lg font-bold text-primary-blue">Drones</h3>
                 </CardContent>
@@ -230,7 +230,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
+            backgroundImage: `url('/lovable-uploads/b0c52e6e-f6e2-40f7-9c6e-a9ac3973e58d.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.05
