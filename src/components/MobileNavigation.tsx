@@ -52,13 +52,16 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isMenuOpen, locatio
         <MobileNavLink to="/projects" isActive={isActive("/projects")} delay={200} isMenuOpen={isMenuOpen}>
           Projects
         </MobileNavLink>
-        <MobileNavLink to="/team" isActive={isActive("/team")} delay={250} isMenuOpen={isMenuOpen}>
+        <MobileNavLink to="/events" isActive={isActive("/events")} delay={250} isMenuOpen={isMenuOpen}>
+          Events
+        </MobileNavLink>
+        <MobileNavLink to="/team" isActive={isActive("/team")} delay={300} isMenuOpen={isMenuOpen}>
           Team
         </MobileNavLink>
-        <MobileNavLink to="/alumni" isActive={isActive("/alumni")} delay={300} isMenuOpen={isMenuOpen}>
+        <MobileNavLink to="/alumni" isActive={isActive("/alumni")} delay={350} isMenuOpen={isMenuOpen}>
           Alumni
         </MobileNavLink>
-        <MobileNavLink to="/contact" isActive={isActive("/contact")} delay={350} isMenuOpen={isMenuOpen}>
+        <MobileNavLink to="/contact" isActive={isActive("/contact")} delay={400} isMenuOpen={isMenuOpen}>
           Contact
         </MobileNavLink>
         <a 
@@ -68,7 +71,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isMenuOpen, locatio
           className={`mt-8 w-4/5 transition-all duration-300 transform ${
             isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           }`}
-          style={{ transitionDelay: "400ms" }}
+          style={{ transitionDelay: "450ms" }}
         >
           <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold text-xl w-full py-6">
             Join Us

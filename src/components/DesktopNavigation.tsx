@@ -8,6 +8,7 @@ const navigationItems = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
   { path: "/projects", label: "Projects" },
+  { path: "/events", label: "Events" },
   { path: "/team", label: "Team" },
   { path: "/alumni", label: "Alumni" },
   { path: "/contact", label: "Contact" }
