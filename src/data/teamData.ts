@@ -179,12 +179,12 @@ export const teamData: TeamMember[] = [
     joinDate: "2023-12"
   },
   
-  // Alumni - Additional alumni
+  // Alumni - Updated with proper image paths
   {
-    id: "9",
+    id: "21",
     name: "Robert Garcia",
     role: "Former Co-Director",
-    image: "/media/alumni/robert-garcia.jpg",
+    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2021-09",
@@ -196,10 +196,10 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "10",
+    id: "22",
     name: "Julia Schwarz",
     role: "Former Team Lead",
-    image: "/media/alumni/julia-schwarz.jpg",
+    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2021-10",
@@ -211,10 +211,10 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "11",
+    id: "23",
     name: "Kai Zhang",
     role: "Former Team Member",
-    image: "/media/alumni/kai-zhang.jpg",
+    image: "/lovable-uploads/eb129a8e-9330-417f-9ffd-f8a96fa4348e.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2022-01",
@@ -226,10 +226,10 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "18",
+    id: "24",
     name: "Ingo Fritz",
     role: "Former Team Member",
-    image: "/media/alumni/ingo-fritz.jpg",
+    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2022-01",
@@ -240,10 +240,10 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "19",
+    id: "25",
     name: "Fabio Veneto",
     role: "Former Team Lead",
-    image: "/media/alumni/fabio-veneto.jpg",
+    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2021-09",
@@ -255,10 +255,10 @@ export const teamData: TeamMember[] = [
     ]
   },
   {
-    id: "20",
+    id: "26",
     name: "Alyona Starikova",
     role: "Former Co-Director",
-    image: "/media/alumni/alyona-starikova.jpg",
+    image: "/lovable-uploads/ab13a4db-2938-4aed-9a39-80130bb95fb1.png",
     linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2021-06",
