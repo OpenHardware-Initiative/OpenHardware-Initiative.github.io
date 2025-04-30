@@ -1,4 +1,3 @@
-
 /**
  * Media organization utilities
  * 
@@ -15,6 +14,7 @@ export const MEDIA_PATHS = {
   EVENTS: "/media/events/",
   PROJECTS: "/media/projects/",
   LOGOS: "/media/logos/",
+  SPONSORS: "/media/sponsors/",
 };
 
 /**
@@ -43,4 +43,19 @@ export const getPlaceholderImage = (
   text: string = "Image"
 ): string => {
   return `https://via.placeholder.com/${width}x${height}?text=${encodeURIComponent(text)}`;
+};
+
+/**
+ * Gets a sponsor logo path with optional fallback
+ * @param filename - Image filename or full path
+ * @returns Full path to the sponsor logo
+ */
+export const getSponsorLogoPath = (filename: string): string => {
+  // If the filename already contains a full path (e.g., /lovable-uploads/...)
+  if (filename.startsWith("/")) {
+    return filename;
+  }
+  
+  // Otherwise, use the sponsors media path
+  return getImagePath("SPONSORS", filename);
 };
