@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Card } from "@/components/ui/card";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Sponsor {
   name: string;
@@ -16,6 +17,8 @@ const sponsors: Sponsor[] = [
 ];
 
 const SponsorSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="py-16 bg-primary-blue/5">
       <div className="container mx-auto px-4">
@@ -26,7 +29,7 @@ const SponsorSection = () => {
           </span>
         </h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'} gap-6 max-w-5xl mx-auto`}>
           {sponsors.map((sponsor, index) => (
             <Card key={index} className="flex items-center justify-center p-6 bg-offwhite border border-primary-blue/20 hover:border-primary-blue/50 transition-all">
               <div className="text-center">

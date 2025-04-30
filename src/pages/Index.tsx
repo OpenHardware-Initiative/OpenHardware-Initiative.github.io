@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import SponsorSection from "@/components/SponsorSection";
@@ -7,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
+  const isMobile = useIsMobile();
+  
   return <div className="min-h-screen bg-offwhite">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
@@ -159,7 +161,7 @@ const Index = () => {
               </span>
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'} gap-6 max-w-5xl mx-auto`}>
               <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
