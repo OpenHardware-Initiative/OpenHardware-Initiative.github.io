@@ -41,7 +41,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary-blue">Circuit<span className="text-bistre">Forge</span></span>
+            <img 
+              src="/lovable-uploads/8c21749c-761b-4cf2-85ca-64f204ac61dd.png" 
+              alt="OpenHardware Logo" 
+              className="h-10 w-auto mr-2" 
+            />
+            <span className="text-2xl font-bold text-primary-blue">Open<span className="text-bistre">Hardware</span></span>
           </Link>
           
           {/* Desktop Navigation */}

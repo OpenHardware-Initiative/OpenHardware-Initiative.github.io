@@ -147,9 +147,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold">Email</h3>
-                    <p className="text-gray-600">contact@circuitforge.org</p>
+                    <p className="text-gray-600">contact@open-hardware-initiative.com</p>
                     <a 
-                      href="mailto:contact@circuitforge.org" 
+                      href="mailto:contact@open-hardware-initiative.com" 
                       className="text-primary-blue hover:underline mt-1 inline-block"
                     >
                       Send an email
@@ -199,7 +199,7 @@ const Contact = () => {
               <div className="mt-auto pt-8">
                 <h3 className="font-bold mb-4">Join our team</h3>
                 <p className="text-gray-600 mb-4">
-                  Interested in being part of CircuitForge? We're always looking for talented individuals
+                  Interested in being part of OpenHardware? We're always looking for talented individuals
                   who are passionate about hardware innovation.
                 </p>
                 <a 
@@ -223,7 +223,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold mb-8 text-center text-primary-blue">Find Us</h2>
           <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
             <iframe
-              title="CircuitForge Location"
+              title="OpenHardware Location"
               className="w-full h-full border-none"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.985656863296!2d11.5663333!3d48.1508957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75ea98a59a67%3A0x5886ef6d96b94c66!2sTechnical%20University%20of%20Munich!5e0!3m2!1sen!2sus!4v1625581697523!5m2!1sen!2sus"
               loading="lazy"

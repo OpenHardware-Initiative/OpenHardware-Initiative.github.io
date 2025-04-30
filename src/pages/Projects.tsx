@@ -153,38 +153,20 @@ const Projects = () => {
           {(categoryFilter !== "all" || statusFilter !== "all" || yearFilter !== "all") && (
             <div className="flex flex-wrap gap-2 mt-4">
               {categoryFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue px-3 py-1 rounded-full text-sm flex items-center">
-                  Category: {categoryFilter}
-                  <button 
-                    onClick={() => setCategoryFilter("all")}
-                    className="ml-2 hover:bg-primary-blue/20 rounded-full p-0.5"
-                  >
-                    <CheckIcon size={14} />
-                  </button>
+                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                  <span>Category: {categoryFilter}</span>
                 </div>
               )}
               
               {statusFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue px-3 py-1 rounded-full text-sm flex items-center">
-                  Status: {statusFilter}
-                  <button 
-                    onClick={() => setStatusFilter("all")}
-                    className="ml-2 hover:bg-primary-blue/20 rounded-full p-0.5"
-                  >
-                    <CheckIcon size={14} />
-                  </button>
+                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                  <span>Status: {statusFilter}</span>
                 </div>
               )}
               
               {yearFilter !== "all" && (
-                <div className="bg-primary-blue/10 text-primary-blue px-3 py-1 rounded-full text-sm flex items-center">
-                  Year: {yearFilter}
-                  <button 
-                    onClick={() => setYearFilter("all")}
-                    className="ml-2 hover:bg-primary-blue/20 rounded-full p-0.5"
-                  >
-                    <CheckIcon size={14} />
-                  </button>
+                <div className="bg-primary-blue/10 text-primary-blue py-1 px-3 rounded-full flex items-center text-sm">
+                  <span>Year: {yearFilter}</span>
                 </div>
               )}
             </div>
@@ -193,7 +175,7 @@ const Projects = () => {
       </section>
       
       {/* Projects Grid */}
-      <section className="py-12 bg-offwhite min-h-[50vh]">
+      <section className="py-16 bg-offwhite min-h-[60vh]">
         <div className="container mx-auto px-4">
           {projects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -203,8 +185,9 @@ const Projects = () => {
             </div>
           ) : (
             <div className="text-center py-16">
-              <h3 className="text-xl font-medium text-gray-500 mb-4">No projects found matching your criteria</h3>
-              <Button onClick={clearFilters}>Clear Filters</Button>
+              <h3 className="text-2xl font-bold text-primary-blue mb-4">No projects found</h3>
+              <p className="text-gray-600 mb-6">Try adjusting your filters or search term</p>
+              <Button onClick={clearFilters} variant="outline">Clear All Filters</Button>
             </div>
           )}
         </div>

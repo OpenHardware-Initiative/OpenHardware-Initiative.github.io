@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4">CircuitForge</h3>
+            <h3 className="text-xl font-bold mb-4">OpenHardware</h3>
             <p className="mb-4 text-white/80">
               A student initiative focused on hardware innovation, including chip design, electronics, 
               smart manufacturing, AI hardware acceleration, and tinyML.
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:contact@circuitforge.org" 
+                href="mailto:contact@open-hardware-initiative.com" 
                 className="text-white hover:text-white/80 transition-colors"
                 aria-label="Email"
               >
@@ -83,7 +83,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-white/80 mb-2">Technical University Munich</p>
             <p className="text-white/80 mb-2">Munich, Germany</p>
-            <p className="text-white/80 mb-4">Email: contact@circuitforge.org</p>
+            <p className="text-white/80 mb-4">Email: contact@open-hardware-initiative.com</p>
             <a 
               href="https://forms.google.com/form"
               target="_blank" 
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 pt-8 text-center text-white/80">
-          <p>&copy; {new Date().getFullYear()} CircuitForge. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} OpenHardware. All rights reserved.</p>
         </div>
       </div>
     </footer>

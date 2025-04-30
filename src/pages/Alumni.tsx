@@ -117,7 +117,7 @@ const Alumni = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Alumni</h1>
           <p className="text-xl max-w-3xl">
-            Recognizing the former members who contributed to the growth and success of CircuitForge.
+            Recognizing the former members who contributed to the growth and success of OpenHardware.
           </p>
         </div>
       </section>

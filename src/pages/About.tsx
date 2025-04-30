@@ -13,7 +13,7 @@ const About = () => {
       {/* Header Section */}
       <section className="bg-primary-blue text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About CircuitForge</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About OpenHardware</h1>
           <p className="text-xl max-w-3xl">
             A student-led initiative at the forefront of hardware innovation, bridging academic research 
             with practical applications in chip design, electronics, and AI acceleration.
@@ -28,7 +28,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-primary-blue">Our Story</h2>
               <p className="mb-4">
-                CircuitForge was founded in 2020 by a group of passionate engineering students who recognized
+                OpenHardware was founded in 2020 by a group of passionate engineering students who recognized
                 the growing need for specialized hardware solutions in the era of AI and IoT. What began as
                 a small project group has evolved into a comprehensive initiative spanning multiple domains
                 of hardware innovation.
@@ -46,7 +46,7 @@ const About = () => {
             <div className="relative h-80 md:h-full min-h-[320px]">
               <img 
                 src="/placeholder.svg" 
-                alt="CircuitForge team working" 
+                alt="OpenHardware team working" 
                 className="rounded-lg shadow-lg object-cover h-full w-full" 
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block">
@@ -164,7 +164,7 @@ const About = () => {
                   <h3 className="text-xl font-bold text-primary-blue">2020</h3>
                   <p className="font-medium">Foundation</p>
                   <p className="text-gray-600 mt-2">
-                    CircuitForge was established by a group of engineering students with a shared passion for hardware innovation.
+                    OpenHardware was established by a group of engineering students with a shared passion for hardware innovation.
                   </p>
                 </div>
                 <div className="bg-primary-blue w-4 h-4 rounded-full border-4 border-white shadow-lg"></div>
@@ -205,7 +205,7 @@ const About = () => {
                   <h3 className="text-xl font-bold text-primary-blue">2023</h3>
                   <p className="font-medium">Innovation Hub</p>
                   <p className="text-gray-600 mt-2">
-                    Established CircuitForge as a recognized innovation hub with multiple ongoing projects and industry collaborations.
+                    Established OpenHardware as a recognized innovation hub with multiple ongoing projects and industry collaborations.
                   </p>
                 </div>
               </div>
