@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
     description: "A specialized hardware design that mimics the brain's neural structure to accelerate machine learning tasks with significantly lower power consumption.",
     category: "Chip Design",
     status: "Active",
-    image: "/placeholder.svg",
+    image: "/media/projects/neuromorphic-accelerator.jpg",
     githubLink: "https://github.com/example/neuromorphic-accelerator",
     year: 2023
   },
@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
     description: "A novel architecture that performs computations directly in memory, reducing the energy cost of data movement and accelerating memory-bound operations.",
     category: "Chip Design",
     status: "Active",
-    image: "/placeholder.svg",
+    image: "/media/projects/in-memory-computing.jpg",
     year: 2023
   },
   {
@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
     description: "Implementation of an efficient Vision Transformer (ViT) model on FPGA for real-time image processing and collision avoidance on drones.",
     category: "AI Hardware",
     status: "Active",
-    image: "/placeholder.svg",
+    image: "/media/projects/vit-fpga.jpg",
     githubLink: "https://github.com/example/vit-fpga",
     year: 2023
   },
@@ -48,7 +48,7 @@ export const projectsData: Project[] = [
     description: "Development of a compiler that optimizes neural network models for various hardware accelerators, including GPUs, FPGAs, and custom ASICs.",
     category: "AI Hardware",
     status: "Active",
-    image: "/placeholder.svg",
+    image: "/media/projects/ai-compiler.jpg",
     githubLink: "https://github.com/example/ai-compiler",
     year: 2023
   },
@@ -58,7 +58,7 @@ export const projectsData: Project[] = [
     description: "A network of low-power IoT sensors for monitoring and optimizing manufacturing processes, with edge computing capabilities.",
     category: "IoT",
     status: "Completed",
-    image: "/placeholder.svg",
+    image: "/media/projects/iot-sensor-network.jpg",
     githubLink: "https://github.com/example/smart-factory-iot",
     year: 2022
   },
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
     description: "Implementation of tiny machine learning models on microcontrollers for real-time equipment maintenance prediction in industrial settings.",
     category: "TinyML",
     status: "Completed",
-    image: "/placeholder.svg",
+    image: "/media/projects/tinyml-maintenance.jpg",
     githubLink: "https://github.com/example/predictive-maintenance-tinyml",
     year: 2022
   },
@@ -78,7 +78,7 @@ export const projectsData: Project[] = [
     description: "A custom processor design optimized for deep learning inference with minimal energy consumption for battery-powered devices.",
     category: "Chip Design",
     status: "Completed",
-    image: "/placeholder.svg",
+    image: "/media/projects/dl-processor.jpg",
     year: 2021
   },
   {
@@ -87,7 +87,7 @@ export const projectsData: Project[] = [
     description: "A framework for creating digital twins of manufacturing processes, enabling simulation, optimization, and predictive analytics.",
     category: "Smart Manufacturing",
     status: "Completed",
-    image: "/placeholder.svg",
+    image: "/media/projects/digital-twin.jpg",
     githubLink: "https://github.com/example/digital-twin-framework",
     year: 2021
   }

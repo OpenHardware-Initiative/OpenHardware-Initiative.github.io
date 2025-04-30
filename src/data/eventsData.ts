@@ -53,7 +53,7 @@ export const eventsData: Event[] = [
     title: "Open Hardware Summit 2023",
     description: "Annual gathering of hardware enthusiasts and industry professionals discussing open-source hardware innovations.",
     date: "2023-10-15",
-    image: "/placeholder.svg",
+    image: "/media/events/hardware-summit.jpg", // Updated path
     link: {
       url: "https://www.linkedin.com/events/openhardwaresummit2023/",
       type: "linkedin"
@@ -75,7 +75,7 @@ export const eventsData: Event[] = [
     title: "Hardware Acceleration Workshop",
     description: "Hands-on workshop on implementing machine learning models on FPGAs and ASICs.",
     date: "2023-07-22",
-    image: "/placeholder.svg",
+    image: "/media/events/hardware-acceleration.jpg", // Updated path
     link: {
       url: "https://www.instagram.com/p/abcdefg/",
       type: "instagram"
@@ -96,7 +96,7 @@ export const eventsData: Event[] = [
     title: "Open Source Chip Design Meetup",
     description: "Community meetup to discuss open-source chip design tools and methodologies.",
     date: "2023-04-10",
-    image: "/placeholder.svg",
+    image: "/media/events/chip-design-meetup.jpg", // Updated path
     link: {
       url: "https://luma.com/events/example",
       type: "luma"

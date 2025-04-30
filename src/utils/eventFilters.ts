@@ -2,6 +2,31 @@
 import { Event } from "@/data/eventsData";
 
 /**
+ * Pastel colors for tags and badges
+ * These are used to create a rotating color scheme for tags
+ */
+export const pastelColors = [
+  "#F2FCE2", // Soft Green
+  "#FEF7CD", // Soft Yellow
+  "#FEC6A1", // Soft Orange
+  "#E5DEFF", // Soft Purple
+  "#FFDEE2", // Soft Pink
+  "#FDE1D3", // Soft Peach
+  "#D3E4FD", // Soft Blue
+  "#F1F0FB", // Soft Gray
+];
+
+/**
+ * Gets a color from the pastel colors array based on an index
+ * This will rotate through colors when display multiple tags
+ * @param index - The index to use for selecting a color
+ * @returns A pastel color string in hex format
+ */
+export const getRotatingColor = (index: number): string => {
+  return pastelColors[index % pastelColors.length];
+};
+
+/**
  * Filters events based on search term, organizer, supporter and year
  * @param events - List of all events to filter
  * @param searchTerm - Text to search in title, description, and location

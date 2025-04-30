@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Link, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Event } from "@/data/eventsData";
+import { getRotatingColor } from "@/utils/eventFilters";
 
 interface EventCardProps {
   event: Event;
@@ -115,19 +116,27 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         <div>
           <h4 className="text-sm font-semibold text-gray-700 mb-1">Supported by:</h4>
           <div className="flex flex-wrap gap-1">
-            {supporters.map((supporter, index) => (
-              <Badge 
-                key={index} 
-                variant="outline" 
-                className={`text-xs ${
-                  supporter.type === "chair" ? "border-blue-200 bg-blue-50" : 
-                  supporter.type === "company" ? "border-green-200 bg-green-50" : 
-                  "border-amber-200 bg-amber-50"
-                }`}
-              >
-                {supporter.name}
-              </Badge>
-            ))}
+            {supporters.map((supporter, index) => {
+              // Get color based on index
+              const backgroundColor = getRotatingColor(index);
+              // Create a darker border color (20% darker)
+              const borderColor = backgroundColor;
+              
+              return (
+                <Badge 
+                  key={index} 
+                  variant="outline" 
+                  className="text-xs border"
+                  style={{ 
+                    backgroundColor, 
+                    borderColor,
+                    color: '#333'
+                  }}
+                >
+                  {supporter.name}
+                </Badge>
+              );
+            })}
           </div>
         </div>
       </CardContent>
