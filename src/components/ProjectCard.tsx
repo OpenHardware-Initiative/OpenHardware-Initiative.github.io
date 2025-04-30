@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Project } from "@/data/projectsData";
+import { getStringBasedColor, getContrastTextColor } from "@/utils/colorUtils";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,22 +14,10 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { title, description, category, status, image, githubLink, year } = project;
   
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "Chip Design":
-        return "bg-blue-100 text-blue-800";
-      case "AI Hardware":
-        return "bg-purple-100 text-purple-800";
-      case "IoT":
-        return "bg-green-100 text-green-800";
-      case "Smart Manufacturing":
-        return "bg-amber-100 text-amber-800";
-      case "TinyML":
-        return "bg-rose-100 text-rose-800";
-      default:
-        return "bg-gray-100 text-gray-800";
-    }
-  };
+  // Get background color for category based on category name
+  const categoryBgColor = getStringBasedColor(category);
+  // Get text color that will have good contrast with the background
+  const categoryTextColor = getContrastTextColor(categoryBgColor);
   
   return (
     <Card className="overflow-hidden h-full flex flex-col transition-all hover:shadow-md">
@@ -39,7 +28,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           className="w-full h-full object-cover" 
         />
         <div className="absolute top-3 left-3">
-          <Badge variant="secondary" className={getCategoryColor(category)}>
+          <Badge 
+            variant="secondary" 
+            style={{ 
+              backgroundColor: categoryBgColor,
+              color: categoryTextColor
+            }}
+          >
             {category}
           </Badge>
         </div>

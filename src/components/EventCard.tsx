@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Link, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Event } from "@/data/eventsData";
-import { getRotatingColor } from "@/utils/eventFilters";
+import { getRotatingColor, getContrastTextColor } from "@/utils/colorUtils";
 
 interface EventCardProps {
   event: Event;
@@ -119,8 +119,8 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
             {supporters.map((supporter, index) => {
               // Get color based on index
               const backgroundColor = getRotatingColor(index);
-              // Create a darker border color (20% darker)
-              const borderColor = backgroundColor;
+              // Get appropriate text color for contrast
+              const textColor = getContrastTextColor(backgroundColor);
               
               return (
                 <Badge 
@@ -129,8 +129,8 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                   className="text-xs border"
                   style={{ 
                     backgroundColor, 
-                    borderColor,
-                    color: '#333'
+                    borderColor: backgroundColor,
+                    color: textColor
                   }}
                 >
                   {supporter.name}
