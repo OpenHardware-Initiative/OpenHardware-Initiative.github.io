@@ -1,5 +1,6 @@
 
-interface TeamMember {
+// Define interfaces for better type safety
+export interface TeamMember {
   id: string;
   name: string;
   role?: string;
@@ -12,6 +13,7 @@ interface TeamMember {
   contributions?: string[];
 }
 
+// Team data
 export const teamData: TeamMember[] = [
   {
     id: "1",
@@ -138,12 +140,43 @@ export const teamData: TeamMember[] = [
   }
 ];
 
-// Helper function to get active team members
+// Helper functions
 export const getActiveMembers = () => {
   return teamData.filter(member => member.isActive);
 };
 
-// Helper function to get alumni
 export const getAlumni = () => {
   return teamData.filter(member => !member.isActive);
+};
+
+export const getMemberById = (id: string): TeamMember | undefined => {
+  return teamData.find(member => member.id === id);
+};
+
+export const getMembersByRole = (role: string): TeamMember[] => {
+  return teamData.filter(member => 
+    member.role?.toLowerCase().includes(role.toLowerCase())
+  );
+};
+
+// Function to get board members
+export const getBoardMembers = (): TeamMember[] => {
+  return teamData.filter(member => 
+    member.isActive && (member.role?.includes("Lead") || member.role?.includes("Board"))
+  );
+};
+
+// Function to get technical team members
+export const getTechnicalTeam = (): TeamMember[] => {
+  return teamData.filter(member => 
+    member.isActive && 
+    !member.role?.includes("Lead") && 
+    !member.role?.includes("Board") && 
+    member.role
+  );
+};
+
+// Function to get regular members
+export const getRegularMembers = (): TeamMember[] => {
+  return teamData.filter(member => member.isActive && !member.role);
 };

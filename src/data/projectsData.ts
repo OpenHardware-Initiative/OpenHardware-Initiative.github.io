@@ -1,4 +1,5 @@
 
+// Define interfaces for better type safety
 export interface Project {
   id: string;
   title: string;
@@ -10,6 +11,7 @@ export interface Project {
   year: number;
 }
 
+// Projects data
 export const projectsData: Project[] = [
   {
     id: "1",
@@ -90,3 +92,20 @@ export const projectsData: Project[] = [
     year: 2021
   }
 ];
+
+// Helper functions for common data operations
+export function getProjectById(id: string): Project | undefined {
+  return projectsData.find(project => project.id === id);
+}
+
+export function getProjectsByCategory(category: Project['category']): Project[] {
+  return projectsData.filter(project => project.category === category);
+}
+
+export function getProjectsByStatus(status: Project['status']): Project[] {
+  return projectsData.filter(project => project.status === status);
+}
+
+export function getProjectsByYear(year: number): Project[] {
+  return projectsData.filter(project => project.year === year);
+}

@@ -3,6 +3,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+// Define navigation items for better maintainability
+const navigationItems = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
+  { path: "/team", label: "Team" },
+  { path: "/alumni", label: "Alumni" },
+  { path: "/contact", label: "Contact" }
+];
+
 interface DesktopNavigationProps {
   isScrolled: boolean;
 }
@@ -16,42 +26,16 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ isScrolled }) => 
   
   return (
     <nav className="hidden md:flex items-center space-x-1">
-      <Link 
-        to="/" 
-        className={`nav-link font-bold ${isActive("/") ? "nav-link-active" : ""}`}
-      >
-        Home
-      </Link>
-      <Link 
-        to="/about" 
-        className={`nav-link font-bold ${isActive("/about") ? "nav-link-active" : ""}`}
-      >
-        About
-      </Link>
-      <Link 
-        to="/projects" 
-        className={`nav-link font-bold ${isActive("/projects") ? "nav-link-active" : ""}`}
-      >
-        Projects
-      </Link>
-      <Link 
-        to="/team" 
-        className={`nav-link font-bold ${isActive("/team") ? "nav-link-active" : ""}`}
-      >
-        Team
-      </Link>
-      <Link 
-        to="/alumni" 
-        className={`nav-link font-bold ${isActive("/alumni") ? "nav-link-active" : ""}`}
-      >
-        Alumni
-      </Link>
-      <Link 
-        to="/contact" 
-        className={`nav-link font-bold ${isActive("/contact") ? "nav-link-active" : ""}`}
-      >
-        Contact
-      </Link>
+      {navigationItems.map((item) => (
+        <Link 
+          key={item.path}
+          to={item.path} 
+          className={`nav-link font-bold ${isActive(item.path) ? "nav-link-active" : ""}`}
+        >
+          {item.label}
+        </Link>
+      ))}
+      
       <a 
         href="https://forms.google.com/form" 
         target="_blank" 

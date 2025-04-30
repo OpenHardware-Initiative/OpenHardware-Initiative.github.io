@@ -1,10 +1,12 @@
 
 import React, { useEffect } from "react";
-import { getActiveMembers } from "@/data/teamData";
+import { getBoardMembers, getTechnicalTeam, getRegularMembers } from "@/data/teamData";
 import TeamMember from "@/components/TeamMember";
 
 const Team = () => {
-  const teamMembers = getActiveMembers();
+  const boardMembers = getBoardMembers();
+  const technicalTeam = getTechnicalTeam();
+  const regularMembers = getRegularMembers();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,56 +31,45 @@ const Team = () => {
             {/* Board Members */}
             <h2 className="text-2xl font-bold mb-8 text-primary-blue">Board Members</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {teamMembers
-                .filter(member => member.role?.includes("Lead") || member.role?.includes("Board"))
-                .map(member => (
-                  <TeamMember
-                    key={member.id}
-                    name={member.name}
-                    role={member.role}
-                    image={member.image}
-                    linkedIn={member.linkedIn}
-                    education={member.education}
-                  />
-                ))}
+              {boardMembers.map(member => (
+                <TeamMember
+                  key={member.id}
+                  name={member.name}
+                  role={member.role}
+                  image={member.image}
+                  linkedIn={member.linkedIn}
+                  education={member.education}
+                />
+              ))}
             </div>
             
             {/* Technical Team */}
             <h2 className="text-2xl font-bold mb-8 text-primary-blue">Technical Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {teamMembers
-                .filter(
-                  member => 
-                    !member.role?.includes("Lead") && 
-                    !member.role?.includes("Board") && 
-                    member.role
-                )
-                .map(member => (
-                  <TeamMember
-                    key={member.id}
-                    name={member.name}
-                    role={member.role}
-                    image={member.image}
-                    linkedIn={member.linkedIn}
-                    education={member.education}
-                  />
-                ))}
+              {technicalTeam.map(member => (
+                <TeamMember
+                  key={member.id}
+                  name={member.name}
+                  role={member.role}
+                  image={member.image}
+                  linkedIn={member.linkedIn}
+                  education={member.education}
+                />
+              ))}
             </div>
             
             {/* Members */}
             <h2 className="text-2xl font-bold my-8 text-primary-blue">Members</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {teamMembers
-                .filter(member => !member.role)
-                .map(member => (
-                  <TeamMember
-                    key={member.id}
-                    name={member.name}
-                    image={member.image}
-                    linkedIn={member.linkedIn}
-                    education={member.education}
-                  />
-                ))}
+              {regularMembers.map(member => (
+                <TeamMember
+                  key={member.id}
+                  name={member.name}
+                  image={member.image}
+                  linkedIn={member.linkedIn}
+                  education={member.education}
+                />
+              ))}
             </div>
           </div>
         </div>
