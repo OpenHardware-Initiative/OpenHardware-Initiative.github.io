@@ -7,10 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, CircuitBoard, Database, Bot, Car, Microscope } from "lucide-react";
 import CircuitPattern from "@/components/CircuitPattern";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 const Index = () => {
   const isMobile = useIsMobile();
-  
   return <div className="min-h-screen bg-offwhite">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
@@ -91,10 +89,8 @@ const Index = () => {
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                     <Cpu size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-primary-blue">Hardware Accelerators</h3>
-                  <p className="text-night">
-                    Developing specialized hardware accelerators for machine learning workloads to improve both speed and efficiency.
-                  </p>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">Control and Computer Vision</h3>
+                  <p className="text-night">Developing software for Drones and Robotics using state-of-the-art control and computer vision systems.</p>
                 </CardContent>
               </Card>
               
@@ -103,10 +99,8 @@ const Index = () => {
                   <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                     <Cpu size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-primary-blue">AI Processors</h3>
-                  <p className="text-night">
-                    Building next-generation processors specifically designed for AI and machine learning applications.
-                  </p>
+                  <h3 className="text-xl font-bold mb-3 text-primary-blue">AI Processors and Accelerators</h3>
+                  <p className="text-night">Building next-generation processors and accelerators specifically designed for AI and machine learning applications.</p>
                 </CardContent>
               </Card>
               
@@ -251,5 +245,4 @@ const Index = () => {
       <SupportersSection />
     </div>;
 };
-
 export default Index;
