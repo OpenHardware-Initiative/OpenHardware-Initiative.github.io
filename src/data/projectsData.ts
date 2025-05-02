@@ -20,7 +20,7 @@ export const projectsData: Project[] = [
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
     status: "Active",
-    image: "/lovable-uploads/58fafde8-2ada-40fe-9f31-cbfcc28bbf05.png",
+    image: "/media/projects/spikingc.png",
     githubLink: "https://github.com/example/spikingc",
     year: 2023,
     recruitingFor: true
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
     description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
     category: "Spiking Neural Networks",
     status: "Completed",
-    image: "/lovable-uploads/2dc03eef-0d17-4562-ab49-d9dbdaef773d.png",
+    image: "/media/projects/gesture-recognition.png",
     year: 2023
   },
   {
@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
     status: "Active",
-    image: "/lovable-uploads/b96b6259-c99d-43e3-a97b-fee16c0154bc.png",
+    image: "/media/projects/densespiking-rtl.png",
     year: 2023,
     recruitingFor: true
   },
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
     description: "An intelligent scheduling system for manufacturing industries that optimizes production processes and resource allocation using AI algorithms.",
     category: "Smart Manufacturing",
     status: "Active",
-    image: "/lovable-uploads/c0a233b0-7b4a-4d39-acee-012349ce425a.png",
+    image: "/media/projects/smart-scheduling.png",
     year: 2023,
     recruitingFor: true
   },
@@ -78,7 +78,7 @@ export const projectsData: Project[] = [
     description: "Development of a compiler that optimizes neural network models for various hardware accelerators, leveraging IREE (IR Execution Environment) technology.",
     category: "AI Hardware",
     status: "Active",
-    image: "/lovable-uploads/ce44f0a3-0848-46f4-9306-5e14feb66003.png",
+    image: "/media/projects/ai-compiler.png",
     githubLink: "https://github.com/example/ai-compiler-iree",
     year: 2023
   },
@@ -110,7 +110,7 @@ export function getProjectsByYear(year: number): Project[] {
   return projectsData.filter(project => project.year === year);
 }
 
-// New helper function to get projects that are recruiting
+// Function to get projects that are recruiting
 export function getRecruitingProjects(): Project[] {
   return projectsData.filter(project => project.recruitingFor === true);
 }

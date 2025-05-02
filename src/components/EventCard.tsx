@@ -40,11 +40,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const getLinkIcon = (type: string) => {
     switch (type) {
       case "instagram":
-        return <Instagram size={18} />;
+        return <Instagram size={16} className="flex-shrink-0" />;
       case "linkedin":
-        return <Linkedin size={18} />;
+        return <Linkedin size={16} className="flex-shrink-0" />;
       default:
-        return <Link size={18} />;
+        return <Link size={16} className="flex-shrink-0" />;
     }
   };
 
@@ -77,13 +77,13 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           alt={title} 
           className="w-full h-full object-cover" 
         />
-        <div className="absolute top-3 left-3 flex items-center gap-2 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-md">
-          <Calendar size={16} className="text-primary-blue" />
-          <span className="text-sm font-medium">{formatDate(date)}</span>
+        <div className="absolute top-3 left-3 flex items-center gap-1 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-md">
+          <Calendar size={14} className="text-primary-blue flex-shrink-0" />
+          <span className="text-xs font-medium truncate max-w-[150px]">{formatDate(date)}</span>
         </div>
         {location && (
           <div className="absolute top-3 right-3">
-            <Badge variant="secondary" className="bg-offwhite text-primary-blue">
+            <Badge variant="secondary" className="bg-offwhite text-primary-blue text-xs truncate max-w-[100px]">
               {location}
             </Badge>
           </div>
@@ -92,12 +92,12 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       
       {/* Event title */}
       <CardHeader className="pb-2">
-        <h3 className="font-bold text-lg text-primary-blue">{title}</h3>
+        <h3 className="font-bold text-lg text-primary-blue line-clamp-2">{title}</h3>
       </CardHeader>
       
       {/* Event details */}
       <CardContent className="flex-grow">
-        <p className="text-gray-600 text-sm mb-4">{description}</p>
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3">{description}</p>
         
         {/* Organizers */}
         <div className="mb-3">
@@ -126,7 +126,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 <Badge 
                   key={index} 
                   variant="outline" 
-                  className="text-xs border"
+                  className="text-xs border truncate max-w-[120px]"
                   style={{ 
                     backgroundColor, 
                     borderColor: backgroundColor,
@@ -154,7 +154,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
             className="w-full flex items-center justify-center gap-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white"
           >
             {getLinkIcon(link.type)}
-            <span>{getLinkText(link.type)}</span>
+            <span className="truncate">{getLinkText(link.type)}</span>
           </Button>
         </a>
       </CardFooter>

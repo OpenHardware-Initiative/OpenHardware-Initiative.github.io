@@ -41,6 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="absolute top-3 left-3">
           <Badge 
             variant="secondary" 
+            className="text-xs truncate max-w-[150px]"
             style={{ 
               backgroundColor: categoryBgColor,
               color: categoryTextColor
@@ -49,14 +50,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {category}
           </Badge>
         </div>
-        <div className="absolute top-3 right-3 flex gap-2">
-          <Badge variant={getStatusBadgeVariant()}>
+        <div className="absolute top-3 right-3 flex flex-col gap-2">
+          <Badge 
+            variant={getStatusBadgeVariant()}
+            className="text-xs truncate max-w-[120px]"
+          >
             {status}
           </Badge>
           {recruitingFor && (
             <Badge 
               variant="secondary"
-              className="bg-green-600 text-white border-green-600"
+              className="bg-green-600 text-white border-green-600 text-xs"
             >
               Recruiting
             </Badge>
@@ -66,26 +70,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
-          <h3 className="font-bold text-lg">{title}</h3>
-          <span className="text-sm text-gray-500">{year}</span>
+          <h3 className="font-bold text-lg line-clamp-2">{title}</h3>
+          <span className="text-sm text-gray-500 flex-shrink-0 ml-2">{year}</span>
         </div>
       </CardHeader>
       
       <CardContent className="flex-grow">
-        <p className="text-gray-600 text-sm">{description}</p>
+        <p className="text-gray-600 text-sm line-clamp-4">{description}</p>
       </CardContent>
       
-      <CardFooter className="pt-2 border-t flex justify-between items-center">
+      <CardFooter className="pt-2 border-t flex justify-between items-center gap-2">
         {githubLink ? (
           <a 
             href={githubLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-full"
+            className="flex-grow"
           >
             <Button variant="outline" className="w-full flex items-center justify-center gap-2">
-              <Github size={18} />
-              <span>View on GitHub</span>
+              <Github size={16} className="flex-shrink-0" />
+              <span className="truncate">View on GitHub</span>
             </Button>
           </a>
         ) : (
@@ -93,10 +97,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         )}
         
         {recruitingFor && (
-          <Link to="/contact" className="ml-2">
-            <Button variant="default" className="flex items-center gap-2">
-              <UserPlus size={18} />
-              <span>Join</span>
+          <Link to="/contact" className="flex-shrink-0">
+            <Button variant="default" className="flex items-center gap-2" size="sm">
+              <UserPlus size={16} className="flex-shrink-0" />
+              <span className="sm:inline hidden">Join</span>
             </Button>
           </Link>
         )}
