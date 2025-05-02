@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,9 +8,56 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const ApplicationsSection = () => {
   const isMobile = useIsMobile();
+  const sectionRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  
+  // Add parallax effect on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current || !cardsRef.current) return;
+      
+      const scrollPosition = window.scrollY;
+      const sectionTop = sectionRef.current.offsetTop;
+      const sectionHeight = sectionRef.current.offsetHeight;
+      
+      // Check if section is in viewport
+      if (scrollPosition > sectionTop - window.innerHeight && 
+          scrollPosition < sectionTop + sectionHeight) {
+        
+        const cards = cardsRef.current.querySelectorAll('.focus-card');
+        
+        cards.forEach((card, index) => {
+          const cardElement = card as HTMLElement;
+          const offset = (scrollPosition - (sectionTop - window.innerHeight * 0.5)) * 0.02;
+          const delay = index * 0.1;
+          const translateY = Math.min(30, Math.max(0, offset - delay * 10));
+          
+          // Only apply effect if not on mobile
+          if (!isMobile) {
+            cardElement.style.transform = `translateY(-${translateY}px)`;
+            cardElement.style.opacity = `${Math.min(1, 0.7 + translateY / 100)}`;
+          } else {
+            cardElement.style.transform = '';
+            cardElement.style.opacity = '1';
+          }
+        });
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isMobile]);
   
   return (
-    <section className="py-20 bg-primary-blue/5 relative">
+    <section ref={sectionRef} className="py-20 bg-primary-blue/5 relative overflow-hidden">
+      {/* Decorative shapes for parallax */}
+      <div className="absolute -z-10 opacity-10 top-0 left-0 w-full h-full overflow-hidden">
+        <div className="parallax-item absolute top-10 left-10 w-64 h-64 rounded-full bg-bistre/20"></div>
+        <div className="parallax-item absolute bottom-20 right-20 w-80 h-80 rounded-full bg-primary-blue/20"></div>
+      </div>
+    
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-primary-blue">
@@ -20,8 +67,8 @@ const ApplicationsSection = () => {
             </span>
           </h2>
           
-          <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'} gap-6 max-w-5xl mx-auto`}>
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+          <div ref={cardsRef} className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'} gap-6 max-w-5xl mx-auto`}>
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-700">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Bot size={24} />
@@ -30,7 +77,7 @@ const ApplicationsSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-700">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Cpu size={24} />
@@ -39,7 +86,7 @@ const ApplicationsSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-700">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Database size={24} />
@@ -48,7 +95,7 @@ const ApplicationsSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-700">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Car size={24} />
@@ -57,7 +104,7 @@ const ApplicationsSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 transition-all duration-700">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Microscope size={24} />

@@ -1,12 +1,42 @@
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CircuitPattern from "@/components/CircuitPattern";
 
 const HeroSection = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  // Add parallax effect to hero elements
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!heroRef.current) return;
+      
+      const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+      const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+      
+      const decorativeCircles = heroRef.current.querySelectorAll('.hero-circle');
+      const teamImage = heroRef.current.querySelector('.team-image');
+      
+      decorativeCircles.forEach((circle, index) => {
+        const speed = index === 0 ? 0.04 : 0.02;
+        (circle as HTMLElement).style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
+      });
+      
+      if (teamImage) {
+        (teamImage as HTMLElement).style.transform = `translate(${-moveX * 0.02}px, ${-moveY * 0.02}px)`;
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
+    <section ref={heroRef} className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24">
       {/* Circuit background */}
       <div className="absolute inset-0 z-0" style={{
         backgroundImage: `url('/lovable-uploads/b1b3ac59-c3b2-4f3e-99d8-f4241b81e61e.png')`,
@@ -18,9 +48,9 @@ const HeroSection = () => {
       {/* Static circuit pattern overlay */}
       <CircuitPattern />
         
-      {/* Large decorative circles */}
-      <div className="hero-circle left-[10%] top-[-10%] w-[500px] h-[500px] bg-bistre opacity-10 hidden md:block" />
-      <div className="hero-circle right-[-10%] bottom-[-30%] w-[600px] h-[600px] bg-primary-blue/10 hidden md:block" />
+      {/* Large decorative circles with parallax effect */}
+      <div className="hero-circle absolute left-[10%] top-[-10%] w-[500px] h-[500px] bg-bistre opacity-10 hidden md:block transition-transform duration-500 ease-out" />
+      <div className="hero-circle absolute right-[-10%] bottom-[-30%] w-[600px] h-[600px] bg-primary-blue/10 hidden md:block transition-transform duration-500 ease-out" />
         
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -54,9 +84,9 @@ const HeroSection = () => {
             </div>
           </div>
             
-          {/* Team image with rounded corners */}
+          {/* Team image with rounded corners and parallax effect */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative overflow-hidden rounded-2xl shadow-lg border-4 border-offwhite">
+            <div className="team-image relative overflow-hidden rounded-2xl shadow-lg border-4 border-offwhite transition-transform duration-500 ease-out">
               <img 
                 src="/lovable-uploads/f96871b8-773a-4f10-a7bf-67c1abe3384c.png" 
                 alt="OpenHardware Team" 
