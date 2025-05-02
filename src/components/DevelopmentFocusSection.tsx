@@ -16,7 +16,7 @@ const DevelopmentFocusSection = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[0s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <CircuitBoard size={24} />
@@ -28,7 +28,7 @@ const DevelopmentFocusSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[0.5s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Cpu size={24} />
@@ -38,7 +38,7 @@ const DevelopmentFocusSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[1s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Cpu size={24} />
@@ -48,7 +48,7 @@ const DevelopmentFocusSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[0.2s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Database size={24} />
@@ -60,7 +60,7 @@ const DevelopmentFocusSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[0.7s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <CircuitBoard size={24} />
@@ -72,7 +72,7 @@ const DevelopmentFocusSection = () => {
               </CardContent>
             </Card>
             
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50 animate-float duration-[4s] delay-[1.2s]">
+            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-8">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <CircuitBoard size={24} />
