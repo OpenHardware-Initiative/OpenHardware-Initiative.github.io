@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { getCoDirectors, getTeamLeads, getTeamMembers, getAdvisors } from "@/data/teamData";
+import { getCoDirectors, getTeamLeads, getTeamMembers, getAdvisors } from "@/data/peopleData";
 import TeamMember from "@/components/TeamMember";
 import { UserCheck, User, GraduationCap, Users } from "lucide-react";
 

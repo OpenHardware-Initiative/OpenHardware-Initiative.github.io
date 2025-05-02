@@ -1,6 +1,10 @@
+/**
+ * Combined data file for team members and alumni
+ * Contains types, data, and utility functions for all people associated with OpenHardware
+ */
 
 // Define interfaces for better type safety
-export interface TeamMember {
+export interface Person {
   id: string;
   name: string;
   role?: string;
@@ -14,8 +18,8 @@ export interface TeamMember {
   isOpenPosition?: boolean;
 }
 
-// Team data
-export const teamData: TeamMember[] = [
+// Combined data array for all team members and alumni
+export const peopleData: Person[] = [
   // Co-directors
   {
     id: "1",
@@ -258,49 +262,70 @@ export const teamData: TeamMember[] = [
 ];
 
 // Helper functions
+
+/**
+ * Returns all active team members
+ */
 export const getActiveMembers = () => {
-  return teamData.filter(member => member.isActive);
+  return peopleData.filter(person => person.isActive);
 };
 
+/**
+ * Returns all former members (alumni)
+ */
 export const getAlumni = () => {
-  return teamData.filter(member => !member.isActive);
+  return peopleData.filter(person => !person.isActive);
 };
 
-export const getMemberById = (id: string): TeamMember | undefined => {
-  return teamData.find(member => member.id === id);
+/**
+ * Find person by their ID
+ */
+export const getPersonById = (id: string): Person | undefined => {
+  return peopleData.find(person => person.id === id);
 };
 
-export const getMembersByRole = (role: string): TeamMember[] => {
-  return teamData.filter(member => 
-    member.role?.toLowerCase().includes(role.toLowerCase())
+/**
+ * Returns people with a specific role
+ */
+export const getPeopleByRole = (role: string): Person[] => {
+  return peopleData.filter(person => 
+    person.role?.toLowerCase().includes(role.toLowerCase())
   );
 };
 
-// Function to get co-directors
-export const getCoDirectors = (): TeamMember[] => {
-  return teamData.filter(member => 
-    member.isActive && member.role?.includes("Co-Director")
+/**
+ * Returns all co-directors (active)
+ */
+export const getCoDirectors = (): Person[] => {
+  return peopleData.filter(person => 
+    person.isActive && person.role?.includes("Co-Director")
   );
 };
 
-// Function to get team leads
-export const getTeamLeads = (): TeamMember[] => {
-  return teamData.filter(member => 
-    member.isActive && member.role?.includes("Team Lead")
+/**
+ * Returns all team leads (active)
+ */
+export const getTeamLeads = (): Person[] => {
+  return peopleData.filter(person => 
+    person.isActive && person.role?.includes("Team Lead")
   );
 };
 
-// Function to get advisors
-export const getAdvisors = (): TeamMember[] => {
-  return teamData.filter(member => 
-    member.isActive && member.role?.includes("Advisor")
+/**
+ * Returns all advisors (active)
+ */
+export const getAdvisors = (): Person[] => {
+  return peopleData.filter(person => 
+    person.isActive && person.role?.includes("Advisor")
   );
 };
 
-// Function to get team members
-export const getTeamMembers = (): TeamMember[] => {
-  return teamData.filter(member => 
-    member.isActive && member.role?.includes("Team Member")
+/**
+ * Returns all regular team members (active)
+ */
+export const getTeamMembers = (): Person[] => {
+  return peopleData.filter(person => 
+    person.isActive && person.role?.includes("Team Member")
   );
 };
 

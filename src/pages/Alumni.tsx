@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from "react";
-import { getAlumni } from "@/data/teamData";
+import { getAlumni } from "@/data/peopleData";
 import {
   Table,
   TableBody,
