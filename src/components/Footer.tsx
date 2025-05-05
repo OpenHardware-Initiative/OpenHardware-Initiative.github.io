@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Github, Mail } from "lucide-react";
@@ -8,13 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <div className="mb-4">
-              <img 
-                src="/lovable-uploads/b0678fb8-d457-44c8-999e-b5eeca18af9a.png" 
-                alt="OpenHardware Logo" 
-                className="h-10 w-auto" 
-              />
-            </div>
+            <h3 className="text-xl font-bold mb-4">OpenHardware</h3>
             <p className="mb-4 text-white/80">
               A student initiative focused on hardware innovation, including chip design, electronics, 
               smart manufacturing, AI hardware acceleration, and tinyML.

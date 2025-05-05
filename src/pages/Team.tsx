@@ -19,21 +19,14 @@ const Team = () => {
       {/* Header */}
       <section className="bg-primary-blue text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-8">
-            <img 
-              src="/lovable-uploads/b0678fb8-d457-44c8-999e-b5eeca18af9a.png" 
-              alt="OpenHardware Logo" 
-              className="h-16 w-auto mb-6" 
-            />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Our Team</h1>
-            <p className="text-xl max-w-3xl text-center">
-              Meet the passionate individuals behind OpenHardware who are driving innovation in hardware design and implementation.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h1>
+          <p className="text-xl max-w-3xl">
+            Meet the passionate individuals behind OpenHardware who are driving innovation in hardware design and implementation.
+          </p>
         </div>
       </section>
       
-      {/* Team Grid - remaining code stays the same */}
+      {/* Team Grid */}
       <section className="py-16 bg-offwhite">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">

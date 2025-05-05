@@ -55,10 +55,11 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center z-50">
               <img 
-                src="/lovable-uploads/b0678fb8-d457-44c8-999e-b5eeca18af9a.png" 
+                src="/lovable-uploads/8c21749c-761b-4cf2-85ca-64f204ac61dd.png" 
                 alt="OpenHardware Logo" 
-                className="h-10 w-auto" 
+                className="h-10 w-auto mr-2" 
               />
+              <span className="text-2xl font-bold text-[#333351]">Open<span className="text-[#AB9A89]">Hardware</span></span>
             </Link>
             
             {/* Desktop Navigation */}
