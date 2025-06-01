@@ -1,13 +1,12 @@
-
 /**
  * Media organization utilities
- * 
- * This file defines constants and helper functions related to
+ *
+ * This file defines constants and helpers related to
  * organizing and accessing media assets across the application.
  */
 
 /**
- * Base paths for media files by category 
+ * Base paths for media files by category
  */
 export const MEDIA_PATHS = {
   TEAM: "/media/team/",
@@ -29,7 +28,7 @@ export const getImagePath = (
   filename: string
 ): string => {
   // If the path already contains a full URL or starts with /
-  if (filename.startsWith('http') || filename.startsWith('/')) {
+  if (filename.startsWith("http") || filename.startsWith("/")) {
     return filename;
   }
   return `${MEDIA_PATHS[category]}${filename}`;
@@ -44,20 +43,20 @@ export const getFallbackImageForCategory = (
   category: keyof typeof MEDIA_PATHS
 ): string => {
   switch (category) {
-    case 'TEAM':
-      return '/media/team/open-position.png';
-    case 'ALUMNI':
-      return '/media/alumni/placeholder.png';
-    case 'EVENTS':
-      return '/placeholder.svg';
-    case 'PROJECTS':
-      return '/placeholder.svg';
-    case 'LOGOS':
-      return '/media/logos/placeholder.png';
-    case 'SPONSORS':
-      return '/media/sponsors/placeholder.png';
+    case "TEAM":
+      return "/media/team/open-position.png";
+    case "ALUMNI":
+      return "/media/alumni/placeholder.png";
+    case "EVENTS":
+      return "/placeholder.svg";
+    case "PROJECTS":
+      return "/placeholder.svg";
+    case "LOGOS":
+      return "/media/logos/placeholder.png";
+    case "SPONSORS":
+      return "/media/sponsors/placeholder.png";
     default:
-      return '/placeholder.svg';
+      return "/placeholder.svg";
   }
 };
 
@@ -73,7 +72,9 @@ export const getPlaceholderImage = (
   height: number = 300,
   text: string = "Image"
 ): string => {
-  return `https://via.placeholder.com/${width}x${height}?text=${encodeURIComponent(text)}`;
+  return `https://via.placeholder.com/${width}x${height}?text=${encodeURIComponent(
+    text
+  )}`;
 };
 
 /**
@@ -82,11 +83,11 @@ export const getPlaceholderImage = (
  * @returns Full path to the sponsor logo
  */
 export const getSponsorLogoPath = (filename: string): string => {
-  // If the filename already contains a full path (e.g., /lovable-uploads/...)
+  // If the filename already contains a full path
   if (filename.startsWith("/") || filename.startsWith("http")) {
     return filename;
   }
-  
+
   // Otherwise, use the sponsors media path
   return getImagePath("SPONSORS", filename);
 };
