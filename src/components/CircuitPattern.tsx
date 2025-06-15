@@ -78,20 +78,20 @@ const CircuitPattern: React.FC = () => {
         />
 
         {/* Pulsing glowing nodes */}
-        <circle cx="100" cy="100" r="4" fill="#333351" className="glow pulse" />
-        <circle cx="300" cy="200" r="4" fill="#333351" className="glow" />
-        <circle cx="500" cy="400" r="6" fill="#333351" className="glow pulse" />
-        <circle cx="200" cy="300" r="4" fill="#333351" className="glow" />
-        <circle cx="400" cy="500" r="4" fill="#333351" className="glow pulse" />
-        <circle cx="600" cy="200" r="4" fill="#c28f40" className="glow" />
-        <circle cx="400" cy="300" r="6" fill="#c28f40" className="glow pulse" />
-        <circle cx="500" cy="300" r="4" fill="#c28f40" className="glow" />
-        <circle cx="400" cy="250" r="4" fill="#333351" className="glow" />
-        <circle cx="500" cy="350" r="4" fill="#333351" className="glow" />
-        <circle cx="500" cy="450" r="6" fill="#333351" className="glow pulse" />
-        <circle cx="550" cy="200" r="4" fill="#c28f40" className="glow" />
-        <circle cx="550" cy="300" r="4" fill="#c28f40" className="glow pulse" />
-        <circle cx="650" cy="300" r="6" fill="#c28f40" className="glow" />
+        <circle cx="100" cy="100" r="4" fill="#333351" className="glow-blue pulse" />
+        <circle cx="300" cy="200" r="4" fill="#333351" className="glow-blue" />
+        <circle cx="500" cy="400" r="6" fill="#333351" className="glow-blue pulse" />
+        <circle cx="200" cy="300" r="4" fill="#333351" className="glow-blue" />
+        <circle cx="400" cy="500" r="4" fill="#333351" className="glow-blue pulse" />
+        <circle cx="600" cy="200" r="4" fill="#c28f40" className="glow-gold" />
+        <circle cx="400" cy="300" r="6" fill="#c28f40" className="glow-gold pulse" />
+        <circle cx="500" cy="300" r="4" fill="#c28f40" className="glow-gold" />
+        <circle cx="400" cy="250" r="4" fill="#333351" className="glow-blue" />
+        <circle cx="500" cy="350" r="4" fill="#333351" className="glow-blue" />
+        <circle cx="500" cy="450" r="6" fill="#333351" className="glow-blue pulse" />
+        <circle cx="550" cy="200" r="4" fill="#c28f40" className="glow-gold" />
+        <circle cx="550" cy="300" r="4" fill="#c28f40" className="glow-gold pulse" />
+        <circle cx="650" cy="300" r="6" fill="#c28f40" className="glow-gold" />
 
         {/* Tracers following the paths */}
         <circle r="4" fill="#333351" className="circle">
@@ -194,9 +194,29 @@ const CircuitPattern: React.FC = () => {
               }
             }
 
-            .glow {
+            /* Separate glow effects for each color */
+            .glow-blue {
               filter: drop-shadow(0 0 4px #333351) drop-shadow(0 0 8px #333351);
             }
+            .glow-gold {
+              filter: drop-shadow(0 0 4px #c28f40) drop-shadow(0 0 8px #c28f40);
+            }
+
+            /* Add random delays for each pulsing dot */
+            .pulse:nth-child(1) { animation-delay: 0s; }
+            .pulse:nth-child(2) { animation-delay: 0.7s; }
+            .pulse:nth-child(3) { animation-delay: 1.3s; }
+            .pulse:nth-child(4) { animation-delay: 0.4s; }
+            .pulse:nth-child(5) { animation-delay: 1.1s; }
+            .pulse:nth-child(6) { animation-delay: 0.2s; }
+            .pulse:nth-child(7) { animation-delay: 0.9s; }
+            .pulse:nth-child(8) { animation-delay: 1.5s; }
+            .pulse:nth-child(9) { animation-delay: 0.5s; }
+            .pulse:nth-child(10) { animation-delay: 1.2s; }
+            .pulse:nth-child(11) { animation-delay: 0.8s; }
+            .pulse:nth-child(12) { animation-delay: 0.3s; }
+            .pulse:nth-child(13) { animation-delay: 1.4s; }
+            .pulse:nth-child(14) { animation-delay: 1.0s; }
           `,
         }}
       />
