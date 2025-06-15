@@ -8,8 +8,8 @@ export interface Person {
   id: string;
   name: string;
   role?: string;
-  image: string;
-  linkedIn: string;
+  image?: string;
+  linkedIn?: string;
   education?: string;
   isActive: boolean;
   joinDate: string;
@@ -25,8 +25,8 @@ export const peopleData: Person[] = [
     id: "1",
     name: "Ipek Akdeniz",
     role: "Co-Director",
-    image: "/media/team/ipek-akdeniz.png",
-    linkedIn: "https://linkedin.com",
+    image: "/media/team/ipek-akdeniz.jpg",
+    linkedIn: "https://linkedin.com/in/ipek-akdeniz/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2022-09"
@@ -35,8 +35,8 @@ export const peopleData: Person[] = [
     id: "2",
     name: "Agustin Nahuel Coppari Hollmann",
     role: "Co-Director",
-    image: "/media/team/agustin-coppari.png",
-    linkedIn: "https://linkedin.com",
+    image: "/media/team/agustin-coppari.JPG",
+    linkedIn: "https://linkedin.com/in/agustin-nahuel-coppari-hollmann/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
@@ -45,8 +45,8 @@ export const peopleData: Person[] = [
     id: "3",
     name: "Deniz Onat Erdoğan",
     role: "Co-Director",
-    image: "/media/team/deniz-erdogan.png",
-    linkedIn: "https://linkedin.com",
+    image: "/media/team/deniz-erdogan.jpg",
+    linkedIn: "https://linkedin.com/in/deniz-onat/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-05"
@@ -57,7 +57,6 @@ export const peopleData: Person[] = [
     id: "4",
     name: "This could be you!",
     role: "Team Lead - Operations",
-    image: "/media/team/open-position.png",
     linkedIn: "https://linkedin.com",
     education: "Join our team!",
     isActive: true,
@@ -68,7 +67,6 @@ export const peopleData: Person[] = [
     id: "5",
     name: "This could be you!",
     role: "Team Lead - Communications",
-    image: "/media/team/open-position-alt.png",
     linkedIn: "https://linkedin.com",
     education: "Join our team!",
     isActive: true,
@@ -82,8 +80,7 @@ export const peopleData: Person[] = [
     name: "Aleksa Stojković",
     role: "Advisor",
     image: "/media/team/aleksa-stojkovic.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Master Electrical Engineering and Information Technology",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
   },
@@ -91,7 +88,6 @@ export const peopleData: Person[] = [
     id: "13",
     name: "Johannes Geier",
     role: "Advisor",
-    image: "/media/team/johannes-geier.png",
     linkedIn: "https://linkedin.com",
     education: "Technical University of Munich, Chair of Electronic Design Automation (Prof. Schlichtmann)",
     isActive: true,
@@ -103,9 +99,9 @@ export const peopleData: Person[] = [
     id: "6",
     name: "Kagan Dikmen",
     role: "Team Member",
-    image: "/media/team/kagan-dikmen.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Bachelor Electrical Engineering and Information Technology",
+    image: "/media/team/kagan-dikmen.jpg",
+    linkedIn: "https://linkedin.com/in/kagan-dikmen/",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-06"
   },
@@ -113,9 +109,8 @@ export const peopleData: Person[] = [
     id: "7",
     name: "Mehmet Efe Karadeniz",
     role: "Team Member",
-    image: "/media/team/mehmet-karadeniz.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Bachelor Electrical Engineering and Information Technology",
+    image: "/media/team/mehmet-karadeniz.jpg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-09"
   },
@@ -123,9 +118,8 @@ export const peopleData: Person[] = [
     id: "8",
     name: "Osman Yasar",
     role: "Team Member",
-    image: "/media/team/osman-yasar.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Master Communications and Electronics",
+    image: "/media/team/osman-yasar.JPG",
+    education: "M.Sc. Communications and Electronics, TUM",
     isActive: true,
     joinDate: "2023-10"
   },
@@ -133,11 +127,30 @@ export const peopleData: Person[] = [
     id: "9",
     name: "Tobias Konieczny",
     role: "Team Member",
-    image: "/media/team/tobias-konieczny.png",
-    linkedIn: "https://linkedin.com",
-    education: "TUM, Bachelor Computer Science",
+    image: "/media/team/tobias-konieczny.JPG",
+    education: "B.Sc Computer Science, TUM",
     isActive: true,
     joinDate: "2023-10"
+  },
+  {
+    id: "10",
+    name: "Danylo Struk",
+    role: "Team Member",
+    image: "/media/team/danylo-struk.jpg",
+    linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
+  },
+  {
+    id: "11",
+    name: "Jakub Skupień",
+    role: "Team Member",
+    image: "/media/team/jakub-skupien.jpg",
+    linkedIn: "https://www.linkedin.com/in/jakub-skupien",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
   },
   
   // Alumni

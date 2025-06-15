@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Linkedin, UserPlus } from "lucide-react";
@@ -8,8 +7,8 @@ import { Link } from "react-router-dom";
 interface TeamMemberProps {
   name: string;
   role?: string;
-  image: string;
-  linkedIn: string;
+  image?: string;
+  linkedIn?: string;
   education?: string;
   personIndex?: number;
   isCoDirector?: boolean;
@@ -35,29 +34,48 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         {isCompositeImage ? (
           <TeamMemberImage image={image} name={name} personIndex={personIndex} />
         ) : (
-          <div className="relative">
-            <img 
-              src={image} 
-              alt={name} 
-              className={`w-full h-60 object-cover object-center ${isOpenPosition ? 'opacity-80' : ''}`}
-            />
-            {isOpenPosition && (
-              <div className="absolute inset-0 flex items-center justify-center">
+          image ? (
+            <div className="relative">
+              <img 
+                src={image} 
+                alt={name} 
+                className={`w-full h-60 object-cover object-center ${isOpenPosition ? 'opacity-80' : ''}`}
+              />
+              {isOpenPosition && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-primary-blue bg-opacity-70 p-4 rounded-full">
+                    <UserPlus size={32} className="text-white" />
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : !isOpenPosition ? (
+            // Placeholder image if no image and not open position
+            <div className="w-full h-60 flex items-center justify-center bg-gray-100">
+              <img 
+                src={"placeholder.png"} 
+                alt={name} 
+                className={`w-full h-60 object-cover object-center ${isOpenPosition ? 'opacity-80' : ''}`}
+              />
+            </div>
+          ) : (
+            <div className={`w-full h-60 flex items-center justify-center bg-gray-100 ${isOpenPosition ? 'opacity-80' : ''}`}>
+              {isOpenPosition && (
                 <div className="bg-primary-blue bg-opacity-70 p-4 rounded-full">
                   <UserPlus size={32} className="text-white" />
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )
         )}
-        {role && (
+        {/* {role && (
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-primary-blue text-white text-xs md:text-sm rounded-full truncate max-w-[200px]">
               {role}
             </span>
           </div>
-        )}
-        {!isOpenPosition ? (
+        )} */}
+        {!isOpenPosition && linkedIn ? (
           <a 
             href={linkedIn} 
             target="_blank" 
@@ -67,7 +85,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           >
             <Linkedin size={18} />
           </a>
-        ) : (
+        ) : null}
+        {isOpenPosition && (
           <Link 
             to="/contact"
             className="absolute bottom-4 right-4 p-2 bg-white text-primary-blue rounded-full hover:bg-primary-blue hover:text-white transition-colors"

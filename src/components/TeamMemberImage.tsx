@@ -16,19 +16,19 @@ const TeamMemberImage: React.FC<TeamMemberImageProps> = ({ image, name, personIn
       // Ipek (left person)
       return {
         objectPosition: "0% center",
-        clipPath: "inset(0 66% 0 0)"
+        //clipPath: "inset(0 66% 0 0)"
       };
     } else if (personIndex === 1) {
       // Agustin (middle person)
       return {
         objectPosition: "50% center",
-        clipPath: "inset(0 33% 0 33%)"
+        //clipPath: "inset(0 33% 0 33%)"
       };
     } else {
       // Deniz (right person)
       return {
         objectPosition: "100% center",
-        clipPath: "inset(0 0 0 66%)"
+        //clipPath: "inset(0 0 0 66%)"
       };
     }
   };
