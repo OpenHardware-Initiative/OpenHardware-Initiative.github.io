@@ -52,11 +52,21 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           ) : !isOpenPosition ? (
             // Placeholder image if no image and not open position
             <div className="w-full h-60 flex items-center justify-center bg-gray-100">
-              <img 
-                src={"placeholder.png"} 
-                alt={name} 
-                className={`w-full h-60 object-cover object-center ${isOpenPosition ? 'opacity-80' : ''}`}
-              />
+              <svg
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-gray-300"
+              >
+                {/* Person silhouette */}
+                <circle cx="60" cy="40" r="25" fill="currentColor" />
+                <path
+                  d="M30 100C30 83.4315 43.4315 70 60 70C76.5685 70 90 83.4315 90 100"
+                  fill="currentColor"
+                />
+              </svg>
             </div>
           ) : (
             <div className={`w-full h-60 flex items-center justify-center bg-gray-100 ${isOpenPosition ? 'opacity-80' : ''}`}>

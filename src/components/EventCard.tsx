@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -72,18 +71,44 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     <Card className="overflow-hidden h-full flex flex-col transition-all hover:shadow-md">
       {/* Image and date/location badges */}
       <div className="relative h-48">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover" 
-        />
+        {image ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover" 
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary-blue/10 to-primary-blue/5 flex items-center justify-center">
+            <svg
+              width="120"
+              height="120"
+              viewBox="0 0 120 120"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-50"
+            >
+              {/* Confetti pieces */}
+              <path d="M20 20l10-10 10 10-10 10z" fill="#AB9A89" />
+              <path d="M80 30l15-15 15 15-15 15z" fill="rgb(51 51 81)" />
+              <path d="M40 80l12-12 12 12-12 12z" fill="rgb(248 221 186)" />
+              <path d="M90 70l8-8 8 8-8 8z" fill="#AB9A89" />
+              <path d="M60 40l6-6 6 6-6 6z" fill="rgb(51 51 81)" />
+              <path d="M30 50l9-9 9 9-9 9z" fill="rgb(248 221 186)" />
+              <path d="M70 90l11-11 11 11-11 11z" fill="#AB9A89" />
+              {/* Calendar icon in center */}
+              <rect x="45" y="45" width="30" height="30" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
+              <line x1="45" y1="55" x2="75" y2="55" stroke="currentColor" strokeWidth="2" />
+              <line x1="55" y1="45" x2="55" y2="65" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          </div>
+        )}
         <div className="absolute top-3 left-3 flex items-center gap-1 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-md">
           <Calendar size={14} className="text-primary-blue flex-shrink-0" />
           <span className="text-xs font-medium truncate max-w-[150px]">{formatDate(date)}</span>
         </div>
         {location && (
           <div className="absolute top-3 right-3">
-            <Badge variant="secondary" className="bg-offwhite text-primary-blue text-xs truncate max-w-[100px]">
+            <Badge variant="secondary" className="bg-offwhite text-primary-blue text-xs truncate max-w-[120px]">
               {location}
             </Badge>
           </div>
@@ -118,15 +143,15 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           <div className="flex flex-wrap gap-1">
             {supporters.map((supporter, index) => {
               // Get color based on index
-              const backgroundColor = getRotatingColor(index);
+              const backgroundColor = "#AB9A89";//getRotatingColor(index);
               // Get appropriate text color for contrast
-              const textColor = getContrastTextColor(backgroundColor);
+              const textColor = "hsl(40 33% 98%)";//getContrastTextColor("#AB9A89");
               
               return (
                 <Badge 
                   key={index} 
                   variant="outline" 
-                  className="text-xs border truncate max-w-[120px]"
+                  className="text-xs border truncate max-w-[240px]"
                   style={{ 
                     backgroundColor, 
                     borderColor: backgroundColor,

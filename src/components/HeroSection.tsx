@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -55,12 +54,12 @@ const HeroSection = () => {
           </div>
             
           {/* Team image with rounded corners */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative overflow-hidden rounded-2xl shadow-lg border-4 border-offwhite">
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-lg border-4 border-offwhite h-[600px]">
               <img 
-                src="/lovable-uploads/f96871b8-773a-4f10-a7bf-67c1abe3384c.png" 
+                src="/Everyone_SoSe2025.jpg" 
                 alt="OpenHardware Team" 
-                className="w-full max-w-md mx-auto object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>

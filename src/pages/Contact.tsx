@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -34,58 +33,77 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
-                    <Mail size={24} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
+                      <Mail size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">Email</h3>
+                      <p className="text-gray-600">contact@open-hardware-initiative.com</p>
+                      <a 
+                        href="mailto:contact@open-hardware-initiative.com" 
+                        className="text-primary-blue hover:underline mt-1 inline-block"
+                      >
+                        Send an email
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold">Email</h3>
-                    <p className="text-gray-600">contact@open-hardware-initiative.com</p>
-                    <a 
-                      href="mailto:contact@open-hardware-initiative.com" 
-                      className="text-primary-blue hover:underline mt-1 inline-block"
-                    >
-                      Send an email
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Location</h3>
-                    <p className="text-gray-600">
-                      Technical University Munich<br />
-                      Arcisstraße 21<br />
-                      80333 Munich, Germany
-                    </p>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
+                      <MapPin size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">Location</h3>
+                      <p className="text-gray-600">
+                        Technical University Munich<br />
+                        Arcisstraße 21<br />
+                        80333 Munich, Germany
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
               
               <div className="mt-8">
-                <h3 className="font-bold mb-4">Connect with us</h3>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="bg-primary-blue text-white p-3 rounded-full hover:bg-primary-blue/90 transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={24} />
-                  </a>
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="bg-primary-blue text-white p-3 rounded-full hover:bg-primary-blue/90 transition-colors"
-                    aria-label="GitHub"
-                  >
-                    <Github size={24} />
-                  </a>
+                <h3 className="font-bold mb-4">Social Media</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
+                      <Linkedin size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">LinkedIn</h3>
+                      <p className="text-gray-600 mb-2">Follow us on LinkedIn</p>
+                      <a 
+                        href="https://linkedin.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-primary-blue hover:underline inline-block"
+                      >
+                        Visit our LinkedIn
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
+                      <Github size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">GitHub</h3>
+                      <p className="text-gray-600 mb-2">Check out our projects</p>
+                      <a 
+                        href="https://github.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-primary-blue hover:underline inline-block"
+                      >
+                        Visit our GitHub
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               

@@ -32,7 +32,7 @@ export interface Event {
   title: string;
   description: string;
   date: string; // Format: YYYY-MM-DD
-  image: string;
+  image?: string;
   link: {
     url: string;
     type: "instagram" | "signup" | "linkedin" | "luma" | "other";
@@ -53,7 +53,6 @@ export const eventsData: Event[] = [
     title: "ASIP Hackathon 2025",
     description: "A hackathon focused on Application-Specific Instruction Set Processors using the ASIP Designer Tool from Synopsys. Participants developed ML inference accelerators with guidance from industry experts.",
     date: "2025-03-15",
-    image: "/media/events/asip-hackathon-2025.png",
     link: {
       url: "https://www.linkedin.com/events/asiphackathon2025/",
       type: "linkedin"
@@ -67,7 +66,7 @@ export const eventsData: Event[] = [
       { name: "AI Processor Design Chair at TUM", type: "chair" },
       { name: "Synopsys", type: "company" }
     ],
-    location: "Technical University of Munich",
+    location: "TUM",
     isArchived: true
   },
   {
@@ -75,7 +74,6 @@ export const eventsData: Event[] = [
     title: "Munich Neuromorphic Hackathon 2024",
     description: "An immersive hackathon on neuromorphic computing technologies with collaboration from fortiss, neurobus, and IBM, featuring expert talks and hands-on challenges.",
     date: "2024-04-20",
-    image: "/media/events/neuromorphic-hackathon-2024.png",
     link: {
       url: "https://www.instagram.com/p/munich-neuromorphic-hackathon/",
       type: "instagram"
@@ -91,7 +89,7 @@ export const eventsData: Event[] = [
       { name: "neurobus", type: "organization" },
       { name: "IBM", type: "company" }
     ],
-    location: "Munich, Germany",
+    location: "Munich",
     isArchived: true
   },
   {
@@ -99,7 +97,6 @@ export const eventsData: Event[] = [
     title: "Neuromorphic Hackathon 2023",
     description: "Four-day hackathon focused on neuromorphic technologies, hosted in collaboration with Fortiss Neuromorphic Labs and Intel, featuring team challenges based on state-of-the-art research.",
     date: "2023-11-06",
-    image: "/media/events/neuromorphic-hackathon-2023.png",
     link: {
       url: "https://luma.com/events/neuromorphic-hackathon-2023",
       type: "luma"
@@ -112,7 +109,7 @@ export const eventsData: Event[] = [
       { name: "Fortiss Neuromorphic Labs", type: "organization" },
       { name: "Intel", type: "company" }
     ],
-    location: "Fortiss offices, Munich",
+    location: "Fortiss offices",
     isArchived: true
   }
 ];

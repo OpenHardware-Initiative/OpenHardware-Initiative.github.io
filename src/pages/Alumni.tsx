@@ -213,15 +213,17 @@ const Alumni = () => {
                         {formatDate(member.joinDate)} - {member.endDate ? formatDate(member.endDate) : "Present"}
                       </TableCell>
                       <TableCell>
-                        <a 
-                          href={member.linkedIn} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center p-2 text-primary-blue hover:text-primary-blue/70 transition-colors"
-                          aria-label={`${member.name}'s LinkedIn profile`}
-                        >
-                          <Linkedin size={20} />
-                        </a>
+                        {member.linkedIn && (
+                          <a 
+                            href={member.linkedIn} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center p-2 text-primary-blue hover:text-primary-blue/70 transition-colors"
+                            aria-label={`${member.name}'s LinkedIn profile`}
+                          >
+                            <Linkedin size={20} />
+                          </a>
+                        )}
                       </TableCell>
                     </TableRow>
                   ))
@@ -252,15 +254,17 @@ const Alumni = () => {
                   <div key={member.id} className="bg-white p-4 rounded-lg shadow">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-bold">{member.name}</h4>
-                      <a 
-                        href={member.linkedIn} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-1 text-primary-blue hover:text-primary-blue/70"
-                        aria-label={`${member.name}'s LinkedIn profile`}
-                      >
-                        <Linkedin size={18} />
-                      </a>
+                      {member.linkedIn && (
+                        <a 
+                          href={member.linkedIn} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="p-1 text-primary-blue hover:text-primary-blue/70"
+                          aria-label={`${member.name}'s LinkedIn profile`}
+                        >
+                          <Linkedin size={18} />
+                        </a>
+                      )}
                     </div>
                     
                     <p className="text-gray-600 text-sm mb-2">{member.role || "Member"}</p>
