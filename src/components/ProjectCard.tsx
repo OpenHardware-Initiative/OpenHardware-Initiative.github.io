@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -34,14 +33,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Card className="overflow-hidden h-full flex flex-col transition-all hover:shadow-md">
       <div className="relative h-48">
         <img 
-          src={image} 
+          src={image || "/placeholder.svg"} 
           alt={title} 
           className="w-full h-full object-cover" 
         />
         <div className="absolute top-3 left-3">
           <Badge 
             variant="secondary" 
-            className="text-xs truncate max-w-[150px]"
+            className="text-xs truncate max-w-[180px]"
             style={{ 
               backgroundColor: categoryBgColor,
               color: categoryTextColor
@@ -57,14 +56,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           >
             {status}
           </Badge>
-          {recruitingFor && (
-            <Badge 
-              variant="secondary"
-              className="bg-green-600 text-white border-green-600 text-xs"
-            >
-              Recruiting
-            </Badge>
-          )}
         </div>
       </div>
       
@@ -93,7 +84,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </Button>
           </a>
         ) : (
-          <span className="text-sm italic text-gray-500">Private Repository</span>
+          <div className="flex-grow">
+            <Button variant="outline" className="w-full flex items-center justify-center gap-2" disabled>
+              <Github size={16} className="flex-shrink-0" />
+              <span className="truncate text-gray-500">Private Repository</span>
+            </Button>
+          </div>
         )}
         
         {recruitingFor && (

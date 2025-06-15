@@ -6,7 +6,7 @@ export interface Project {
   description: string;
   category: "Chip Design" | "AI Hardware" | "IoT" | "Smart Manufacturing" | "TinyML" | "Spiking Neural Networks";
   status: "Active" | "Completed" | "Discontinued";
-  image: string;
+  image?: string;
   githubLink?: string;
   year: number;
   recruitingFor?: boolean;
@@ -20,7 +20,6 @@ export const projectsData: Project[] = [
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
     status: "Active",
-    image: "/media/projects/spikingc.png",
     githubLink: "https://github.com/example/spikingc",
     year: 2023,
     recruitingFor: true
@@ -31,7 +30,7 @@ export const projectsData: Project[] = [
     description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
     category: "Spiking Neural Networks",
     status: "Completed",
-    image: "/media/projects/gesture-recognition.png",
+    image: "",
     year: 2023
   },
   {
@@ -40,7 +39,6 @@ export const projectsData: Project[] = [
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
     status: "Active",
-    image: "/media/projects/densespiking-rtl.png",
     year: 2023,
     recruitingFor: true
   },
@@ -50,7 +48,6 @@ export const projectsData: Project[] = [
     description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints.",
     category: "AI Hardware",
     status: "Active",
-    image: "/media/projects/drone-vit.jpg",
     year: 2023
   },
   {
@@ -59,7 +56,6 @@ export const projectsData: Project[] = [
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
     status: "Active",
-    image: "/media/projects/mobile-vit.jpg",
     year: 2023
   },
   {
@@ -68,7 +64,6 @@ export const projectsData: Project[] = [
     description: "An intelligent scheduling system for manufacturing industries that optimizes production processes and resource allocation using AI algorithms.",
     category: "Smart Manufacturing",
     status: "Active",
-    image: "/media/projects/smart-scheduling.png",
     year: 2023,
     recruitingFor: true
   },
@@ -78,7 +73,6 @@ export const projectsData: Project[] = [
     description: "Development of a compiler that optimizes neural network models for various hardware accelerators, leveraging IREE (IR Execution Environment) technology.",
     category: "AI Hardware",
     status: "Active",
-    image: "/media/projects/ai-compiler.png",
     githubLink: "https://github.com/example/ai-compiler-iree",
     year: 2023
   },
@@ -88,7 +82,6 @@ export const projectsData: Project[] = [
     description: "A custom processor design optimized for deep learning inference with minimal energy consumption for battery-powered devices.",
     category: "Chip Design",
     status: "Discontinued",
-    image: "/media/projects/dl-processor.jpg",
     year: 2021
   }
 ];
