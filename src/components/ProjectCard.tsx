@@ -32,11 +32,54 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Card className="overflow-hidden h-full flex flex-col transition-all hover:shadow-md">
       <div className="relative h-48">
-        <img 
-          src={image || "/placeholder.svg"} 
-          alt={title} 
-          className="w-full h-full object-cover" 
-        />
+        {image ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover" 
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary-blue/10 to-primary-blue/5 flex items-center justify-center">
+            <svg
+              width="120"
+              height="120"
+              viewBox="0 0 120 120"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-50"
+            >
+              {/* Circuit Board Base */}
+              <rect x="20" y="20" width="80" height="80" rx="8" fill="#AB9A89" />
+              
+              {/* Circuit Traces */}
+              <path d="M30 40h60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              <path d="M30 60h60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              <path d="M30 80h60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              <path d="M40 30v60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              <path d="M60 30v60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              <path d="M80 30v60" stroke="rgb(51 51 81)" strokeWidth="2" />
+              
+              {/* Circuit Components */}
+              {/* Microchip */}
+              <rect x="45" y="45" width="30" height="30" rx="2" fill="rgb(51 51 81)" />
+              <rect x="50" y="50" width="20" height="20" rx="1" fill="rgb(248 221 186)" />
+              
+              {/* Capacitors */}
+              <rect x="35" y="35" width="4" height="10" fill="rgb(248 221 186)" />
+              <rect x="81" y="35" width="4" height="10" fill="rgb(248 221 186)" />
+              <rect x="35" y="75" width="4" height="10" fill="rgb(248 221 186)" />
+              <rect x="81" y="75" width="4" height="10" fill="rgb(248 221 186)" />
+              
+              {/* Connection Points */}
+              <circle cx="30" cy="40" r="2" fill="rgb(248 221 186)" />
+              <circle cx="90" cy="40" r="2" fill="rgb(248 221 186)" />
+              <circle cx="30" cy="60" r="2" fill="rgb(248 221 186)" />
+              <circle cx="90" cy="60" r="2" fill="rgb(248 221 186)" />
+              <circle cx="30" cy="80" r="2" fill="rgb(248 221 186)" />
+              <circle cx="90" cy="80" r="2" fill="rgb(248 221 186)" />
+            </svg>
+          </div>
+        )}
         <div className="absolute top-3 left-3">
           <Badge 
             variant="secondary" 

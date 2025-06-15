@@ -167,22 +167,24 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       </CardContent>
       
       {/* Link to event */}
-      <CardFooter className="pt-2 border-t">
-        <a 
-          href={link.url} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="w-full"
-        >
-          <Button 
-            variant="outline" 
-            className="w-full flex items-center justify-center gap-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white"
+      {link?.url && (
+        <CardFooter className="pt-2 border-t">
+          <a 
+            href={link.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full"
           >
-            {getLinkIcon(link.type)}
-            <span className="truncate">{getLinkText(link.type)}</span>
-          </Button>
-        </a>
-      </CardFooter>
+            <Button 
+              variant="outline" 
+              className="w-full flex items-center justify-center gap-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white"
+            >
+              {getLinkIcon(link.type)}
+              <span className="truncate">{getLinkText(link.type)}</span>
+            </Button>
+          </a>
+        </CardFooter>
+      )}
     </Card>
   );
 };

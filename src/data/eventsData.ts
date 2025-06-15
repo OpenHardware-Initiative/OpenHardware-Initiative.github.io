@@ -33,7 +33,7 @@ export interface Event {
   description: string;
   date: string; // Format: YYYY-MM-DD
   image?: string;
-  link: {
+  link?: {
     url: string;
     type: "instagram" | "signup" | "linkedin" | "luma" | "other";
   };
@@ -53,10 +53,6 @@ export const eventsData: Event[] = [
     title: "ASIP Hackathon 2025",
     description: "A hackathon focused on Application-Specific Instruction Set Processors using the ASIP Designer Tool from Synopsys. Participants developed ML inference accelerators with guidance from industry experts.",
     date: "2025-03-15",
-    link: {
-      url: "https://www.linkedin.com/events/asiphackathon2025/",
-      type: "linkedin"
-    },
     organizers: [
       { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
       { name: "Ipek Akdeniz", role: "Co-organizer" },

@@ -51,21 +51,35 @@ const TeamMember: React.FC<TeamMemberProps> = ({
             </div>
           ) : !isOpenPosition ? (
             // Placeholder image if no image and not open position
-            <div className="w-full h-60 flex items-center justify-center bg-gray-100">
+            <div className="w-full h-60 flex items-center justify-center bg-gradient-to-br from-primary-blue/10 to-primary-blue/5">
               <svg
                 width="120"
                 height="120"
                 viewBox="0 0 120 120"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-300"
+                className="opacity-50"
               >
-                {/* Person silhouette */}
-                <circle cx="60" cy="40" r="25" fill="currentColor" />
+                {/* Fun character design */}
+                {/* Head */}
+                <circle cx="60" cy="45" r="25" fill="rgb(248 221 186)" />
+                
+                {/* Eyes */}
+                <circle cx="50" cy="40" r="4" fill="rgb(51 51 81)" />
+                <circle cx="70" cy="40" r="4" fill="rgb(51 51 81)" />
+                
+                {/* Smile */}
+                <path d="M50 55 Q60 65 70 55" stroke="rgb(51 51 81)" strokeWidth="2" strokeLinecap="round" />
+                
+                {/* Body */}
                 <path
-                  d="M30 100C30 83.4315 43.4315 70 60 70C76.5685 70 90 83.4315 90 100"
-                  fill="currentColor"
+                  d="M40 100C40 85.4315 50 75 60 75C70 75 80 85.4315 80 100"
+                  fill="rgb(248 221 186)"
                 />
+                
+                {/* Connection lines */}
+                <path d="M25 85L40 100" stroke="#AB9A89" strokeWidth="2"  />
+                <path d="M95 85L80 100" stroke="#AB9A89" strokeWidth="2"  />
               </svg>
             </div>
           ) : (
