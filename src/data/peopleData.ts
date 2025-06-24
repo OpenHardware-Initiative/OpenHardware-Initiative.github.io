@@ -157,29 +157,28 @@ export const peopleData: Person[] = [
   {
     id: "26",
     name: "Alyona Starikova",
-    role: "Former Co-Director",
+    role: "Former Team Lead",
     image: "/media/alumni/alyona-starikova.png",
     isActive: false,
     joinDate: "2021-06",
     endDate: "2023-01",
     contributions: [
-      "Co-founded OpenHardware initiative",
-      "Led strategic partnerships with industry",
-      "Secured initial funding for operations"
+      "Co-founded the brain-inspired computing group at neuroTUM",
+      "Co-organized the neuromorphic hackathon of 2024",
+      "Worked on learning rules usng SNNs"
     ]
   },
   {
     id: "25",
     name: "Fabio Veneto",
-    role: "Former Team Lead",
+    role: "Former Advisor",
     image: "/media/alumni/fabio-veneto.png",
     isActive: false,
     joinDate: "2021-09",
     endDate: "2023-05",
     contributions: [
-      "Led the communications team",
-      "Established partnership with TUM entrepreneurship center",
-      "Organized multiple hackathons"
+      "Advised on topics related to computational neuroscience",
+      "Worked on continual learning using Intel's neuromorphic framework"
     ]
   },
   {
@@ -191,8 +190,8 @@ export const peopleData: Person[] = [
     joinDate: "2022-01",
     endDate: "2023-04",
     contributions: [
-      "Contributed to FPGA design for neuromorphic computing",
-      "Developed power analysis tooling for SNN accelerators"
+      "Worked on learning rules related to computational neuroscience",
+      "Contributed to the transformer SNN model"
     ]
   },
   {
@@ -206,7 +205,7 @@ export const peopleData: Person[] = [
     endDate: "2024-03",
     contributions: [
       "Contributed to spiking neural network implementations",
-      "Worked on hardware optimization for edge devices"
+      "Worked on FPGA SoC integration with SNN accelerator"
     ]
   },
   {
@@ -219,7 +218,7 @@ export const peopleData: Person[] = [
     joinDate: "2023-12",
     endDate: "2024-03",
     contributions: [
-      "Developed hardware accelerators for neural networks",
+      "Developed analog LIF neuron for SNNs",
       "Optimized power efficiency for edge AI applications"
     ]
   },
