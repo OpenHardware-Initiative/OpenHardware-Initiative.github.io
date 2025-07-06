@@ -10,23 +10,19 @@ This folder contains the full source code for the OpenHardware Initiative websit
   - `...`
 - `public/` — Static assets (images, uploads, etc.)
 
-## 🛠️ Development
-- Built with [React](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [Bun](https://bun.sh/)
-- All data is managed in `src/data/` as TypeScript files
-- No database or CMS required
-
 ## 📦 Data Management
-See [`../DATA_MANAGEMENT_README.md`](../DATA_MANAGEMENT_README.md) for how to add or edit people, events, or projects.
+- See [`DATA_MANAGEMENT_README.md`](DATA_MANAGEMENT_README.md) for how to add or edit people, events, or projects.
+- See [`APPLICATION_CONFIG_README.md`](APPLICATION_CONFIG_README.md) for how to set-up & remove an application form.
 
 ## 🏗️ Building & Deploying
-See [`../DEPLOYMENT_README.md`](../DEPLOYMENT_README.md) for how to build and deploy the site with Bun and GitHub Pages.
+See [`DEPLOYMENT_README.md`](DEPLOYMENT_README.md) for how to build and deploy the site with Bun and GitHub Pages.
 
 ## ⚡ Quick Start
 1. Install dependencies (if needed):
    ```sh
    bun install
    ```
-2. Start the dev server:
+2. Start the dev server (test the website locally):
    ```sh
    bun run dev
    ```
@@ -34,6 +30,11 @@ See [`../DEPLOYMENT_README.md`](../DEPLOYMENT_README.md) for how to build and de
    ```sh
    bun run build
    ```
+
+## 🛠️ Development
+- Built with [React](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), and [Bun](https://bun.sh/)
+- All data is managed in `src/data/` as TypeScript files
+- No database or CMS required
 
 ## 📝 Notes
 - SPA routing is supported for GitHub Pages, Vercel, and Netlify
