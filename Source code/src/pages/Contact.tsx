@@ -96,7 +96,7 @@ const Contact = () => {
                       <h3 className="font-bold">GitHub</h3>
                       <p className="text-gray-600 mb-2">Check out our projects</p>
                       <a 
-                        href="https://github.com" 
+                        href="https://github.com/OpenHardware-Initiative" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-primary-blue hover:underline inline-block"
