@@ -53,6 +53,7 @@ export const eventsData: Event[] = [
     title: "ASIP Hackathon 2025",
     description: "A hackathon focused on Application-Specific Instruction Set Processors using the ASIP Designer Tool from Synopsys. Participants developed ML inference accelerators with guidance from industry experts.",
     date: "2025-03-15",
+    image: "/media/events/Asip_2025.png",
     organizers: [
       { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
       { name: "Ipek Akdeniz", role: "Co-organizer" },
@@ -70,6 +71,7 @@ export const eventsData: Event[] = [
     title: "Munich Neuromorphic Hackathon 2024",
     description: "An immersive hackathon on neuromorphic computing technologies with collaboration from fortiss, neurobus, and IBM, featuring expert talks and hands-on challenges.",
     date: "2024-04-20",
+    image: "/media/events/fortiss_2024.png",
     link: {
       url: "https://www.instagram.com/p/munich-neuromorphic-hackathon/",
       type: "instagram"
@@ -93,6 +95,7 @@ export const eventsData: Event[] = [
     title: "Neuromorphic Hackathon 2023",
     description: "Four-day hackathon focused on neuromorphic technologies, hosted in collaboration with Fortiss Neuromorphic Labs and Intel, featuring team challenges based on state-of-the-art research.",
     date: "2023-11-06",
+    image: "/media/events/fortiss_2023.png",
     link: {
       url: "https://luma.com/events/neuromorphic-hackathon-2023",
       type: "luma"
