@@ -2,6 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ApplicationLink from "./ApplicationLink";
 
 // Define navigation items for better maintainability
 const navigationItems = [
@@ -37,14 +38,9 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ isScrolled }) => 
         </Link>
       ))}
       
-      <a 
-        href="https://forms.google.com/form" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="ml-4"
-      >
+      <ApplicationLink className="ml-4">
         <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold">Join Us</Button>
-      </a>
+      </ApplicationLink>
     </nav>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CircuitPattern from "@/components/CircuitPattern";
+import ApplicationLink from "./ApplicationLink";
 
 const HeroSection = () => {
   return (
@@ -45,11 +46,11 @@ const HeroSection = () => {
                     Our Projects
                   </Button>
                 </Link>
-                <a href="https://forms.google.com/form" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <ApplicationLink className="w-full sm:w-auto">
                   <Button variant="outline" size="lg" className="w-full sm:w-auto border-bistre text-bistre hover:bg-bistre/5 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
                     Join Our Team
                   </Button>
-                </a>
+                </ApplicationLink>
               </div>
             </div>
           </div>

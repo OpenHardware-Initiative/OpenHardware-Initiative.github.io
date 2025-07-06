@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import ApplicationLink from "./ApplicationLink";
 import { Linkedin, Github, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -84,14 +85,11 @@ const Footer = () => {
             <p className="text-white/80 mb-2">Technical University Munich</p>
             <p className="text-white/80 mb-2">Munich, Germany</p>
             <p className="text-white/80 mb-4">Email: contact@open-hardware-initiative.com</p>
-            <a 
-              href="https://forms.google.com/form"
-              target="_blank" 
-              rel="noopener noreferrer"
+            <ApplicationLink 
               className="inline-block bg-white text-primary-blue px-4 py-2 rounded-md font-semibold hover:bg-white/90 transition-colors"
             >
               Join Us
-            </a>
+            </ApplicationLink>
           </div>
         </div>
         

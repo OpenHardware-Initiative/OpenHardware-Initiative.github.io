@@ -50,10 +50,14 @@ export interface Event {
 export const eventsData: Event[] = [
   {
     id: "1",
-    title: "ASIP Hackathon 2025",
+    title: "ASIP Hackathon 2024",
     description: "A hackathon focused on Application-Specific Instruction Set Processors using the ASIP Designer Tool from Synopsys. Participants developed ML inference accelerators with guidance from industry experts.",
-    date: "2025-03-15",
-    image: "/media/events/Asip_2025.png",
+    date: "2024-05-25",
+    image: "/media/events/Asip_2024.png",
+    link: {
+      url: "https://www.instagram.com/p/C4N15fFoJYI/?img_index=1",
+      type: "instagram"
+    },
     organizers: [
       { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
       { name: "Ipek Akdeniz", role: "Co-organizer" },
@@ -68,13 +72,13 @@ export const eventsData: Event[] = [
   },
   {
     id: "2",
-    title: "Munich Neuromorphic Hackathon 2024",
+    title: "Neuromorphic Hackathon 2024",
     description: "An immersive hackathon on neuromorphic computing technologies with collaboration from fortiss, neurobus, and IBM, featuring expert talks and hands-on challenges.",
     date: "2024-04-20",
     image: "/media/events/fortiss_2024.png",
     link: {
-      url: "https://www.instagram.com/p/munich-neuromorphic-hackathon/",
-      type: "instagram"
+      url: "https://www.linkedin.com/posts/fortiss_%F0%9D%97%AA%F0%9D%97%BF%F0%9D%97%AE%F0%9D%97%BD%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%A8%F0%9D%97%BD-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%BC%F0%9D%97%A7%F0%9D%97%A8%F0%9D%97%A0-activity-7264179266274119680-ZElX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC3APW4BigkIXkDHHZZZj49K9zvVfV4w4AM",
+      type: "linkedin"
     },
     organizers: [
       { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" },
@@ -97,8 +101,8 @@ export const eventsData: Event[] = [
     date: "2023-11-06",
     image: "/media/events/fortiss_2023.png",
     link: {
-      url: "https://luma.com/events/neuromorphic-hackathon-2023",
-      type: "luma"
+      url: "https://www.instagram.com/p/CwplfkPovDD/",
+      type: "instagram"
     },
     organizers: [
       { name: "Agustin N. Coppari Hollmann", role: "Lead Organizer" }

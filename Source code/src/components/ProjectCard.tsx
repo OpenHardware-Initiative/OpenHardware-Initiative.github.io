@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Project } from "@/data/projectsData";
 import { getStringBasedColor, getContrastTextColor } from "@/utils/colorUtils";
 import { Link } from "react-router-dom";
+import ApplicationLink from "./ApplicationLink";
 
 interface ProjectCardProps {
   project: Project;
@@ -136,12 +137,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         )}
         
         {recruitingFor && (
-          <Link to="/contact" className="flex-shrink-0">
+          <ApplicationLink className="flex-shrink-0">
             <Button variant="default" className="flex items-center gap-2" size="sm">
               <UserPlus size={16} className="flex-shrink-0" />
               <span className="sm:inline hidden">Join</span>
             </Button>
-          </Link>
+          </ApplicationLink>
         )}
       </CardFooter>
     </Card>

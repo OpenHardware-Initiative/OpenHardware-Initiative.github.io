@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Linkedin, UserPlus } from "lucide-react";
 import TeamMemberImage from "./TeamMemberImage";
 import { Link } from "react-router-dom";
+import ApplicationLink from "./ApplicationLink";
 
 interface TeamMemberProps {
   name: string;
@@ -111,13 +112,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           </a>
         ) : null}
         {isOpenPosition && (
-          <Link 
-            to="/contact"
+          <ApplicationLink 
             className="absolute bottom-4 right-4 p-2 bg-white text-primary-blue rounded-full hover:bg-primary-blue hover:text-white transition-colors"
-            aria-label="Apply for this position"
+            buttonProps={{ "aria-label": "Apply for this position" }}
           >
             <UserPlus size={18} />
-          </Link>
+          </ApplicationLink>
         )}
       </div>
       <div className="p-4">
@@ -126,12 +126,11 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           <p className="text-gray-600 text-sm mt-1 line-clamp-2">{education}</p>
         )}
         {isOpenPosition && (
-          <Link 
-            to="/contact" 
+          <ApplicationLink 
             className="inline-block mt-3 text-sm font-medium text-primary-blue hover:underline"
           >
             Apply Now →
-          </Link>
+          </ApplicationLink>
         )}
       </div>
     </Card>

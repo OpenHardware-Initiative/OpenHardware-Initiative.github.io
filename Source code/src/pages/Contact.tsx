@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import ApplicationLink from "@/components/ApplicationLink";
 
 const Contact = () => {
   useEffect(() => {
@@ -113,15 +114,11 @@ const Contact = () => {
                   Interested in being part of OpenHardware? We're always looking for talented individuals
                   who are passionate about hardware innovation.
                 </p>
-                <a 
-                  href="https://forms.google.com/form" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+                <ApplicationLink>
                   <Button variant="outline" className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
                     Apply to Join Us
                   </Button>
-                </a>
+                </ApplicationLink>
               </div>
             </Card>
           </div>

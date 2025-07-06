@@ -2,6 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ApplicationLink from "./ApplicationLink";
 
 interface NavLinkProps {
   to: string;
@@ -64,19 +65,16 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isMenuOpen, locatio
         <MobileNavLink to="/contact" isActive={isActive("/contact")} delay={400} isMenuOpen={isMenuOpen}>
           Contact
         </MobileNavLink>
-        <a 
-          href="https://forms.google.com/form" 
-          target="_blank" 
-          rel="noopener noreferrer"
+        <ApplicationLink 
           className={`mt-8 w-4/5 transition-all duration-300 transform ${
             isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           }`}
-          style={{ transitionDelay: "450ms" }}
+          buttonProps={{ style: { transitionDelay: "450ms" } }}
         >
           <Button className="bg-primary-blue hover:bg-primary-blue/90 font-bold text-xl w-full py-6">
             Join Us
           </Button>
-        </a>
+        </ApplicationLink>
       </nav>
     </div>
   );
