@@ -34,36 +34,16 @@ This is the official website for the OpenHardware Initiative, a student-led grou
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Bun](https://bun.sh/) (for local development/build)
 
-## 📦 Data Management
-- All data is in `Source code/src/data/` as TypeScript files
-- See `DATA_MANAGEMENT_README.md` for details on adding/editing data
+## 📦 Website Configuration Management
+- All code is in `Source code/src/data/` as TypeScript files
+- See `Source_code/README.md`, `Source_code/APPLICATION_CONFIG_README.md` & `Source_code/DATA_MANAGEMENT_README.md` for details on adding/editing data
 
 ## 🏗️ Building & Deploying
-1. **Build the site:**
-   ```sh
-   cd "Source code"
-   bun run build
-   ```
-2. **Move the build output:**
-   ```sh
-   mv dist/* ../
-   mv dist/.* ../ 2>/dev/null || true
-   rm -rf dist
-   ```
-3. **Commit and push to GitHub**
-
-See `DEPLOYMENT_README.md` for full instructions.
+See `Source_code/DEPLOYMENT_README.md` for full instructions.
 
 ## 🌐 Hosting
 - Designed for GitHub Pages, but can be hosted on Vercel, Netlify, etc.
 - SPA routing is supported everywhere (see Vite config and `_redirects`/`vercel.json`)
-
-## 🤝 Contributing
-- Open to student and alumni contributions!
-- Please open an issue or pull request for improvements or bug fixes.
-
-## 📄 License
-MIT License
 
 ---
 
