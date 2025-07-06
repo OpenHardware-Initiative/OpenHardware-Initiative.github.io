@@ -166,6 +166,47 @@
   .focus-icon {
     @apply w-12 h-12 rounded-full flex items-center justify-center mb-4;
   }
+
+  /* Mobile-first responsive hero styles */
+  .hero-title {
+    @apply font-bold leading-tight;
+    font-size: clamp(2.5rem, 8vw, 8rem);
+  }
+
+  .hero-subtitle {
+    @apply font-medium leading-tight;
+    font-size: clamp(1.5rem, 5vw, 6rem);
+  }
+
+  .hero-description {
+    @apply leading-relaxed;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .hero-buttons {
+    @apply flex flex-col sm:flex-row gap-3 sm:gap-4;
+  }
+
+  .hero-button {
+    @apply w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4;
+  }
+
+  .hero-image-container {
+    @apply w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl;
+    aspect-ratio: 4/3;
+  }
+
+  @media (max-width: 640px) {
+    .hero-image-container {
+      aspect-ratio: 3/2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-image-container {
+      aspect-ratio: 4/3;
+    }
+  }
 }
 
 .parallax-wrapper {

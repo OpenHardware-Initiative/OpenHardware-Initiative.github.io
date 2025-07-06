@@ -53,7 +53,7 @@ export const peopleData: Person[] = [
   },
   
   // Team Leads - Open Positions
-  {
+/**  {
     id: "4",
     name: "This could be you!",
     role: "Team Lead - Operations",
@@ -72,7 +72,7 @@ export const peopleData: Person[] = [
     isActive: true,
     joinDate: "2023-01",
     isOpenPosition: true
-  },
+  },*/
   
   // Advisors
   {

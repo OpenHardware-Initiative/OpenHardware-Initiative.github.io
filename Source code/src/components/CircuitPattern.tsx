@@ -21,7 +21,7 @@ const CircuitPattern: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full z-0 opacity-20 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 w-full h-full z-0 opacity-30 sm:opacity-25 md:opacity-20 pointer-events-none overflow-hidden">
       <svg
         ref={svgRef}
         viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}
@@ -77,43 +77,43 @@ const CircuitPattern: React.FC = () => {
           className="circuit-path"
         />
 
-        {/* Pulsing glowing nodes */}
-        <circle cx="100" cy="100" r="4" fill="#333351" className="glow-blue pulse" />
-        <circle cx="300" cy="200" r="4" fill="#333351" className="glow-blue" />
-        <circle cx="500" cy="400" r="6" fill="#333351" className="glow-blue pulse" />
-        <circle cx="200" cy="300" r="4" fill="#333351" className="glow-blue" />
-        <circle cx="400" cy="500" r="4" fill="#333351" className="glow-blue pulse" />
-        <circle cx="600" cy="200" r="4" fill="#c28f40" className="glow-gold" />
-        <circle cx="400" cy="300" r="6" fill="#c28f40" className="glow-gold pulse" />
-        <circle cx="500" cy="300" r="4" fill="#c28f40" className="glow-gold" />
-        <circle cx="400" cy="250" r="4" fill="#333351" className="glow-blue" />
-        <circle cx="500" cy="350" r="4" fill="#333351" className="glow-blue" />
-        <circle cx="500" cy="450" r="6" fill="#333351" className="glow-blue pulse" />
-        <circle cx="550" cy="200" r="4" fill="#c28f40" className="glow-gold" />
-        <circle cx="550" cy="300" r="4" fill="#c28f40" className="glow-gold pulse" />
-        <circle cx="650" cy="300" r="6" fill="#c28f40" className="glow-gold" />
+        {/* Pulsing glowing nodes - appear after paths load */}
+        <circle cx="100" cy="100" r="4" fill="#333351" className="glow-blue pulse delayed-node" />
+        <circle cx="300" cy="200" r="4" fill="#333351" className="glow-blue delayed-node" />
+        <circle cx="500" cy="400" r="6" fill="#333351" className="glow-blue pulse delayed-node" />
+        <circle cx="200" cy="300" r="4" fill="#333351" className="glow-blue delayed-node" />
+        <circle cx="400" cy="500" r="4" fill="#333351" className="glow-blue pulse delayed-node" />
+        <circle cx="600" cy="200" r="4" fill="#c28f40" className="glow-gold delayed-node" />
+        <circle cx="400" cy="300" r="6" fill="#c28f40" className="glow-gold pulse delayed-node" />
+        <circle cx="500" cy="300" r="4" fill="#c28f40" className="glow-gold delayed-node" />
+        <circle cx="400" cy="250" r="4" fill="#333351" className="glow-blue delayed-node" />
+        <circle cx="500" cy="350" r="4" fill="#333351" className="glow-blue delayed-node" />
+        <circle cx="500" cy="450" r="6" fill="#333351" className="glow-blue pulse delayed-node" />
+        <circle cx="550" cy="200" r="4" fill="#c28f40" className="glow-gold delayed-node" />
+        <circle cx="550" cy="300" r="4" fill="#c28f40" className="glow-gold pulse delayed-node" />
+        <circle cx="650" cy="300" r="6" fill="#c28f40" className="glow-gold delayed-node" />
 
-        {/* Tracers following the paths */}
-        <circle r="4" fill="#333351" className="circle">
+        {/* Tracers following the paths - also delayed */}
+        <circle r="4" fill="#333351" className="circle delayed-tracer">
           <animateMotion dur="5s" repeatCount="indefinite">
             <mpath href="#path1" />
           </animateMotion>
         </circle>
 
-        <circle r="4" fill="#333351" className="circle">
+        <circle r="4" fill="#333351" className="circle delayed-tracer">
           <animateMotion dur="6s" repeatCount="indefinite" begin="1s">
             <mpath href="#path2" />
           </animateMotion>
         </circle>
 
-        <circle r="4" fill="#c28f40" className="circle">
+        <circle r="4" fill="#c28f40" className="circle delayed-tracer">
           <animateMotion dur="5s" repeatCount="indefinite" begin="2s">
             <mpath href="#path3" />
           </animateMotion>
         </circle>
 
 
-        <circle r="7" fill="#333351" opacity="0.3" className="tracer-aura">
+        <circle r="7" fill="#333351" opacity="0.3" className="tracer-aura delayed-tracer">
           <animateMotion dur="5s" repeatCount="indefinite">
             <mpath href="#path1" />
           </animateMotion>
@@ -131,7 +131,7 @@ const CircuitPattern: React.FC = () => {
           />
         </circle>
 
-        <circle r="7" fill="#333351" opacity="0.3" className="tracer-aura">
+        <circle r="7" fill="#333351" opacity="0.3" className="tracer-aura delayed-tracer">
           <animateMotion dur="6s" repeatCount="indefinite" begin="1s">
             <mpath href="#path2" />
           </animateMotion>
@@ -149,7 +149,7 @@ const CircuitPattern: React.FC = () => {
           />
         </circle>
 
-        <circle r="7" fill="#c28f40" opacity="0.3" className="tracer-aura">
+        <circle r="7" fill="#c28f40" opacity="0.3" className="tracer-aura delayed-tracer">
           <animateMotion dur="5s" repeatCount="indefinite" begin="2s">
             <mpath href="#path3" />
           </animateMotion>
@@ -202,21 +202,88 @@ const CircuitPattern: React.FC = () => {
               filter: drop-shadow(0 0 4px #c28f40) drop-shadow(0 0 8px #c28f40);
             }
 
-            /* Add random delays for each pulsing dot */
-            .pulse:nth-child(1) { animation-delay: 0s; }
-            .pulse:nth-child(2) { animation-delay: 0.7s; }
-            .pulse:nth-child(3) { animation-delay: 1.3s; }
-            .pulse:nth-child(4) { animation-delay: 0.4s; }
-            .pulse:nth-child(5) { animation-delay: 1.1s; }
-            .pulse:nth-child(6) { animation-delay: 0.2s; }
-            .pulse:nth-child(7) { animation-delay: 0.9s; }
-            .pulse:nth-child(8) { animation-delay: 1.5s; }
-            .pulse:nth-child(9) { animation-delay: 0.5s; }
-            .pulse:nth-child(10) { animation-delay: 1.2s; }
-            .pulse:nth-child(11) { animation-delay: 0.8s; }
-            .pulse:nth-child(12) { animation-delay: 0.3s; }
-            .pulse:nth-child(13) { animation-delay: 1.4s; }
-            .pulse:nth-child(14) { animation-delay: 1.0s; }
+            /* Circuit path animations */
+            .circuit-path {
+              stroke-dasharray: 1000;
+              stroke-dashoffset: 1000;
+              animation: draw 3s ease-in-out forwards;
+            }
+
+            @keyframes draw {
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+
+            /* Stagger the path animations */
+            #path1 { animation-delay: 0s; }
+            #path2 { animation-delay: 0.5s; }
+            #path3 { animation-delay: 1s; }
+            #path4 { animation-delay: 1.5s; }
+            #path5 { animation-delay: 2s; }
+
+            /* Delayed appearance for nodes and tracers */
+            .delayed-node {
+              opacity: 0;
+              animation: fadeInNode 0.5s ease-in-out forwards;
+              animation-delay: 3.5s;
+            }
+
+            .delayed-tracer {
+              opacity: 0;
+              animation: fadeInTracer 0.5s ease-in-out forwards;
+              animation-delay: 3.5s;
+            }
+
+            @keyframes fadeInNode {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+
+            @keyframes fadeInTracer {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+
+            /* Stagger the node appearances */
+            .delayed-node:nth-child(6) { animation-delay: 3.5s; }
+            .delayed-node:nth-child(7) { animation-delay: 3.7s; }
+            .delayed-node:nth-child(8) { animation-delay: 3.9s; }
+            .delayed-node:nth-child(9) { animation-delay: 4.1s; }
+            .delayed-node:nth-child(10) { animation-delay: 4.3s; }
+            .delayed-node:nth-child(11) { animation-delay: 4.5s; }
+            .delayed-node:nth-child(12) { animation-delay: 4.7s; }
+            .delayed-node:nth-child(13) { animation-delay: 4.9s; }
+            .delayed-node:nth-child(14) { animation-delay: 5.1s; }
+            .delayed-node:nth-child(15) { animation-delay: 5.3s; }
+            .delayed-node:nth-child(16) { animation-delay: 5.5s; }
+            .delayed-node:nth-child(17) { animation-delay: 5.7s; }
+            .delayed-node:nth-child(18) { animation-delay: 5.9s; }
+            .delayed-node:nth-child(19) { animation-delay: 6.1s; }
+
+            /* Add random delays for each pulsing dot - starts after dots load */
+            .pulse:nth-child(1) { animation-delay: 3.5s; }
+            .pulse:nth-child(2) { animation-delay: 4.2s; }
+            .pulse:nth-child(3) { animation-delay: 4.8s; }
+            .pulse:nth-child(4) { animation-delay: 3.9s; }
+            .pulse:nth-child(5) { animation-delay: 4.6s; }
+            .pulse:nth-child(6) { animation-delay: 3.7s; }
+            .pulse:nth-child(7) { animation-delay: 4.4s; }
+            .pulse:nth-child(8) { animation-delay: 5.0s; }
+            .pulse:nth-child(9) { animation-delay: 4.0s; }
+            .pulse:nth-child(10) { animation-delay: 4.7s; }
+            .pulse:nth-child(11) { animation-delay: 4.3s; }
+            .pulse:nth-child(12) { animation-delay: 3.8s; }
+            .pulse:nth-child(13) { animation-delay: 4.9s; }
+            .pulse:nth-child(14) { animation-delay: 4.5s; }
           `,
         }}
       />
