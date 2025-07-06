@@ -26,7 +26,7 @@ const CircuitPattern: React.FC = () => {
         ref={svgRef}
         viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}
         preserveAspectRatio="xMidYMid slice"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         style={{
           width: "100%",
           height: "100%",

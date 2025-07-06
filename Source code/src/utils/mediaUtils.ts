@@ -29,7 +29,7 @@ export const getImagePath = (
   filename: string
 ): string => {
   // If the path already contains a full URL or starts with /
-  if (filename.startsWith('http') || filename.startsWith('/')) {
+  if (filename.startsWith('https') || filename.startsWith('/')) {
     return filename;
   }
   return `${MEDIA_PATHS[category]}${filename}`;
@@ -83,7 +83,7 @@ export const getPlaceholderImage = (
  */
 export const getSponsorLogoPath = (filename: string): string => {
   // If the filename already contains a full path (e.g., /lovable-uploads/...)
-  if (filename.startsWith("/") || filename.startsWith("http")) {
+  if (filename.startsWith("/") || filename.startsWith("https")) {
     return filename;
   }
   
