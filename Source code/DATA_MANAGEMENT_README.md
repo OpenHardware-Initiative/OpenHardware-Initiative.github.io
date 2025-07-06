@@ -22,6 +22,7 @@ Source code/src/data/
 2. **Add a new entry** by copying an existing object and updating its fields, or edit/remove existing entries as needed.
    - Each file contains an array of objects. Each object represents a person, event, or project.
    - Make sure to follow the structure of the existing objects (field names, types, etc.).
+   - You should add images to 'code/src/public/media' and link the database to them.
 
 3. **Save the file.**
 
@@ -45,8 +46,7 @@ Open `peopleData.ts` and add a new object to the `peopleData` array:
 
 ## Tips
 - **Use unique IDs** for each entry.
-- **Image paths** should point to files in the `public/media/` or `public/lovable-uploads/` folders.
-- **No need to restart the dev server** if it's already running; just refresh the page to see changes.
+- **Image paths** should point to files in the `public/media/` folder. When typing the image path it will use 'public' as the source directory. So to point to media you only need to type '/media'
 - **Type safety:** If you make a typo or use the wrong field, TypeScript will show an error during build or in your editor.
 
 ## That's it!
