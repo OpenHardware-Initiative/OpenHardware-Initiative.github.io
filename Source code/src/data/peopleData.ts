@@ -79,20 +79,20 @@ export const peopleData: Person[] = [
     id: "12",
     name: "Aleksa Stojković",
     role: "Advisor",
+    linkedIn: "https://www.linkedin.com/in/aleksa-stojkovi%C4%87-288550200/",
     image: "/media/team/aleksa-stojkovic.png",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
   },
-  {
+/**  {
     id: "13",
     name: "Johannes Geier",
     role: "Advisor",
-    linkedIn: "https://linkedin.com",
     education: "Technical University of Munich, Chair of Electronic Design Automation (Prof. Schlichtmann)",
     isActive: true,
     joinDate: "2023-01"
-  },
+  },*/
   
   // Team Members
   {
@@ -124,15 +124,6 @@ export const peopleData: Person[] = [
     joinDate: "2023-10"
   },
   {
-    id: "9",
-    name: "Tobias Konieczny",
-    role: "Team Member",
-    image: "/media/team/tobias-konieczny.JPG",
-    education: "B.Sc Computer Science, TUM",
-    isActive: true,
-    joinDate: "2023-10"
-  },
-  {
     id: "10",
     name: "Danylo Struk",
     role: "Team Member",
@@ -149,6 +140,50 @@ export const peopleData: Person[] = [
     image: "/media/team/jakub-skupien.jpg",
     linkedIn: "https://www.linkedin.com/in/jakub-skupien",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
+  },
+  {
+    id: "18",
+    name: "Deniz Öztürk",
+    role: "Team Member",
+    image: "/media/team/deniz-ozturk.jpg",
+    education: "M.Sc. Informatics, TUM",
+    isActive: true,
+    joinDate: "2024-10"
+  },
+  {
+    id: "19",
+    name: "Youssef Sharafaldin",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
+  },
+  {
+    id: "20",
+    name: "Michael Lobis",
+    role: "Team Member",
+    image: "/media/team/michael-lobis.jpg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
+  },
+  {
+    id: "21",
+    name: "Dinis Carmona",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
+  },
+  {
+    id: "22",
+    name: "Efe Karavelioğlu",
+    role: "Team Member",
+    linkedIn: "https://linkedin.com/in/efe-karavelioğlu-1110ba318",
+    image: "/media/team/efe-karavelioglu.jpg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
   },
@@ -180,6 +215,15 @@ export const peopleData: Person[] = [
       "Advised on topics related to computational neuroscience",
       "Worked on continual learning using Intel's neuromorphic framework"
     ]
+  },
+  {
+    id: "9",
+    name: "Tobias Konieczny",
+    role: "Former Team Member",
+    image: "/media/team/tobias-konieczny.JPG",
+    education: "B.Sc Computer Science, TUM",
+    isActive: false,
+    joinDate: "2023-10"
   },
   {
     id: "24",
