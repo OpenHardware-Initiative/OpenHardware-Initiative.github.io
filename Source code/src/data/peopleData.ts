@@ -101,7 +101,7 @@ export const peopleData: Person[] = [
     role: "Team Member",
     image: "/media/team/kagan-dikmen.jpg",
     linkedIn: "https://linkedin.com/in/kagan-dikmen/",
-    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-06"
   },
