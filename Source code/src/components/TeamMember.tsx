@@ -27,7 +27,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   isOpenPosition = false
 }) => {
   // Check if this is a co-director with the composite image
-  const isCompositeImage = isCoDirector && image.includes("team/") && personIndex >= 0;
+  // const isCompositeImage = isCoDirector && image.includes("team/") && personIndex >= 0;
+  
+  // Since all co-directors now have individual images, we don't need to use composite images
+  const isCompositeImage = false;
   
   return (
     <Card className={`overflow-hidden transition-all hover:shadow-lg ${isOpenPosition ? 'border-dashed border-2 border-primary-blue' : ''}`}>

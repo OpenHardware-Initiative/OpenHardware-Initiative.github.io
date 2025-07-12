@@ -35,7 +35,7 @@ export const peopleData: Person[] = [
     id: "2",
     name: "Agustin Nahuel Coppari Hollmann",
     role: "Co-Director",
-    image: "/media/team/agustin-coppari.JPG",
+    image: "/media/team/agustin-coppari.jpg",
     linkedIn: "https://linkedin.com/in/agustin-nahuel-coppari-hollmann/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -118,7 +118,7 @@ export const peopleData: Person[] = [
     id: "8",
     name: "Osman Yasar",
     role: "Team Member",
-    image: "/media/team/osman-yasar.JPG",
+    image: "/media/team/osman-yasar.jpg",
     education: "M.Sc. Communications and Electronics, TUM",
     isActive: true,
     joinDate: "2023-10"
@@ -220,7 +220,7 @@ export const peopleData: Person[] = [
     id: "9",
     name: "Tobias Konieczny",
     role: "Former Team Member",
-    image: "/media/team/tobias-konieczny.JPG",
+    image: "/media/team/tobias-konieczny.jpg",
     education: "B.Sc Computer Science, TUM",
     isActive: false,
     joinDate: "2023-10"
