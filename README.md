@@ -1,50 +1,52 @@
-# OpenHardware Initiative Website
+# Open Hardware Initiative Website
 
-This is the official website for the OpenHardware Initiative, a student-led group at TUM focused on hardware acceleration, chip design, and smart manufacturing systems.
+This repository contains the official website for the Open Hardware Initiative, built with React, TypeScript, and Vite.
 
-## 🚀 Project Overview
-- **Modern React website** built with Vite, TypeScript, and Tailwind CSS
-- **Static data** managed in TypeScript files (no database required)
-- **Fully responsive** and mobile-friendly
-- **Easy to maintain**: add or edit data by changing files in `src/data/`
-- **SPA routing** with React Router, including GitHub Pages support
+## 🚀 Deployment
 
-## 🗂️ Repository Structure
+This website is automatically deployed using **GitHub Actions**. When you push changes to the `main` branch, the following happens automatically:
+
+1. **Build**: The source code is built using Bun and Vite
+2. **Deploy**: The built files are deployed to GitHub Pages
+3. **Live**: The site is available at [open-hardware-initiative.com](https://open-hardware-initiative.com)
+
+### How it works
+
+- The GitHub Actions workflow is located in `.github/workflows/deploy.yml`
+- It uses Bun for faster dependency installation and builds
+- The workflow runs on every push to the `main` branch
+- No manual build or deployment steps are needed
+
+## 📁 Project Structure
 
 ```
-/
-├── Source code/           # Main website source (React, Vite, etc.)
-│   ├── src/               # App source code
-│   │   ├── components/    # React components
-│   │   ├── data/          # All data (people, events, projects)
-│   │   ├── pages/         # Page components
-│   │   └── ...
-│   ├── public/            # Static assets (images, uploads, etc.)
-│   ├── ...
-│   └── ...
-├── media/                 # Additional media assets
-├── lovable-uploads/       # Uploaded images
-├── ...
+├── .github/workflows/     # GitHub Actions deployment workflow
+├── Source code/           # Main source code directory
+│   ├── src/              # React components and pages
+│   ├── public/           # Static assets
+│   ├── data/             # Content data files
+│   └── ...               # Configuration files
+├── media/                # Media assets (images, etc.)
+└── README.md            # This file
 ```
 
-## 🛠️ Tech Stack
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Bun](https://bun.sh/) (for local development/build)
+## 🛠️ Development
 
-## 📦 Website Configuration Management
-- All code is in `Source code/src/data/` as TypeScript files
-- See `Source_code/README.md`, `Source_code/APPLICATION_CONFIG_README.md` & `Source_code/DATA_MANAGEMENT_README.md` for details on adding/editing data
+For local development, see the [Source code/README.md](Source%20code/README.md) file for detailed instructions.
 
-## 🏗️ Building & Deploying
-See `Source_code/DEPLOYMENT_README.md` for full instructions.
+## 📝 Content Management
 
-## 🌐 Hosting
-- Designed for GitHub Pages, but can be hosted on Vercel, Netlify, etc.
-- SPA routing is supported everywhere (see Vite config and `_redirects`/`vercel.json`)
+- **Team Members**: Edit `Source code/data/peopleData.ts`
+- **Projects**: Edit `Source code/data/projectsData.ts`
+- **Events**: Edit `Source code/data/eventsData.ts`
+- **Application Status**: Edit `Source code/src/config/applicationConfig.ts`
 
----
+## 🔧 Configuration
 
-For more details, see the documentation files in the repo. 
+- **Custom Domain**: Configured via `Source code/CNAME`
+- **Application Links**: Managed in `Source code/src/config/applicationConfig.ts`
+- **Build Settings**: Configured in `Source code/vite.config.ts`
+
+## 📞 Support
+
+For questions or issues, please contact the development team or create an issue in this repository. 
