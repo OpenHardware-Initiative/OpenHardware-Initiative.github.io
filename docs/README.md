@@ -15,10 +15,6 @@ Welcome to the documentation for the Open Hardware Initiative website. This guid
 
 ### 📝 Content Management
 - **[Content Management Guide](content-management.md)** - How to update website content
-- **[Team Management](team-management.md)** - Adding/editing team members
-- **[Project Management](project-management.md)** - Adding/editing projects
-- **[Event Management](event-management.md)** - Adding/editing events
-- **[Application Management](application-management.md)** - Managing application forms and status
 
 ### 🚀 Deployment & Hosting
 - **[Deployment Guide](deployment.md)** - How the website is deployed and hosted
@@ -39,24 +35,3 @@ Welcome to the documentation for the Open Hardware Initiative website. This guid
 - **Live Website**: [open-hardware-initiative.com](https://open-hardware-initiative.com)
 - **GitHub Repository**: [OpenHardware-Initiative/OpenHardware-Initiative.github.io](https://github.com/OpenHardware-Initiative/OpenHardware-Initiative.github.io)
 - **GitHub Actions**: [Workflow runs](https://github.com/OpenHardware-Initiative/OpenHardware-Initiative.github.io/actions)
-
-## 📞 Support
-
-If you need help:
-1. Check the relevant documentation section above
-2. Look at the [troubleshooting guide](troubleshooting.md)
-3. Create an issue in the GitHub repository
-4. Contact the development team
-
-## 🔄 Contributing
-
-To contribute to the documentation:
-1. Make your changes in the appropriate `.md` file
-2. Test your changes locally
-3. Submit a pull request
-4. Wait for review and approval
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
