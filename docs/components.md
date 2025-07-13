@@ -149,8 +149,3 @@ export { NewComponent } from './NewComponent';
 ```typescript
 import { NewComponent } from '@/components/NewComponent';
 ```
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
