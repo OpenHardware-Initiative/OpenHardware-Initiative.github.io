@@ -284,9 +284,3 @@ git push
 - **[Quick Start Guide](quick-start.md)** - Getting started
 - **[Development Guide](development.md)** - Technical setup
 - **[Deployment Guide](deployment.md)** - How deployment works
-- **[Troubleshooting](troubleshooting.md)** - Common problems and solutions
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
