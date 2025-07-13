@@ -133,19 +133,6 @@ src/
 - **Use lazy loading** for heavy components
 - **Check bundle size** with `bun run build`
 
-## Troubleshooting
-
-### Common Issues
-- **Port 8080 in use**: Change port in `vite.config.ts` or kill the process
-- **Build errors**: Run `bun run lint` to see TypeScript errors
-- **Dependencies missing**: Run `bun install` to reinstall
-
-### Getting Help
-- Check the [troubleshooting guide](troubleshooting.md)
-- Look at existing code for patterns
-- Use GitHub Copilot for guidance
-- Create an issue in the repository
-
 ## Deployment
 
 ### Automatic Deployment
@@ -162,6 +149,3 @@ bun run preview
 ---
 
 **Pro Tip**: GitHub Copilot is incredibly helpful for this React/TypeScript/Tailwind stack. It understands the project structure and can generate code that follows existing patterns!
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
