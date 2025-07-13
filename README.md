@@ -44,19 +44,11 @@ We have comprehensive documentation to help you work with the website:
 
 ### 📝 Content Management
 - **[Content Management Guide](docs/content-management.md)** - How to update website content
-- **[Team Management](docs/team-management.md)** - Adding/editing team members
-- **[Project Management](docs/project-management.md)** - Adding/editing projects
-- **[Event Management](docs/event-management.md)** - Adding/editing events
-- **[Application Management](docs/application-management.md)** - Managing application forms
 
 ### 🚀 Deployment & Hosting
 - **[Deployment Guide](docs/deployment.md)** - How the website is deployed
 - **[GitHub Actions](docs/github-actions.md)** - Understanding the automated workflow
 - **[Domain Configuration](docs/domain-configuration.md)** - Custom domain setup
-
-### 🐛 Troubleshooting
-- **[Troubleshooting Guide](docs/troubleshooting.md)** - Solutions to common problems
-- **[Debug Guide](docs/debugging.md)** - How to debug issues
 
 ## 🛠️ Development
 
@@ -75,13 +67,6 @@ For local development, see the **[Development Guide](docs/development.md)** for 
 - **Application Links**: Managed in `Source code/src/config/applicationConfig.ts`
 - **Build Settings**: Configured in `Source code/vite.config.ts`
 
-## 📞 Support
-
-For questions or issues:
-1. Check the **[Troubleshooting Guide](docs/troubleshooting.md)**
-2. Review the **[Documentation Index](docs/README.md)**
-3. Create an issue in this repository
-4. Contact the development team
 
 ## 🎯 Quick Links
 
@@ -91,6 +76,4 @@ For questions or issues:
 - **Documentation**: [docs/README.md](docs/README.md)
 
 ---
-
-**Last Updated**: December 2024  
 **Maintained by**: Open Hardware Initiative Development Team 
