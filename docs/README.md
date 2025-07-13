@@ -24,10 +24,6 @@ Welcome to the documentation for the Open Hardware Initiative website. This guid
 ### 🔧 Configuration
 - **[SEO & Performance](seo-performance.md)** - Search engine optimization and performance
 
-### 🐛 Troubleshooting
-- **[Common Issues](troubleshooting.md)** - Solutions to common problems
-- **[Debug Guide](debugging.md)** - How to debug issues
-
 ## 🎯 Quick Links
 
 - **Live Website**: [open-hardware-initiative.com](https://open-hardware-initiative.com)
