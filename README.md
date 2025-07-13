@@ -4,7 +4,7 @@ This repository contains the official website for the Open Hardware Initiative, 
 
 ## 🚀 Quick Start
 
-Want to get started quickly? See our **[Quick Start Guide](docs/quick-start.md)** for a 5-minute setup.
+Want to get started quickly? See our **[Quick Start Guide](docs/quick-start.md)** for a 5-minute setup.(Usually enough for maintaining the website)
 
 ## 🚀 Deployment
 
