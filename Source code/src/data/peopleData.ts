@@ -116,7 +116,7 @@ export const peopleData: Person[] = [
   },
   {
     id: "8",
-    name: "Osman Yasar",
+    name: "Osman Yasarrrrrrrr",
     role: "Team Member",
     image: "/media/team/osman-yasar.jpg",
     education: "M.Sc. Communications and Electronics, TUM",
