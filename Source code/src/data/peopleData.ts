@@ -35,7 +35,7 @@ export const peopleData: Person[] = [
     id: "2",
     name: "Agustin Nahuel Coppari Hollmann",
     role: "Co-Director",
-    image: "/media/team/agustin-coppari.jpg",
+    image: "/media/team/agustin-coppari.JPG",
     linkedIn: "https://linkedin.com/in/agustin-nahuel-coppari-hollmann/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -80,7 +80,7 @@ export const peopleData: Person[] = [
     name: "Aleksa Stojković",
     role: "Advisor",
     linkedIn: "https://www.linkedin.com/in/aleksa-stojkovi%C4%87-288550200/",
-    image: "/media/team/aleksa-stojkovic.png",
+    image: "/media/team/aleksa-stojkovic.JPG",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
@@ -118,7 +118,7 @@ export const peopleData: Person[] = [
     id: "8",
     name: "Osman Yasar",
     role: "Team Member",
-    image: "/media/team/osman-yasar.jpg",
+    image: "/media/team/osman-yasar.JPG",
     education: "M.Sc. Communications and Electronics, TUM",
     isActive: true,
     joinDate: "2023-10"
