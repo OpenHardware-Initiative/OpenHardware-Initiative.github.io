@@ -80,7 +80,7 @@ export const peopleData: Person[] = [
     name: "Aleksa Stojković",
     role: "Advisor",
     linkedIn: "https://www.linkedin.com/in/aleksa-stojkovi%C4%87-288550200/",
-    image: "/media/team/aleksa-stojkovic.JPG",
+    image: "/media/team/aleksa-stojkovic.jpg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
