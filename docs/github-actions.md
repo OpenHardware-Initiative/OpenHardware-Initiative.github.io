@@ -194,8 +194,3 @@ If something goes wrong:
 2. Find a previous successful deployment
 3. Click **"Re-run jobs"**
 4. This will redeploy the previous version
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
