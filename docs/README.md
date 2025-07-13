@@ -22,8 +22,6 @@ Welcome to the documentation for the Open Hardware Initiative website. This guid
 - **[Domain Configuration](domain-configuration.md)** - Custom domain setup and management
 
 ### 🔧 Configuration
-- **[Configuration Guide](configuration.md)** - Website settings and customization
-- **[Styling Guide](styling.md)** - CSS, Tailwind, and design system
 - **[SEO & Performance](seo-performance.md)** - Search engine optimization and performance
 
 ### 🐛 Troubleshooting
