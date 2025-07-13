@@ -2,6 +2,10 @@
 
 This repository contains the official website for the Open Hardware Initiative, built with React, TypeScript, and Vite.
 
+## 🚀 Quick Start
+
+Want to get started quickly? See our **[Quick Start Guide](docs/quick-start.md)** for a 5-minute setup.
+
 ## 🚀 Deployment
 
 This website is automatically deployed using **GitHub Actions**. When you push changes to the `main` branch, the following happens automatically:
@@ -26,13 +30,37 @@ This website is automatically deployed using **GitHub Actions**. When you push c
 │   ├── public/           # Static assets
 │   ├── data/             # Content data files
 │   └── ...               # Configuration files
-├── media/                # Media assets (images, etc.)
+├── docs/                 # 📚 Comprehensive documentation
 └── README.md            # This file
 ```
 
+## 📚 Documentation
+
+We have comprehensive documentation to help you work with the website:
+
+### 🚀 Getting Started
+- **[Quick Start Guide](docs/quick-start.md)** - Get up and running in 5 minutes
+- **[Project Overview](docs/project-overview.md)** - Understanding the website structure
+
+### 📝 Content Management
+- **[Content Management Guide](docs/content-management.md)** - How to update website content
+- **[Team Management](docs/team-management.md)** - Adding/editing team members
+- **[Project Management](docs/project-management.md)** - Adding/editing projects
+- **[Event Management](docs/event-management.md)** - Adding/editing events
+- **[Application Management](docs/application-management.md)** - Managing application forms
+
+### 🚀 Deployment & Hosting
+- **[Deployment Guide](docs/deployment.md)** - How the website is deployed
+- **[GitHub Actions](docs/github-actions.md)** - Understanding the automated workflow
+- **[Domain Configuration](docs/domain-configuration.md)** - Custom domain setup
+
+### 🐛 Troubleshooting
+- **[Troubleshooting Guide](docs/troubleshooting.md)** - Solutions to common problems
+- **[Debug Guide](docs/debugging.md)** - How to debug issues
+
 ## 🛠️ Development
 
-For local development, see the [Source code/README.md](Source%20code/README.md) file for detailed instructions.
+For local development, see the **[Development Guide](docs/development.md)** for detailed instructions.
 
 ## 📝 Content Management
 
@@ -49,4 +77,20 @@ For local development, see the [Source code/README.md](Source%20code/README.md) 
 
 ## 📞 Support
 
-For questions or issues, please contact the development team or create an issue in this repository. 
+For questions or issues:
+1. Check the **[Troubleshooting Guide](docs/troubleshooting.md)**
+2. Review the **[Documentation Index](docs/README.md)**
+3. Create an issue in this repository
+4. Contact the development team
+
+## 🎯 Quick Links
+
+- **Live Website**: [open-hardware-initiative.com](https://open-hardware-initiative.com)
+- **GitHub Repository**: [OpenHardware-Initiative/OpenHardware-Initiative.github.io](https://github.com/OpenHardware-Initiative/OpenHardware-Initiative.github.io)
+- **GitHub Actions**: [Workflow runs](https://github.com/OpenHardware-Initiative/OpenHardware-Initiative.github.io/actions)
+- **Documentation**: [docs/README.md](docs/README.md)
+
+---
+
+**Last Updated**: December 2024  
+**Maintained by**: Open Hardware Initiative Development Team 

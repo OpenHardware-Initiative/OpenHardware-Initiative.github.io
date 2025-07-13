@@ -4,6 +4,8 @@ This directory contains the source code for the Open Hardware Initiative website
 
 ## 🚀 Quick Start
 
+For a complete setup guide, see the **[Quick Start Guide](../docs/quick-start.md)**.
+
 ### Prerequisites
 - [Bun](https://bun.sh/) (recommended) or Node.js 18+
 - Git
@@ -40,6 +42,8 @@ The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles:
 - Building the project
 - Deploying to GitHub Pages
 
+For detailed deployment information, see the **[Deployment Guide](../docs/deployment.md)**.
+
 ## 📁 Project Structure
 
 ```
@@ -67,54 +71,14 @@ data/                   # Content data (TypeScript files)
 
 ## 📝 Content Management
 
-### Adding/Editing Team Members
-Edit `src/data/peopleData.ts`:
-```typescript
-export const peopleData = [
-  {
-    name: "John Doe",
-    role: "Team Member",
-    image: "/media/team/john-doe.jpg",
-    // ... other fields
-  }
-];
-```
+For detailed content management instructions, see the **[Content Management Guide](../docs/content-management.md)**.
 
-### Adding/Editing Projects
-Edit `src/data/projectsData.ts`:
-```typescript
-export const projectsData = [
-  {
-    title: "Project Name",
-    description: "Project description",
-    image: "/media/projects/project.jpg",
-    // ... other fields
-  }
-];
-```
+### Quick Reference
 
-### Adding/Editing Events
-Edit `src/data/eventsData.ts`:
-```typescript
-export const eventsData = [
-  {
-    title: "Event Name",
-    date: "2024-01-15",
-    description: "Event description",
-    // ... other fields
-  }
-];
-```
-
-### Managing Application Status
-Edit `src/config/applicationConfig.ts`:
-```typescript
-export const applicationConfig = {
-  isOpen: false, // Set to true to enable applications
-  formUrl: "https://forms.google.com/your-form", // Google Form URL
-  closedMessage: "Application period is currently closed."
-};
-```
+**Team Members**: Edit `src/data/peopleData.ts`
+**Projects**: Edit `src/data/projectsData.ts`
+**Events**: Edit `src/data/eventsData.ts`
+**Application Status**: Edit `src/config/applicationConfig.ts`
 
 ## 🛠️ Tech Stack
 
@@ -159,6 +123,8 @@ The website is fully responsive and mobile-friendly. All components are designed
 
 ## 🐛 Troubleshooting
 
+For common issues and solutions, see the **[Troubleshooting Guide](../docs/troubleshooting.md)**.
+
 ### Common Issues
 
 1. **Port already in use**: Change the port in `vite.config.ts`
@@ -167,6 +133,20 @@ The website is fully responsive and mobile-friendly. All components are designed
 
 ### Getting Help
 
-- Check the [main README.md](../README.md) for repository overview
+- Check the **[Documentation Index](../docs/README.md)** for comprehensive guides
 - Create an issue in the repository for bugs
 - Contact the development team for questions
+
+## 📚 Documentation
+
+For complete documentation, see the **[docs/](../docs/README.md)** directory:
+
+- **[Quick Start Guide](../docs/quick-start.md)** - Getting started
+- **[Content Management](../docs/content-management.md)** - Updating content
+- **[Deployment Guide](../docs/deployment.md)** - How deployment works
+- **[Troubleshooting](../docs/troubleshooting.md)** - Common problems and solutions
+
+---
+
+**Last Updated**: December 2024  
+**Maintained by**: Open Hardware Initiative Development Team
