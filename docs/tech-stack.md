@@ -36,8 +36,3 @@ This document lists and briefly describes the technologies used in the Open Hard
 - **Vite** - Hot module replacement and fast builds
 - **TypeScript** - Static type checking
 - **ESLint** - Code quality and consistency
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
