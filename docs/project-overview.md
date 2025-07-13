@@ -44,8 +44,3 @@ The Open Hardware Initiative website serves as the official online presence for 
 2. **Content Updates** - Edit TypeScript data files
 3. **Automatic Deployment** - Push to main branch triggers GitHub Actions
 4. **Live Updates** - Changes appear on website in 2-3 minutes
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
