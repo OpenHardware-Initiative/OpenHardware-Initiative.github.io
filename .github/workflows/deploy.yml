@@ -34,13 +34,12 @@ jobs:
         with:
           bun-version: latest
           
-      - name: Change to source directory
-        run: cd "Source code"
-          
       - name: Install dependencies
+        working-directory: ./Source code
         run: bun install
         
       - name: Build project
+        working-directory: ./Source code
         run: bun run build
         
       - name: Upload artifact
