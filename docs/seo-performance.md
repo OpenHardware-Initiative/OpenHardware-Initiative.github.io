@@ -156,8 +156,3 @@ Sitemap: https://open-hardware-initiative.com/sitemap.xml
 - [TinyPNG](https://tinypng.com/) - Image compression
 - [Squoosh](https://squoosh.app/) - Advanced image optimization
 - [WebP Converter](https://convertio.co/webp-converter/) - Convert to WebP
-
----
-
-**Last Updated**: December 2024  
-**Maintained by**: Open Hardware Initiative Development Team 
