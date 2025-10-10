@@ -59,7 +59,7 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
             <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg border-2 sm:border-4 border-offwhite w-full max-w-sm sm:max-w-md md:max-w-md lg:max-w-sm xl:max-w-md h-[400px] sm:h-[500px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
               <img 
-                src="/Everyone_SoSe2025_2.jpeg" 
+                src="/Everyone_SoSe2025_2.png" 
                 alt="OpenHardware Team" 
                 className="w-full h-full object-cover object-center"
                 loading="eager"
