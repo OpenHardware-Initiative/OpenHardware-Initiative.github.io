@@ -20,6 +20,7 @@ export const projectsData: Project[] = [
     description: "AI Compilers Meet FPGAs: A HW/SW Codesign Approach for Vision Transformers",
     category: "Chip Design",
     status: "Active",
+    image: "/media/projects/AMD_comp.png",
     githubLink: "https://github.com/OpenHardware-Initiative/ITA-FPGA",
     year: 2025,
     recruitingFor: true
