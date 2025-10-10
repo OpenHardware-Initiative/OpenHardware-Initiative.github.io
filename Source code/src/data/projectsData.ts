@@ -16,6 +16,16 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "1",
+    title: "AMD Competition",
+    description: "AI Compilers Meet FPGAs: A HW/SW Codesign Approach for Vision Transformers",
+    category: "Chip Design",
+    status: "Active",
+    githubLink: "https://github.com/OpenHardware-Initiative/ITA-FPGA",
+    year: 2025,
+    recruitingFor: true
+  },
+  {
+    id: "2",
     title: "SpikingC",
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
@@ -25,7 +35,7 @@ export const projectsData: Project[] = [
     recruitingFor: true
   },
   {
-    id: "2",
+    id: "3",
     title: "Fortiss Hackathon 2023 - Gesture Recognition",
     description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
     category: "Spiking Neural Networks",
@@ -34,7 +44,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "3",
+    id: "4",
     title: "DenseSpiking RTL",
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
@@ -43,7 +53,7 @@ export const projectsData: Project[] = [
     recruitingFor: true
   },
   {
-    id: "4",
+    id: "5",
     title: "Drone-ViT-HW-Accelerator",
     description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints.",
     category: "AI Hardware",
@@ -51,7 +61,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "5",
+    id: "6",
     title: "Spiking Mobile ViT",
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
@@ -59,7 +69,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "6",
+    id: "7",
     title: "Industry Smart Scheduling",
     description: "An intelligent scheduling system for manufacturing industries that optimizes production processes and resource allocation using AI algorithms.",
     category: "Smart Manufacturing",
@@ -68,7 +78,7 @@ export const projectsData: Project[] = [
     recruitingFor: true
   },
   {
-    id: "7",
+    id: "8",
     title: "AI Compiler for Heterogeneous Hardware with IREE",
     description: "Development of a compiler that optimizes neural network models for various hardware accelerators, leveraging IREE (IR Execution Environment) technology.",
     category: "AI Hardware",
@@ -77,7 +87,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "8",
+    id: "9",
     title: "Energy-Efficient Deep Learning Processor",
     description: "A custom processor design optimized for deep learning inference with minimal energy consumption for battery-powered devices.",
     category: "Chip Design",
