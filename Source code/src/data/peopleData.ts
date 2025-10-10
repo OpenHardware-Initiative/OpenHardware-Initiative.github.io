@@ -32,16 +32,6 @@ export const peopleData: Person[] = [
     joinDate: "2022-09"
   },
   {
-    id: "2",
-    name: "Agustin Nahuel Coppari Hollmann",
-    role: "Co-Director",
-    image: "/media/team/agustin-coppari.JPG",
-    linkedIn: "https://linkedin.com/in/agustin-nahuel-coppari-hollmann/",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2023-01"
-  },
-  {
     id: "3",
     name: "Deniz Onat Erdoğan",
     role: "Co-Director",
@@ -50,6 +40,16 @@ export const peopleData: Person[] = [
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-05"
+  },
+  {
+    id: "10",
+    name: "Danylo Struk",
+    role: "Co-Director",
+    image: "/media/team/danylo-struk.jpg",
+    linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-05"
   },
   
   // Team Leads - Open Positions
@@ -81,6 +81,16 @@ export const peopleData: Person[] = [
     role: "Advisor",
     linkedIn: "https://www.linkedin.com/in/aleksa-stojkovi%C4%87-288550200/",
     image: "/media/team/aleksa-stojkovic.jpg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2023-01"
+  },
+  {
+    id: "2",
+    name: "Agustin Nahuel Coppari Hollmann",
+    role: "Advisor",
+    image: "/media/team/agustin-coppari.JPG",
+    linkedIn: "https://linkedin.com/in/agustin-nahuel-coppari-hollmann/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2023-01"
@@ -122,16 +132,6 @@ export const peopleData: Person[] = [
     education: "M.Sc. Communications and Electronics, TUM",
     isActive: true,
     joinDate: "2023-10"
-  },
-  {
-    id: "10",
-    name: "Danylo Struk",
-    role: "Team Member",
-    image: "/media/team/danylo-struk.jpg",
-    linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
   },
   {
     id: "11",
