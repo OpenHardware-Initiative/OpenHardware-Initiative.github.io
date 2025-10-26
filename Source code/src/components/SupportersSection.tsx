@@ -20,7 +20,7 @@ const partners: Partner[] = [
     name: "TukiResearch e.V.",
     role: "Non-Profit Organization",
     organization: "",
-    logoSrc: "/lovable-uploads/c437def5-92ff-48cf-86eb-2300aa696360.png"
+    logoSrc: "/IMG_3429.jpg"
   }, 
   {
     name: "neuroTUM",
