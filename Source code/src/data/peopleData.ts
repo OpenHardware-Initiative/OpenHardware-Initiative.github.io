@@ -223,7 +223,12 @@ export const peopleData: Person[] = [
     image: "/media/team/tobias-konieczny.jpg",
     education: "B.Sc Computer Science, TUM",
     isActive: false,
-    joinDate: "2023-10"
+    joinDate: "2023-10",
+    endDate: "2025-3",
+    contributions: [
+      "Worked on Spiking Vision Transformer",
+      "Helped organize Neuromorphic Hackaton of 2024"
+    ]
   },
   {
     id: "24",
