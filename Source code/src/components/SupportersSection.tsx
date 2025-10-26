@@ -25,7 +25,7 @@ const partners: Partner[] = [
   {
     name: "neuroTUM",
     role: "Student Initiative",
-    organization: "part of OpenResearch e.V.",
+    organization: "part of TukiResearch e.V.",
     logoSrc: "/lovable-uploads/eb05a193-9f42-4e1b-84c5-197b7eacb6a5.png"
   }
 ];
