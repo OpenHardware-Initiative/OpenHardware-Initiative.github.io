@@ -22,9 +22,6 @@ const Index = () => {
       {/* Team Section with parallax */}
       <TeamSection />
       
-      {/* Sponsors */}
-       {/* <SponsorSection />*/}
-      
       {/* Supporters */}
       <SupportersSection />
     </div>
