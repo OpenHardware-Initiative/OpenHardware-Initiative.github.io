@@ -55,14 +55,6 @@ export const projectsData: Project[] = [
   },
   {
     id: "5",
-    title: "Drone-ViT-HW-Accelerator",
-    description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints.",
-    category: "AI Hardware",
-    status: "Active",
-    year: 2023
-  },
-  {
-    id: "6",
     title: "Spiking Mobile ViT",
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
