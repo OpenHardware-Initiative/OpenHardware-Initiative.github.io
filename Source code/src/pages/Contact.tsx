@@ -41,7 +41,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-gray-600">contact@open-hardware-initiative.com</p>
+                      <p className="text-gray-600">openhardware.team@gmail.com</p>
                       <a 
                         href="mailto:contact@open-hardware-initiative.com" 
                         className="text-primary-blue hover:underline mt-1 inline-block"
