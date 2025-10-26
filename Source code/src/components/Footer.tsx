@@ -84,7 +84,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-white/80 mb-2">Technical University Munich</p>
             <p className="text-white/80 mb-2">Munich, Germany</p>
-            <p className="text-white/80 mb-4">Email: contact@open-hardware-initiative.com</p>
+            <p className="text-white/80 mb-4">Email: openhardware.team@gmail.com</p>
             <ApplicationLink 
               className="inline-block bg-white text-primary-blue px-4 py-2 rounded-md font-semibold hover:bg-white/90 transition-colors"
             >
