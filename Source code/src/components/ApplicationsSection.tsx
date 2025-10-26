@@ -38,16 +38,7 @@ const ApplicationsSection = () => {
                 <h3 className="text-lg font-bold text-primary-blue">Drones</h3>
               </CardContent>
             </Card>
-            
-            <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="focus-icon bg-primary-blue/5 text-primary-blue">
-                  <Database size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-primary-blue">Smart Manufacturing</h3>
-              </CardContent>
-            </Card>
-            
+          
             <Card className="focus-card bg-offwhite border-primary-blue/20 hover:border-primary-blue/50">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
