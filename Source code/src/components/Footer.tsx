@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/open-hardware-initiative/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-white/80 transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/OpenHardware-Initiative" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-white/80 transition-colors"
