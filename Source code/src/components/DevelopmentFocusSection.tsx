@@ -33,7 +33,7 @@ const DevelopmentFocusSection = () => {
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Cpu size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary-blue">Control and Computer Vision</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary-blue">Computer Vision on Edge</h3>
                 <p className="text-night">Developing software for Drones and Robotics using state-of-the-art control and computer vision systems.</p>
               </CardContent>
             </Card>
