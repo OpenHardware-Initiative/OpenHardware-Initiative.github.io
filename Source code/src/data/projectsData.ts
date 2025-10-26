@@ -40,7 +40,6 @@ export const projectsData: Project[] = [
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
     status: "Completed",
-    image: "/lovable-uploads/image.png",
     githubLink: "https://github.com/example/spikingc",
     year: 2024
   },
@@ -67,6 +66,7 @@ export const projectsData: Project[] = [
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
     status: "Completed",
+    image: "/lovable-uploads/image.png",
     year: 2023
   }
 ];
