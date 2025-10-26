@@ -27,6 +27,15 @@ export const projectsData: Project[] = [
   },
   {
     id: "2",
+    title: "Neural Network Quantization Benchmarking",
+    description: "Systematic comparison of quantization methods across multiple deep learning architectures.",
+    category: "AI Software",
+    status: "Active",
+    year: 2025,
+    recruitingFor: true
+  },
+  {
+    id: "3",
     title: "SpikingC",
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
@@ -35,7 +44,7 @@ export const projectsData: Project[] = [
     year: 2024
   },
   {
-    id: "3",
+    id: "4",
     title: "Fortiss Hackathon 2023 - Gesture Recognition",
     description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
     category: "Spiking Neural Networks",
@@ -44,7 +53,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "4",
+    id: "5",
     title: "DenseSpiking RTL",
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
@@ -52,22 +61,13 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "5",
+    id: "6",
     title: "Spiking Mobile ViT",
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
     status: "Completed",
     year: 2023
-  },
-  {
-    id: "6",
-    title: "Neural Network Quantization Benchmarking",
-    description: "Systematic comparison of quantization methods across multiple deep learning architectures.",
-    category: "AI Software",
-    status: "Active",
-    year: 2025,
-    recruitingFor: true
-  },
+  }
 ];
 
 // Helper functions for common data operations
