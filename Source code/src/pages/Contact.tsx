@@ -78,7 +78,7 @@ const Contact = () => {
                       <h3 className="font-bold">LinkedIn</h3>
                       <p className="text-gray-600 mb-2">Follow us on LinkedIn</p>
                       <a 
-                        href="https://linkedin.com" 
+                        href="https://www.linkedin.com/company/open-hardware-initiative/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-primary-blue hover:underline inline-block"
