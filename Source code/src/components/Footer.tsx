@@ -12,8 +12,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">OpenHardware</h3>
             <p className="mb-4 text-white/80">
-              A student initiative focused on hardware innovation, including chip design, electronics, 
-              smart manufacturing, AI hardware acceleration, and tinyML.
+              Student-led innovation and research in chip design, hardware acceleration, 
+              and intelligent analog design from concept to implementation.
             </p>
             <div className="flex space-x-4">
               <a 
