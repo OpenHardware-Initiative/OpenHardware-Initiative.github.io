@@ -17,7 +17,7 @@ const partners: Partner[] = [
     logoSrc: "/lovable-uploads/13247213-358a-4273-9ad0-b5fa1af9c924.png"
   }, 
   {
-    name: "OpenResearch e.V.",
+    name: "TukiResearch e.V.",
     role: "Non-Profit Organization",
     organization: "",
     logoSrc: "/lovable-uploads/c437def5-92ff-48cf-86eb-2300aa696360.png"
