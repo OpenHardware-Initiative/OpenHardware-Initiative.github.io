@@ -16,8 +16,8 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "1",
-    title: "AMD Competition",
-    description: "AI Compilers Meet FPGAs: A HW/SW Codesign Approach for Vision Transformers",
+    title: "AMD Competition - Drone-ViT-HW-Accelerator",
+    description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints",
     category: "Chip Design",
     status: "Active",
     image: "/media/projects/AMD_comp.png",
@@ -68,32 +68,6 @@ export const projectsData: Project[] = [
     category: "Spiking Neural Networks",
     status: "Active",
     year: 2023
-  },
-  {
-    id: "7",
-    title: "Industry Smart Scheduling",
-    description: "An intelligent scheduling system for manufacturing industries that optimizes production processes and resource allocation using AI algorithms.",
-    category: "Smart Manufacturing",
-    status: "Active",
-    year: 2023,
-    recruitingFor: true
-  },
-  {
-    id: "8",
-    title: "AI Compiler for Heterogeneous Hardware with IREE",
-    description: "Development of a compiler that optimizes neural network models for various hardware accelerators, leveraging IREE (IR Execution Environment) technology.",
-    category: "AI Hardware",
-    status: "Active",
-    githubLink: "https://github.com/example/ai-compiler-iree",
-    year: 2023
-  },
-  {
-    id: "9",
-    title: "Energy-Efficient Deep Learning Processor",
-    description: "A custom processor design optimized for deep learning inference with minimal energy consumption for battery-powered devices.",
-    category: "Chip Design",
-    status: "Discontinued",
-    year: 2021
   }
 ];
 
