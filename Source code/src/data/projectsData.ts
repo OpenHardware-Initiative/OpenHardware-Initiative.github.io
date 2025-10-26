@@ -32,8 +32,7 @@ export const projectsData: Project[] = [
     category: "Spiking Neural Networks",
     status: "Completed",
     githubLink: "https://github.com/example/spikingc",
-    year: 2024,
-    recruitingFor: false
+    year: 2024
   },
   {
     id: "3",
@@ -50,8 +49,7 @@ export const projectsData: Project[] = [
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
     status: "Completed",
-    year: 2023,
-    recruitingFor: false
+    year: 2023
   },
   {
     id: "5",
