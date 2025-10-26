@@ -30,10 +30,10 @@ export const projectsData: Project[] = [
     title: "SpikingC",
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
-    status: "Active",
+    status: "Completed",
     githubLink: "https://github.com/example/spikingc",
-    year: 2023,
-    recruitingFor: true
+    year: 2024,
+    recruitingFor: false
   },
   {
     id: "3",
@@ -49,16 +49,16 @@ export const projectsData: Project[] = [
     title: "DenseSpiking RTL",
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
-    status: "Active",
+    status: "Completed",
     year: 2023,
-    recruitingFor: true
+    recruitingFor: false
   },
   {
     id: "5",
     title: "Spiking Mobile ViT",
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
-    status: "Active",
+    status: "Completed",
     year: 2023
   }
 ];
