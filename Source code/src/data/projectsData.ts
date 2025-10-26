@@ -4,7 +4,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: "Chip Design" | "AI Hardware" | "IoT" | "Smart Manufacturing" | "TinyML" | "Spiking Neural Networks";
+  category: "Chip Design" | "AI Hardware" | "IoT" | "AI Software" | "TinyML" | "Spiking Neural Networks";
   status: "Active" | "Completed" | "Discontinued";
   image?: string;
   githubLink?: string;
@@ -60,7 +60,16 @@ export const projectsData: Project[] = [
     category: "Spiking Neural Networks",
     status: "Completed",
     year: 2023
-  }
+  },
+  {
+    id: "6",
+    title: "Neural Network Quantization Benchmarking",
+    description: "Systematic comparison of quantization methods across multiple deep learning architectures.",
+    category: "AI Software",
+    status: "Active",
+    year: 2025,
+    recruitingFor: true
+  },
 ];
 
 // Helper functions for common data operations
