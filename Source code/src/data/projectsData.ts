@@ -4,7 +4,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: "Chip Design" | "AI Hardware" | "IoT" | "AI Software" | "TinyML" | "Spiking Neural Networks";
+  category: "Chip Design" | "AI Hardware" | "AI Software" | "TinyML" | "Spiking Neural Networks";
   status: "Active" | "Completed" | "Discontinued";
   image?: string;
   githubLink?: string;
