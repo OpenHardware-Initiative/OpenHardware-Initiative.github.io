@@ -37,7 +37,7 @@ const HeroSection = () => {
             <div className="max-w-2xl mx-auto lg:mx-0">
               <p className="text-base sm:text-lg md:text-xl lg:text-xl mb-6 sm:mb-8 lg:mb-10 text-night leading-relaxed">
                 Student-led innovation and research in chip design, hardware acceleration, 
-                and smart manufacturing systems from concept to implementation.
+                and embedded software from concept to implementation.
               </p>
                 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
