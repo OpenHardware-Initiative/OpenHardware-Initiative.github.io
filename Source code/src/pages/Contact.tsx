@@ -43,7 +43,7 @@ const Contact = () => {
                       <h3 className="font-bold">Email</h3>
                       <p className="text-gray-600">openhardware.team@gmail.com</p>
                       <a 
-                        href="mailto:contact@open-hardware-initiative.com" 
+                        href="mailto:openhardware.team@gmail.com" 
                         className="text-primary-blue hover:underline mt-1 inline-block"
                       >
                         Send an email
