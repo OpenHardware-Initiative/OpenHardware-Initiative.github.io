@@ -304,7 +304,6 @@ export const peopleData: Person[] = [
     name: "Ana Villalobos",
     role: "Former Team Member",
     image: "/media/alumni/ana-villalobos.png",
-    linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2022-09",
     endDate: "2023-12",
