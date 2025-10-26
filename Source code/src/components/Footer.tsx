@@ -35,7 +35,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:contact@open-hardware-initiative.com" 
+                href="mailto:openhardware.team@gmail.com" 
                 className="text-white hover:text-white/80 transition-colors"
                 aria-label="Email"
               >
