@@ -47,7 +47,7 @@ const About = () => {
             </div>
             <div className="relative h-80 md:h-full min-h-[320px]">
               <img 
-                src="/placeholder.svg" 
+                src="/lovable-uploads/Screenshot_2025-10-26_at_14.53.40.png" 
                 alt="OpenHardware team working" 
                 className="rounded-lg shadow-lg object-cover h-full w-full" 
               />
