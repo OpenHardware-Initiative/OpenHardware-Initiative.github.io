@@ -86,11 +86,11 @@ const ApplicationClosed = () => {
                       Have questions? Feel free to reach out:
                     </p>
                     <a 
-                      href="mailto:contact@open-hardware-initiative.com"
+                      href="mailto:openhardware.team@gmail.com"
                       className="inline-flex items-center gap-2 text-primary-blue hover:underline font-medium"
                     >
                       <Mail size={16} />
-                      contact@open-hardware-initiative.com
+                      openhardware.team@gmail.com
                     </a>
                   </div>
                 </div>
