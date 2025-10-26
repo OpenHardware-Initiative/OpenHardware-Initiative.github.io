@@ -23,7 +23,7 @@ const Index = () => {
       <TeamSection />
       
       {/* Sponsors */}
-      <SponsorSection />
+       {/* <SponsorSection />*/}
       
       {/* Supporters */}
       <SupportersSection />
