@@ -53,9 +53,9 @@ const DevelopmentFocusSection = () => {
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Database size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary-blue">Intelligent analog design</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary-blue">Intelligent Analog Design</h3>
                 <p className="text-night">
-                  Creating electronic design automation tools that streamline chip development and manufacturing processes.
+                  Merging analog hardware with machine learning to enable edge computing and autonomous systems.
                 </p>
               </CardContent>
             </Card>
