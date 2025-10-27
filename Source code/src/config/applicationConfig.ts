@@ -4,8 +4,8 @@
 export const APPLICATION_CONFIG = {
   // Google Form URL - set this when applications are open
   // Set to null or empty string to show "Application Closed" page
-  // googleFormUrl: null as string | null,
-  googleFormUrl: "https://forms.gle/xEsCjBCaqRBW7FsY7",
+  googleFormUrl: null,
+  //googleFormUrl: "https://forms.gle/xEsCjBCaqRBW7FsY7",
   
   // Alternative: You can also set this to a different application system URL
   // applicationUrl: "https://your-application-system.com/apply",
