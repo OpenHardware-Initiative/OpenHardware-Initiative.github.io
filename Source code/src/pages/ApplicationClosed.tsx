@@ -44,8 +44,7 @@ const ApplicationClosed = () => {
                   </h2>
                   
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    We're currently not accepting new applications. Our team is at full capacity 
-                    and we want to ensure we can provide the best experience for our current members.
+                    We're currently not accepting new applications. Please check back at the start of next semester for the new application period, and follow our social channels for the latest updates.
                   </p>
                   
                   <div className="bg-bistre/5 border border-bistre/20 rounded-lg p-6 mb-8">
