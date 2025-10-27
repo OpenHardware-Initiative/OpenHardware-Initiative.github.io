@@ -44,7 +44,7 @@ const ApplicationClosed = () => {
                   </h2>
                   
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    We're currently not accepting new applications. Please check back at the start of next semester for the new application period, and follow our social channels for the latest updates.
+                    We're currently not accepting new applications.
                   </p>
                   
                   <div className="bg-bistre/5 border border-bistre/20 rounded-lg p-6 mb-8">
@@ -56,7 +56,7 @@ const ApplicationClosed = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-bistre font-bold">•</span>
-                        <span>Check back here start of next semester for new application periods</span>
+                        <span>Check back here start of next semester for the new application period</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-bistre font-bold">•</span>
