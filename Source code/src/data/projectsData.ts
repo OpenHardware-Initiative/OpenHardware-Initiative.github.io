@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
     status: "Completed",
-    githubLink: "https://github.com/example/spikingc",
+    githubLink: "https://github.com/neuroTUM/SpikingC",
     year: 2024
   },
   {
