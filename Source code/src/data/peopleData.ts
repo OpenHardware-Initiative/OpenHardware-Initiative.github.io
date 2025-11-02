@@ -45,7 +45,7 @@ export const peopleData: Person[] = [
     id: "10",
     name: "Danylo Struk",
     role: "Co-Director",
-    image: "/media/team/danylo-struk.jpg",
+    image: "/media/team/danylo-struk.jpeg",
     linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -186,6 +186,36 @@ export const peopleData: Person[] = [
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
+  },
+  {
+    id: "23",
+    name: "Sebastian Preißler",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/sebastian-prei%C3%9Fler-340a59238/",
+    image: "/media/team/sebastian-preissler.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "24",
+    name: "Arda Hız",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/arda-h%C4%B1z-411224238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "/media/team/arda-hiz.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "25",
+    name: "Kaan Yasar",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/kaan-yasar-a62019244/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "/media/team/kaan-yasar.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
   },
   
   // Alumni
