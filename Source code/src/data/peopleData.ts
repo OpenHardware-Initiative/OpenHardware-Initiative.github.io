@@ -125,25 +125,6 @@ export const peopleData: Person[] = [
     joinDate: "2023-09"
   },
   {
-    id: "8",
-    name: "Osman Yasar",
-    role: "Team Member",
-    image: "/media/team/osman-yasar.JPG",
-    education: "M.Sc. Communications and Electronics, TUM",
-    isActive: true,
-    joinDate: "2023-10"
-  },
-  {
-    id: "11",
-    name: "Jakub Skupień",
-    role: "Team Member",
-    image: "/media/team/jakub-skupien.jpg",
-    linkedIn: "https://www.linkedin.com/in/jakub-skupien",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
     id: "18",
     name: "Deniz Öztürk",
     role: "Team Member",
@@ -153,26 +134,10 @@ export const peopleData: Person[] = [
     joinDate: "2024-10"
   },
   {
-    id: "19",
-    name: "Youssef Sharafaldin",
-    role: "Team Member",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
     id: "20",
     name: "Michael Lobis",
     role: "Team Member",
     image: "/media/team/michael-lobis.jpeg",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
-    id: "21",
-    name: "Dinis Carmona",
-    role: "Team Member",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
@@ -421,7 +386,42 @@ export const peopleData: Person[] = [
       "Contributed to neuromorphic computing research",
       "Helped organize the Munich Neuromorphic Hackathon 2024"
     ]
-  }
+  },
+  {
+    id: "8",
+    name: "Osman Yasar",
+    role: "Team Member",
+    image: "/media/team/osman-yasar.JPG",
+    education: "M.Sc. Communications and Electronics, TUM",
+    isActive: false,
+    joinDate: "2023-10"
+  },
+  {
+    id: "11",
+    name: "Jakub Skupień",
+    role: "Team Member",
+    image: "/media/team/jakub-skupien.jpg",
+    linkedIn: "https://www.linkedin.com/in/jakub-skupien",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
+  {
+    id: "19",
+    name: "Youssef Sharafaldin",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
+  {
+    id: "21",
+    name: "Dinis Carmona",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
 ];
 
 // Helper functions
