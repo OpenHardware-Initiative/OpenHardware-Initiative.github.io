@@ -35,7 +35,7 @@ export const peopleData: Person[] = [
     id: "3",
     name: "Deniz Onat Erdoğan",
     role: "Co-Director",
-    image: "/media/team/deniz-erdogan.jpg",
+    image: "/media/team/deniz-erdogan.jpeg",
     linkedIn: "https://linkedin.com/in/deniz-onat/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
