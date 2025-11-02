@@ -217,6 +217,76 @@ export const peopleData: Person[] = [
     isActive: true,
     joinDate: "2025-10"
   },
+  {
+    id: "26",
+    name: "Baran Aru",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/baranaru/",
+    image: "/media/team/baran-aru.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "27",
+    name: "Áron Fehér",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/%C3%A1ron-feh%C3%A9r/",
+    image: "/media/team/aron-feher.jpeg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "28",
+    name: "Vishesh Kiran Kumar Bafna",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/vishesh-k",
+    image: "/media/team/vishesh-bafna.jpeg",
+    education: "M.Sc. Communication and Electronics Engineering, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "28",
+    name: "Vishesh Kiran Kumar Bafna",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/bora-cakiroglu/",
+    image: "/media/team/vishesh-bafna.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "29",
+    name: "Melis Çetinkaya",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/melis-cetinkaya-/",
+    image: "/media/team/melis-cetinkaya.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "30",
+    name: "Florian Braumandl",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/florian-braumandl/",
+    image: "/media/team/florian-braumandl.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "31",
+    name: "Muhammed Rabin K C",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/muhammed-rabin-k-c-9859291b6/",
+    image: "/media/team/muhammed-rabin-kc.jpeg",
+    education: "Microelectronics and Chipdesign, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
   
   // Alumni
   {
