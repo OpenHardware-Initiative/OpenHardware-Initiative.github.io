@@ -164,7 +164,7 @@ export const peopleData: Person[] = [
     id: "20",
     name: "Michael Lobis",
     role: "Team Member",
-    image: "/media/team/michael-lobis.jpg",
+    image: "/media/team/michael-lobis.jpeg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
@@ -229,6 +229,16 @@ export const peopleData: Person[] = [
   },
   {
     id: "27",
+    name: "Robyn Lin",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/robyn-lin-718058369/",
+    image: "/media/team/robyn-lin.jpeg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "28",
     name: "Áron Fehér",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/%C3%A1ron-feh%C3%A9r/",
@@ -238,7 +248,7 @@ export const peopleData: Person[] = [
     joinDate: "2025-10"
   },
   {
-    id: "28",
+    id: "29",
     name: "Vishesh Kiran Kumar Bafna",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/vishesh-k",
@@ -248,17 +258,17 @@ export const peopleData: Person[] = [
     joinDate: "2025-10"
   },
   {
-    id: "28",
-    name: "Vishesh Kiran Kumar Bafna",
+    id: "30",
+    name: "Bora Cakiroglu",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/bora-cakiroglu/",
-    image: "/media/team/vishesh-bafna.jpeg",
+    image: "/media/team/bora-cakiroglu.jpeg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-10"
   },
   {
-    id: "29",
+    id: "31",
     name: "Melis Çetinkaya",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/melis-cetinkaya-/",
@@ -268,7 +278,7 @@ export const peopleData: Person[] = [
     joinDate: "2025-10"
   },
   {
-    id: "30",
+    id: "32",
     name: "Florian Braumandl",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/florian-braumandl/",
@@ -278,7 +288,7 @@ export const peopleData: Person[] = [
     joinDate: "2025-10"
   },
   {
-    id: "31",
+    id: "33",
     name: "Muhammed Rabin K C",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/muhammed-rabin-k-c-9859291b6/",
