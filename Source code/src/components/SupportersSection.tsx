@@ -18,7 +18,7 @@ const partners: Partner[] = [
   }, 
   {
     name: "TukiResearch e.V.",
-    role: "Non-Profit Organization",
+    role: "Student Led Research Group",
     organization: "",
     logoSrc: "/lovable-uploads/IMG_3429.jpg"
   }, 
