@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ApplicationLink from "./ApplicationLink";
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,6 +33,15 @@ const Footer = () => {
                 aria-label="GitHub"
               >
                 <Github size={20} />
+              </a>
+              <a 
+                href="https://www.instagram.com/open.hardware/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-white/80 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
               </a>
               <a 
                 href="mailto:openhardware.team@gmail.com" 

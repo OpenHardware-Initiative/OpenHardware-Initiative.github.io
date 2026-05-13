@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Instagram } from "lucide-react";
 import ApplicationLink from "@/components/ApplicationLink";
 
 const Contact = () => {
@@ -69,7 +69,7 @@ const Contact = () => {
               
               <div className="mt-8">
                 <h3 className="font-bold mb-4">Social Media</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
                       <Linkedin size={24} />
@@ -102,6 +102,24 @@ const Contact = () => {
                         className="text-primary-blue hover:underline inline-block"
                       >
                         Visit our GitHub
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary-blue/10 p-3 rounded-full text-primary-blue">
+                      <Instagram size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">Instagram</h3>
+                      <p className="text-gray-600 mb-2">Photos and updates</p>
+                      <a 
+                        href="https://www.instagram.com/open.hardware/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-primary-blue hover:underline inline-block"
+                      >
+                        Visit our Instagram
                       </a>
                     </div>
                   </div>
