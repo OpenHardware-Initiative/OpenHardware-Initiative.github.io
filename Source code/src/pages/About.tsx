@@ -47,7 +47,7 @@ const About = () => {
             </div>
             <div className="relative h-80 md:h-full min-h-[320px]">
               <img 
-                src="/placeholder.svg" 
+                src="/lovable-uploads/Screenshot_2025-10-26_at_14.53.40.png" 
                 alt="OpenHardware team working" 
                 className="rounded-lg shadow-lg object-cover h-full w-full" 
               />
@@ -210,7 +210,7 @@ const About = () => {
                   <h3 className="text-xl font-bold text-primary-blue">2025</h3>
                   <p className="font-medium">Foundation of the OpenHardware Initiative</p>
                   <p className="text-gray-600 mt-2">
-                    OpenHardware is founded as a student initiative under the OpenResearch e.V. by Ipek Akdeniz, 
+                    OpenHardware is founded as a student initiative under the TukiResearch e.V. by Ipek Akdeniz, 
                     Deniz Onat Erdogan, Aleksa Stojkovic and Agustin N. Coppari Hollmann.
                   </p>
                 </div>

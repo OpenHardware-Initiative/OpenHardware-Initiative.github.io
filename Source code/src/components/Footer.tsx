@@ -12,12 +12,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">OpenHardware</h3>
             <p className="mb-4 text-white/80">
-              A student initiative focused on hardware innovation, including chip design, electronics, 
-              smart manufacturing, AI hardware acceleration, and tinyML.
+              Student-led innovation and research in chip design, hardware acceleration, 
+              and intelligent analog design from concept to implementation.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/open-hardware-initiative/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-white/80 transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/OpenHardware-Initiative" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-white/80 transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="mailto:contact@open-hardware-initiative.com" 
+                href="mailto:openhardware.team@gmail.com" 
                 className="text-white hover:text-white/80 transition-colors"
                 aria-label="Email"
               >
@@ -84,7 +84,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-white/80 mb-2">Technical University Munich</p>
             <p className="text-white/80 mb-2">Munich, Germany</p>
-            <p className="text-white/80 mb-4">Email: contact@open-hardware-initiative.com</p>
+            <p className="text-white/80 mb-4">Email: openhardware.team@gmail.com</p>
             <ApplicationLink 
               className="inline-block bg-white text-primary-blue px-4 py-2 rounded-md font-semibold hover:bg-white/90 transition-colors"
             >

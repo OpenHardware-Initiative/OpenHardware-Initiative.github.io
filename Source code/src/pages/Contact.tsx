@@ -41,9 +41,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-gray-600">contact@open-hardware-initiative.com</p>
+                      <p className="text-gray-600">openhardware.team@gmail.com</p>
                       <a 
-                        href="mailto:contact@open-hardware-initiative.com" 
+                        href="mailto:openhardware.team@gmail.com" 
                         className="text-primary-blue hover:underline mt-1 inline-block"
                       >
                         Send an email
@@ -78,7 +78,7 @@ const Contact = () => {
                       <h3 className="font-bold">LinkedIn</h3>
                       <p className="text-gray-600 mb-2">Follow us on LinkedIn</p>
                       <a 
-                        href="https://linkedin.com" 
+                        href="https://www.linkedin.com/company/open-hardware-initiative/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-primary-blue hover:underline inline-block"

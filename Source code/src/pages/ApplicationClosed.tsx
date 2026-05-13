@@ -44,8 +44,7 @@ const ApplicationClosed = () => {
                   </h2>
                   
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    We're currently not accepting new applications. Our team is at full capacity 
-                    and we want to ensure we can provide the best experience for our current members.
+                    We're currently not accepting new applications.
                   </p>
                   
                   <div className="bg-bistre/5 border border-bistre/20 rounded-lg p-6 mb-8">
@@ -57,7 +56,7 @@ const ApplicationClosed = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-bistre font-bold">•</span>
-                        <span>Check back here start of next semester for new application periods</span>
+                        <span>Check back here start of next semester for the new application period</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-bistre font-bold">•</span>
@@ -86,11 +85,11 @@ const ApplicationClosed = () => {
                       Have questions? Feel free to reach out:
                     </p>
                     <a 
-                      href="mailto:contact@open-hardware-initiative.com"
+                      href="mailto:openhardware.team@gmail.com"
                       className="inline-flex items-center gap-2 text-primary-blue hover:underline font-medium"
                     >
                       <Mail size={16} />
-                      contact@open-hardware-initiative.com
+                      openhardware.team@gmail.com
                     </a>
                   </div>
                 </div>

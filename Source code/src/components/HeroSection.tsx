@@ -31,13 +31,13 @@ const HeroSection = () => {
             </h1>
               
             <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-night mb-4 sm:mb-6 lg:mb-8 max-w-4xl mx-auto lg:mx-0 leading-tight">
-              Pioneering the future of hardware acceleration
+              Pioneering the future of hardware design
             </p>
               
             <div className="max-w-2xl mx-auto lg:mx-0">
               <p className="text-base sm:text-lg md:text-xl lg:text-xl mb-6 sm:mb-8 lg:mb-10 text-night leading-relaxed">
                 Student-led innovation and research in chip design, hardware acceleration, 
-                and smart manufacturing systems from concept to implementation.
+                and intelligent analog design from concept to implementation.
               </p>
                 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">

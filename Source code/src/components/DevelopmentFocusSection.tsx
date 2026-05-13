@@ -21,9 +21,9 @@ const DevelopmentFocusSection = () => {
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <CircuitBoard size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary-blue">Chip Design</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary-blue">FPGA Design</h3>
                 <p className="text-night">
-                  Creating innovative chip architectures for next-generation computing, focusing on energy efficiency and performance.
+                  Creating innovative hardware architectures for next-generation computing, focusing on energy efficiency and performance.
                 </p>
               </CardContent>
             </Card>
@@ -33,7 +33,7 @@ const DevelopmentFocusSection = () => {
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Cpu size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary-blue">Control and Computer Vision</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary-blue">Computer Vision on Edge</h3>
                 <p className="text-night">Developing software for Drones and Robotics using state-of-the-art control and computer vision systems.</p>
               </CardContent>
             </Card>
@@ -53,9 +53,9 @@ const DevelopmentFocusSection = () => {
                 <div className="focus-icon bg-primary-blue/5 text-primary-blue">
                   <Database size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary-blue">EDA & Manufacturing Tools</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary-blue">Intelligent Analog Design</h3>
                 <p className="text-night">
-                  Creating electronic design automation tools that streamline chip development and manufacturing processes.
+                  Merging analog hardware with machine learning to enable edge computing and autonomous systems.
                 </p>
               </CardContent>
             </Card>

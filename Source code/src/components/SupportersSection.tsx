@@ -17,22 +17,22 @@ const partners: Partner[] = [
     logoSrc: "/lovable-uploads/13247213-358a-4273-9ad0-b5fa1af9c924.png"
   }, 
   {
-    name: "OpenResearch e.V.",
-    role: "Non-Profit Organization",
+    name: "TukiResearch e.V.",
+    role: "Student Led Research Group",
     organization: "",
-    logoSrc: "/lovable-uploads/c437def5-92ff-48cf-86eb-2300aa696360.png"
+    logoSrc: "/lovable-uploads/IMG_3429.jpg"
   }, 
   {
     name: "neuroTUM",
     role: "Student Initiative",
-    organization: "part of OpenResearch e.V.",
+    organization: "part of TukiResearch e.V.",
     logoSrc: "/lovable-uploads/eb05a193-9f42-4e1b-84c5-197b7eacb6a5.png"
   }
 ];
 
 const SupportersSection = () => {
   return (
-    <section className="py-16 bg-offwhite">
+    <section className="py-16 bg-primary-blue/5">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary-blue">
           <span className="relative pb-2">

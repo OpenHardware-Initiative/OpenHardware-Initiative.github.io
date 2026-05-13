@@ -35,7 +35,7 @@ export const peopleData: Person[] = [
     id: "3",
     name: "Deniz Onat Erdoğan",
     role: "Co-Director",
-    image: "/media/team/deniz-erdogan.jpg",
+    image: "/media/team/deniz-erdogan.jpeg",
     linkedIn: "https://linkedin.com/in/deniz-onat/",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -45,7 +45,7 @@ export const peopleData: Person[] = [
     id: "10",
     name: "Danylo Struk",
     role: "Co-Director",
-    image: "/media/team/danylo-struk.jpg",
+    image: "/media/team/danylo-struk.jpeg",
     linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -125,25 +125,6 @@ export const peopleData: Person[] = [
     joinDate: "2023-09"
   },
   {
-    id: "8",
-    name: "Osman Yasar",
-    role: "Team Member",
-    image: "/media/team/osman-yasar.JPG",
-    education: "M.Sc. Communications and Electronics, TUM",
-    isActive: true,
-    joinDate: "2023-10"
-  },
-  {
-    id: "11",
-    name: "Jakub Skupień",
-    role: "Team Member",
-    image: "/media/team/jakub-skupien.jpg",
-    linkedIn: "https://www.linkedin.com/in/jakub-skupien",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
     id: "18",
     name: "Deniz Öztürk",
     role: "Team Member",
@@ -153,26 +134,10 @@ export const peopleData: Person[] = [
     joinDate: "2024-10"
   },
   {
-    id: "19",
-    name: "Youssef Sharafaldin",
-    role: "Team Member",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
     id: "20",
     name: "Michael Lobis",
     role: "Team Member",
-    image: "/media/team/michael-lobis.jpg",
-    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
-  },
-  {
-    id: "21",
-    name: "Dinis Carmona",
-    role: "Team Member",
+    image: "/media/team/michael-lobis.jpeg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
@@ -186,6 +151,116 @@ export const peopleData: Person[] = [
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-05"
+  },
+  {
+    id: "23",
+    name: "Sebastian Preißler",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/sebastian-prei%C3%9Fler-340a59238/",
+    image: "/media/team/sebastian-preissler.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "24",
+    name: "Arda Hız",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/arda-h%C4%B1z-411224238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "/media/team/arda-hiz.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "25",
+    name: "Kaan Yasar",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/kaan-yasar-a62019244/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "/media/team/kaan-yasar.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "26",
+    name: "Baran Aru",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/baranaru/",
+    image: "/media/team/baran-aru.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "27",
+    name: "Robyn Lin",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/robyn-lin-718058369/",
+    image: "/media/team/robyn-lin.jpeg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "28",
+    name: "Áron Fehér",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/%C3%A1ron-feh%C3%A9r/",
+    image: "/media/team/aron-feher.jpeg",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "29",
+    name: "Vishesh Kiran Kumar Bafna",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/vishesh-k",
+    image: "/media/team/vishesh-bafna.jpeg",
+    education: "M.Sc. Communication and Electronics Engineering, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "30",
+    name: "Bora Cakiroglu",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/bora-cakiroglu/",
+    image: "/media/team/bora-cakiroglu.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "31",
+    name: "Melis Çetinkaya",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/melis-cetinkaya-/",
+    image: "/media/team/melis-cetinkaya.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "32",
+    name: "Florian Braumandl",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/florian-braumandl/",
+    image: "/media/team/florian-braumandl.jpeg",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: true,
+    joinDate: "2025-10"
+  },
+  {
+    id: "33",
+    name: "Muhammed Rabin K C",
+    role: "Team Member",
+    linkedIn: "https://www.linkedin.com/in/muhammed-rabin-k-c-9859291b6/",
+    image: "/media/team/muhammed-rabin-kc.jpeg",
+    education: "Microelectronics and Chipdesign, TUM",
+    isActive: true,
+    joinDate: "2025-10"
   },
   
   // Alumni
@@ -223,7 +298,12 @@ export const peopleData: Person[] = [
     image: "/media/team/tobias-konieczny.jpg",
     education: "B.Sc Computer Science, TUM",
     isActive: false,
-    joinDate: "2023-10"
+    joinDate: "2023-10",
+    endDate: "2025-3",
+    contributions: [
+      "Worked on Spiking Vision Transformer",
+      "Helped organize Neuromorphic Hackaton of 2024"
+    ]
   },
   {
     id: "24",
@@ -299,7 +379,6 @@ export const peopleData: Person[] = [
     name: "Ana Villalobos",
     role: "Former Team Member",
     image: "/media/alumni/ana-villalobos.png",
-    linkedIn: "https://linkedin.com",
     isActive: false,
     joinDate: "2022-09",
     endDate: "2023-12",
@@ -307,7 +386,42 @@ export const peopleData: Person[] = [
       "Contributed to neuromorphic computing research",
       "Helped organize the Munich Neuromorphic Hackathon 2024"
     ]
-  }
+  },
+  {
+    id: "8",
+    name: "Osman Yasar",
+    role: "Team Member",
+    image: "/media/team/osman-yasar.JPG",
+    education: "M.Sc. Communications and Electronics, TUM",
+    isActive: false,
+    joinDate: "2023-10"
+  },
+  {
+    id: "11",
+    name: "Jakub Skupień",
+    role: "Team Member",
+    image: "/media/team/jakub-skupien.jpg",
+    linkedIn: "https://www.linkedin.com/in/jakub-skupien",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
+  {
+    id: "19",
+    name: "Youssef Sharafaldin",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
+  {
+    id: "21",
+    name: "Dinis Carmona",
+    role: "Team Member",
+    education: "M.Sc. Electrical Engineering and Information Technology, TUM",
+    isActive: false,
+    joinDate: "2025-05"
+  },
 ];
 
 // Helper functions
