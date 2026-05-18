@@ -16,44 +16,50 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "1",
-    title: "AMD Competition - Drone-ViT-HW-Accelerator",
-    description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints",
-    category: "Chip Design",
+    title: "TinyTPU",
+    description: "Implementation of a small-scale Tensor Processing Unit on FPGA, targeting TinyML inference workloads",
+    category: "AI Hardware",
     status: "Active",
-    image: "/media/projects/AMD_comp.png",
-    githubLink: "https://github.com/OpenHardware-Initiative/ITA-FPGA",
-    year: 2025,
+    year: 2026,
     recruitingFor: true
   },
   {
     id: "2",
-    title: "Analog Spiking TinyML",
-    description: "Implementation of SNN's with analog synaptic circuits for Gesture/Audio recognition",
-    category: "AI Hardware",
-    status: "Active",
-    year: 2025,
-    recruitingFor: true
+    title: "AMD Competition - Drone-ViT-HW-Accelerator",
+    description: "Hardware acceleration for Vision Transformer models specialized for drone applications with optimization for size and power constraints",
+    category: "Chip Design",
+    status: "Completed",
+    image: "/media/projects/AMD_comp.png",
+    githubLink: "https://github.com/OpenHardware-Initiative/ITA-FPGA",
+    year: 2025
   },
   {
     id: "3",
-    title: "Neural Network Quantization Benchmarking",
-    description: "Systematic comparison of quantization methods across multiple deep learning architectures",
-    category: "AI Software",
-    status: "Active",
-    year: 2025,
-    recruitingFor: true
+    title: "Analog Spiking TinyML",
+    description: "Implementation of SNN's with analog synaptic circuits for Gesture/Audio recognition",
+    category: "AI Hardware",
+    status: "Completed",
+    year: 2025
   },
   {
     id: "4",
-    title: "UPMEM-MLP",
-    description: "Multilayer perceptron in pure C enhanced with UPMEM PIM-based training",
-    category: "AI Hardware",
-    status: "Active",
-    githubLink: "https://github.com/OpenHardware-Initiative/UPMEM-MLP",
+    title: "Neural Network Quantization Benchmarking",
+    description: "Systematic comparison of quantization methods across multiple deep learning architectures",
+    category: "AI Software",
+    status: "Completed",
     year: 2025
   },
   {
     id: "5",
+    title: "UPMEM-MLP",
+    description: "Multilayer perceptron in pure C enhanced with UPMEM PIM-based training",
+    category: "AI Hardware",
+    status: "Completed",
+    githubLink: "https://github.com/OpenHardware-Initiative/UPMEM-MLP",
+    year: 2025
+  },
+  {
+    id: "6",
     title: "SpikingC",
     description: "SNN implementation in C for efficient spiking neural network computation with optimized performance and debugging capabilities.",
     category: "Spiking Neural Networks",
@@ -62,7 +68,7 @@ export const projectsData: Project[] = [
     year: 2024
   },
   {
-    id: "6",
+    id: "7",
     title: "Fortiss Hackathon 2023 - Gesture Recognition",
     description: "SNN-based gesture recognition system developed during the November 2023 Hackathon with Fortiss.",
     category: "Spiking Neural Networks",
@@ -71,7 +77,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "7",
+    id: "8",
     title: "DenseSpiking RTL",
     description: "Implementation of a Dense Layer with Leaky Integrate and Fire (LIF) neurons in SystemVerilog for FPGA deployment.",
     category: "Chip Design",
@@ -79,7 +85,7 @@ export const projectsData: Project[] = [
     year: 2023
   },
   {
-    id: "8",
+    id: "9",
     title: "Spiking Mobile ViT",
     description: "A mobile-optimized Vision Transformer model using spiking neural networks for efficient visual processing on edge devices.",
     category: "Spiking Neural Networks",
