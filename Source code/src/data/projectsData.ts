@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     id: "1",
     title: "TinyTPU",
     description: "Implementation of a small-scale Tensor Processing Unit on FPGA, targeting TinyML inference workloads",
-    category: "AI Hardware",
+    category: "Chip Design",
     status: "Active",
     year: 2026,
     recruitingFor: true
