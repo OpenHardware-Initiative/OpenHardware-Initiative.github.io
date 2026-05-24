@@ -35,7 +35,7 @@ export const peopleData: Person[] = [
     id: "10",
     name: "Danylo Struk",
     role: "Co-Director",
-    image: "/media/team/danylo-struk.jpeg",
+    image: "/media/team/danylo-struk.jpg",
     linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
@@ -46,7 +46,7 @@ export const peopleData: Person[] = [
     name: "Florian Braumandl",
     role: "Co-Director",
     linkedIn: "https://www.linkedin.com/in/florian-braumandl/",
-    image: "/media/team/florian-braumandl.jpeg",
+    image: "/media/team/florian-braumandl.jpg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-10"
@@ -148,7 +148,7 @@ export const peopleData: Person[] = [
     name: "Áron Fehér",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/%C3%A1ron-feh%C3%A9r/",
-    image: "/media/team/aron-feher.jpeg",
+    image: "/media/team/aron-feher.jpg",
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-10"
@@ -158,7 +158,7 @@ export const peopleData: Person[] = [
     name: "Milo Valle",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/milo-valle/",
-    image: "/media/team/milo-valle.jpeg",
+    image: "/media/team/milo-valle.jpg",
     education: "M.Sc. Embedded and Computer Systems, TUM",
     isActive: true,
     joinDate: "2026-02"
@@ -168,7 +168,7 @@ export const peopleData: Person[] = [
     name: "Gabriele Lacchin",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/gabriele-lacchin-93aa00284/?skipRedirect=true",
-    image: "/media/team/gabriele-lacchin.jpeg",
+    image: "/media/team/gabriele-lacchin.jpg",
     education: "M.Sc. Data Engineering and Analytics, TUM",
     isActive: true,
     joinDate: "2026-02"
@@ -186,7 +186,7 @@ export const peopleData: Person[] = [
     id: "37",
     name: "Josip Pepić",
     role: "Team Member",
-    image: "/media/team/josip-pepic.jpeg",
+    image: "/media/team/josip-pepic.jpg",
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2026-02"
@@ -196,7 +196,7 @@ export const peopleData: Person[] = [
     name: "Ekin Türkü Erdoğan",
     role: "Team Member",
     linkedIn: "http://linkedin.com/in/ekinturkuerdogan",
-    image: "/media/team/ekin-erdogan.jpeg",
+    image: "/media/team/ekin-erdogan.jpg",
     education: "M.Sc. Microelectronics and Chip Design, TUM",
     isActive: true,
     joinDate: "2026-02"
@@ -206,7 +206,7 @@ export const peopleData: Person[] = [
     name: "Brittany Bravo",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/brittany-bravo-9b5407390/",
-    image: "/media/team/brittany-bravo.jpeg",
+    image: "/media/team/brittany-bravo.jpg",
     education: "B.Sc. Management & Technology, TUM",
     isActive: true,
     joinDate: "2026-02"
@@ -215,8 +215,7 @@ export const peopleData: Person[] = [
     id: "40",
     name: "Annemarie Nießner",
     role: "Team Member",
-    linkedIn: "https://www.linkedin.com/in/annemarie-nie%C3%9Fner-93ba8925a/",
-    image: "/media/team/annemarie-niessner.jpeg",
+    image: "/media/team/annemarie-niessner.jpg",
     education: "B.Sc. Management & Technology, TUM",
     isActive: false,
     joinDate: "2026-02"
