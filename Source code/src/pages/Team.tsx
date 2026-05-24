@@ -84,7 +84,7 @@ const Team = () => {
                   <UserCheck className="text-primary-blue" size={24} />
                   <h2 className="text-2xl font-bold text-primary-blue">Team Leads</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-16">
                   {teamLeads.map(member => (
                     <TeamMember
                       key={member.id}
