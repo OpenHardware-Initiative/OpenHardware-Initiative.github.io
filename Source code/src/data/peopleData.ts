@@ -148,7 +148,7 @@ export const peopleData: Person[] = [
     name: "Áron Fehér",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/%C3%A1ron-feh%C3%A9r/",
-    image: "/media/team/aron-feher.jpg",
+    image: "/media/team/aron-feher.jpeg",
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2025-10"
