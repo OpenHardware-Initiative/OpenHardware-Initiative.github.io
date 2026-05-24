@@ -175,10 +175,11 @@ export const peopleData: Person[] = [
   },
   {
     id: "36",
-    name: "Jeongjoo Lim",
+    name: "Brittany Bravo",
     role: "Team Member",
-    linkedIn: "https://www.linkedin.com/in/jeongjoo-lim/",
-    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
+    linkedIn: "https://www.linkedin.com/in/brittany-bravo-9b5407390/",
+    image: "/media/team/brittany-bravo.jpg",
+    education: "B.Sc. Management & Technology, TUM",
     isActive: true,
     joinDate: "2026-02"
   },
@@ -193,21 +194,20 @@ export const peopleData: Person[] = [
   },
   {
     id: "38",
-    name: "Ekin Türkü Erdoğan",
+    name: "Jeongjoo Lim",
     role: "Team Member",
-    linkedIn: "http://linkedin.com/in/ekinturkuerdogan",
-    image: "/media/team/ekin-erdogan.jpg",
-    education: "M.Sc. Microelectronics and Chip Design, TUM",
+    linkedIn: "https://www.linkedin.com/in/jeongjoo-lim/",
+    education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2026-02"
   },
   {
     id: "39",
-    name: "Brittany Bravo",
+    name: "Ekin Türkü Erdoğan",
     role: "Team Member",
-    linkedIn: "https://www.linkedin.com/in/brittany-bravo-9b5407390/",
-    image: "/media/team/brittany-bravo.jpg",
-    education: "B.Sc. Management & Technology, TUM",
+    linkedIn: "http://linkedin.com/in/ekinturkuerdogan",
+    image: "/media/team/ekin-erdogan.jpg",
+    education: "M.Sc. Microelectronics and Chip Design, TUM",
     isActive: true,
     joinDate: "2026-02"
   },
