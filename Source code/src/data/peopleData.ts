@@ -197,6 +197,7 @@ export const peopleData: Person[] = [
     name: "Jeongjoo Lim",
     role: "Team Member",
     linkedIn: "https://www.linkedin.com/in/jeongjoo-lim/",
+    image: "/media/team/jeongjoo-lim.jpg",
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: true,
     joinDate: "2026-02"
