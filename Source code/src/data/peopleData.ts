@@ -38,8 +38,12 @@ export const peopleData: Person[] = [
     image: "/media/team/danylo-struk.jpg",
     linkedIn: "https://linkedin.com/in/danylo-struk-666085195",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-05"
+    isActive: false,
+    endDate: "2026-08",
+    joinDate: "2025-05",
+    contributions: [
+      "Former Co-Director",
+    ]
   },
   {
     id: "32",
@@ -48,15 +52,19 @@ export const peopleData: Person[] = [
     linkedIn: "https://www.linkedin.com/in/florian-braumandl/",
     image: "/media/team/florian-braumandl.jpg",
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
-    isActive: true,
-    joinDate: "2025-10"
+    isActive: false,
+    endDate: "2026-08",
+    joinDate: "2025-10",
+    contributions: [
+      "Former Co-Director",
+    ]
   },
   
   // Team Leads - Open Positions
   {
     id: "27",
     name: "Robyn Lin",
-    role: "Team Lead - Communications",
+    role: "Co-Director",
     linkedIn: "https://www.linkedin.com/in/robyn-lin-718058369/",
     image: "/media/team/robyn-lin.jpeg",
     education: "B.Sc. Electrical Engineering and Information Technology, TUM",
@@ -166,7 +174,7 @@ export const peopleData: Person[] = [
   {
     id: "35",
     name: "Gabriele Lacchin",
-    role: "Team Member",
+    role: "Co-Director",
     linkedIn: "https://www.linkedin.com/in/gabriele-lacchin-93aa00284/?skipRedirect=true",
     image: "/media/team/gabriele-lacchin.jpg",
     education: "M.Sc. Data Engineering and Analytics, TUM",
@@ -355,7 +363,10 @@ export const peopleData: Person[] = [
     education: "M.Sc. Electrical Engineering and Information Technology, TUM",
     isActive: false,
     endDate: "2026-02",
-    joinDate: "2023-06"
+    joinDate: "2024-11",
+    contributions: [
+      "Contributed to the UPMEM-MLP project",
+    ]
   },
   {
     id: "8",
@@ -365,7 +376,10 @@ export const peopleData: Person[] = [
     education: "M.Sc. Communications and Electronics, TUM",
     isActive: false,
     endDate: "2025-08",
-    joinDate: "2023-10"
+    joinDate: "2023-10",
+    contributions: [
+      "Contributed to the ITA Project that won the AMD Open Hardware competition",
+    ]
   },
   {
     id: "11",
